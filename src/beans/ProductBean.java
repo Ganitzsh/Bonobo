@@ -4,6 +4,11 @@ import java.io.Serializable;
 
 import javax.faces.bean.ManagedBean;
 
+/**
+ * 
+ * @author Ganitzsh
+ *
+ */
 @ManagedBean
 public class ProductBean implements Serializable {
 

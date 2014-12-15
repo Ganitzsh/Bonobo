@@ -6,6 +6,11 @@ import java.util.List;
 
 import javax.faces.bean.ManagedBean;
 
+/**
+ * 
+ * @author Ganitzsh
+ *
+ */
 @ManagedBean
 public class NewsListBean implements Serializable {
 	

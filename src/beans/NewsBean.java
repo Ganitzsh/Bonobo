@@ -5,6 +5,11 @@ import java.sql.Timestamp;
 
 import javax.faces.bean.ManagedBean;
 
+/**
+ * 
+ * @author Ganitzsh
+ *
+ */
 @ManagedBean
 public class NewsBean implements Serializable {
 	
