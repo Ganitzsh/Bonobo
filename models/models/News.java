@@ -1,25 +1,14 @@
-package beans;
+package models;
 
-import java.io.Serializable;
 import java.sql.Timestamp;
 
-import javax.faces.bean.ManagedBean;
-
-/**
- * 
- * @author Ganitzsh
- *
- */
-@ManagedBean
-public class NewsBean implements Serializable {
-	
-	private static final long serialVersionUID = 3L;
+public class News {
 
 	private String		title;
 	private String		content;
 	private	Timestamp	timestamp;
 	
-	public NewsBean()
+	public News()
 	{
 		
 	}
@@ -46,9 +35,5 @@ public class NewsBean implements Serializable {
 
 	public void setTimestamp(Timestamp timestamp) {
 		this.timestamp = timestamp;
-	}
-
-	public static long getSerialversionuid() {
-		return serialVersionUID;
 	}
 }

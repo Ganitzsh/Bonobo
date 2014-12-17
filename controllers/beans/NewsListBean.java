@@ -6,6 +6,8 @@ import java.util.List;
 
 import javax.faces.bean.ManagedBean;
 
+import models.News;
+
 /**
  * 
  * @author Ganitzsh
@@ -14,20 +16,19 @@ import javax.faces.bean.ManagedBean;
 @ManagedBean
 public class NewsListBean implements Serializable {
 	
-	private static final long serialVersionUID = 6L;
-	
-	private List<NewsBean>	newsList = new ArrayList<NewsBean>();
+	private static final long serialVersionUID = -4747832241684935467L;
+	private List<News>	newsList = new ArrayList<News>();
 	
 	public NewsListBean()
 	{
 		// TODO: Requests every news from web-service and allocate array
 	}
 
-	public List<NewsBean> getNewsList() {
+	public List<News> getNewsList() {
 		return newsList;
 	}
 
-	public void setNewsList(List<NewsBean> newsList) {
+	public void setNewsList(List<News> newsList) {
 		this.newsList = newsList;
 	}
 }

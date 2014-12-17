@@ -1,6 +1,5 @@
-package beans;
+package models;
 
-import java.io.Serializable;
 import java.sql.Timestamp;
 
 import javax.faces.bean.ManagedBean;
@@ -11,9 +10,7 @@ import javax.faces.bean.ManagedBean;
  *
  */
 @ManagedBean
-public class UserBean implements Serializable {
-	
-	private static final long serialVersionUID = 4L;
+public class User {
 
 	private long		id;
 	private String		username;
@@ -23,7 +20,7 @@ public class UserBean implements Serializable {
 	private Boolean		newsletter;
 	private Boolean		admin;
 	
-	public UserBean()
+	public User()
 	{
 		
 	}
@@ -82,9 +79,5 @@ public class UserBean implements Serializable {
 
 	public void setAdmin(Boolean admin) {
 		this.admin = admin;
-	}
-
-	public static long getSerialversionuid() {
-		return serialVersionUID;
 	}
 }

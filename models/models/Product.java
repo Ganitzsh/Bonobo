@@ -1,24 +1,17 @@
-package beans;
-
-import java.io.Serializable;
-
-import javax.faces.bean.ManagedBean;
+package models;
 
 /**
  * 
  * @author Ganitzsh
  *
  */
-@ManagedBean
-public class ProductBean implements Serializable {
-
-	private static final long serialVersionUID = 1L;
+public class Product {
 	
 	private String	name;
 	private	String	description;
 	private float	price;
 	
-	public ProductBean()
+	public Product()
 	{
 		
 	}
@@ -45,9 +38,5 @@ public class ProductBean implements Serializable {
 
 	public void setPrice(float price) {
 		this.price = price;
-	}
-
-	public static long getSerialversionuid() {
-		return serialVersionUID;
 	}
 }

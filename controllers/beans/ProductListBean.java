@@ -6,6 +6,8 @@ import java.util.List;
 
 import javax.faces.bean.ManagedBean;
 
+import models.Product;
+
 /**
  * 
  * @author Ganitzsh
@@ -13,16 +15,21 @@ import javax.faces.bean.ManagedBean;
  */
 @ManagedBean
 public class ProductListBean implements Serializable {
+
+	private static final long serialVersionUID = 1790033715744773751L;
 	
-	private static final long serialVersionUID = 9L;
+	private List<Product> productList = new ArrayList<Product>();
 
-	private List<ProductBean> productList = new ArrayList<ProductBean>();
-
-	public List<ProductBean> getProductList() {
+	public ProductListBean()
+	{
+		
+	}
+	
+	public List<Product> getProductList() {
 		return productList;
 	}
 
-	public void setProductList(List<ProductBean> productList) {
+	public void setProductList(List<Product> productList) {
 		this.productList = productList;
 	}
 }
