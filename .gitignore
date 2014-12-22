@@ -2,4 +2,6 @@ build/
 .metadata\  
 .metadata/
 Bonobo.iml
-.idea/
+.idea/.classpath
+.project
+.settings/
