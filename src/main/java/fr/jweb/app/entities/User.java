@@ -1,15 +1,12 @@
-package models;
+package fr.jweb.app.entities;
 
 import java.sql.Timestamp;
-
-import javax.faces.bean.ManagedBean;
 
 /**
  * 
  * @author Ganitzsh
  *
  */
-@ManagedBean
 public class User {
 
 	private long		id;

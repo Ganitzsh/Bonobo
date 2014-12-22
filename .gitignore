@@ -5,3 +5,5 @@ Bonobo.iml
 .idea/.classpath
 .project
 .settings/
+/target/
+.classpath

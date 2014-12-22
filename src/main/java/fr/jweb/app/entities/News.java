@@ -1,6 +1,12 @@
-package models;
+package fr.jweb.app.entities;
 
 import java.sql.Timestamp;
+
+/**
+ * 
+ * @author ganich_j
+ *
+ */
 
 public class News {
 

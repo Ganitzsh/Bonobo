@@ -1,10 +1,10 @@
-package beans;
+package fr.jweb.app.mbeans;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import models.Review;
+import fr.jweb.app.entities.Review;
 
 /**
  * 

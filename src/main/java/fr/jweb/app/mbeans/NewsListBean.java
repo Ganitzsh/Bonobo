@@ -1,4 +1,4 @@
-package beans;
+package fr.jweb.app.mbeans;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -6,7 +6,7 @@ import java.util.List;
 
 import javax.faces.bean.ManagedBean;
 
-import models.News;
+import fr.jweb.app.entities.News;
 
 /**
  * 
