@@ -14,13 +14,13 @@ import fr.jweb.app.entities.Product;
  *
  */
 @ManagedBean
-public class ProductListBean implements Serializable {
+public class ProductListMB implements Serializable {
 
 	private static final long serialVersionUID = 1790033715744773751L;
 	
 	private List<Product> productList = new ArrayList<Product>();
 
-	public ProductListBean()
+	public ProductListMB()
 	{
 		
 	}

@@ -14,12 +14,12 @@ import fr.jweb.app.entities.News;
  *
  */
 @ManagedBean
-public class NewsListBean implements Serializable {
+public class NewsListMB implements Serializable {
 	
 	private static final long serialVersionUID = -4747832241684935467L;
 	private List<News>	newsList = new ArrayList<News>();
 	
-	public NewsListBean()
+	public NewsListMB()
 	{
 		// TODO: Requests every news from web-service and allocate array
 	}

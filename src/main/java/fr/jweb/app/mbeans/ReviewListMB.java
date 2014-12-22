@@ -6,18 +6,21 @@ import java.util.List;
 
 import fr.jweb.app.entities.Review;
 
+import javax.faces.bean.ManagedBean;
+
 /**
  * 
  * @author Ganitzsh
  *
  */
-public class ReviewListBean implements Serializable {
+@ManagedBean
+public class ReviewListMB implements Serializable {
 
 	private static final long serialVersionUID = 743855838330123360L;
 	
 	private List<Review>	userList = new ArrayList<Review>();
 	
-	public ReviewListBean()
+	public ReviewListMB()
 	{
 		
 	}

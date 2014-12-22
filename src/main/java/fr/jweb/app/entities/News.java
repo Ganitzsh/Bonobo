@@ -7,7 +7,6 @@ import java.sql.Timestamp;
  * @author ganich_j
  *
  */
-
 public class News {
 
 	private String		title;

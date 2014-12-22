@@ -14,13 +14,13 @@ import fr.jweb.app.entities.User;
  *
  */
 @ManagedBean
-public class UserListBean implements Serializable {
+public class UserListMB implements Serializable {
 	
 	private static final long serialVersionUID = -568316793809037696L;
 	
 	private List<User>	userList = new ArrayList<User>();
 
-	public UserListBean()
+	public UserListMB()
 	{
 		
 	}
