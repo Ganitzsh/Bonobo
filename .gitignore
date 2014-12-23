@@ -7,6 +7,6 @@ Bonobo.iml
 .settings/
 /target/
 .classpath
-.idea/  
-*.iml  
+.idea/
+*.iml
 bin/  
