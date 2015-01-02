@@ -1,0 +1,12 @@
+build/
+.metadata\  
+.metadata/
+Bonobo.iml
+.idea/.classpath
+.project
+.settings/
+/target/
+.classpath
+.idea/
+*.iml
+bin/  
