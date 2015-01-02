@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:body>
+
+	<ui:composition template="template/common/commonLayout.xhtml">
+		<ui:param name="pageTitle" value="Bonobo 2k15 Official WebSite!" />
+		<ui:define name="content">
+			<!-- Display all news here -->
+			<h:outputText value="No news at this time"
+				rendered="#{empty nList.newsList}" />
+			<ui:repeat value="#{nList.newsList}" var="item"
+				rendered="#{not empty nList.newsList}">
+    			#{item.title}<br />
+			</ui:repeat>
+		</ui:define>
+	</ui:composition>
+
+</h:body>
+
+</html>
