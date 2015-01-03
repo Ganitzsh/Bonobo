@@ -1,6 +1,5 @@
 package fr.jweb.app.mbeans;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,7 +14,7 @@ import fr.jweb.app.entities.User;
  *
  */
 @ManagedBean(name="users")
-public class UserListMB implements Serializable {
+public class UserListMB {
 	
 	private UserDAO	userDataSource;
 	
@@ -26,8 +25,6 @@ public class UserListMB implements Serializable {
 	public void setUserDataSource(UserDAO userDataSource) {
 		this.userDataSource = userDataSource;
 	}
-
-	private static final long serialVersionUID = -568316793809037696L;
 	
 	private List<User>	userList = new ArrayList<User>();
 

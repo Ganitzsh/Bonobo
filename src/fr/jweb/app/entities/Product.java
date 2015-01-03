@@ -3,13 +3,8 @@ package fr.jweb.app.entities;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.RequestScoped;
 import javax.faces.bean.SessionScoped;
-import javax.faces.bean.ViewScoped;
-import javax.faces.context.ExternalContext;
-import javax.faces.context.FacesContext;
 
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
@@ -23,32 +18,6 @@ import com.j256.ormlite.table.DatabaseTable;
 @ManagedBean(name="currentProduct")
 @SessionScoped
 public class Product {
-	
-	private Object anyObject;
-	
-	public Object getAnyObject() {
-		return anyObject;
-	}
-
-	public void setAnyObject(Object anyObject) {
-		this.anyObject = anyObject;
-	}
-
-	public long getId() {
-		return id;
-	}
-
-	public void setId(long id) {
-		this.id = id;
-	}
-
-	public List<Review> getReviews() {
-		return reviews;
-	}
-
-	public void setReviews(List<Review> reviews) {
-		this.reviews = reviews;
-	}
 
 	@DatabaseField(id = true)
 	private long	id = 0;
@@ -59,19 +28,18 @@ public class Product {
 	
 	public Product()
 	{
-		
 	}
-	
-	@PostConstruct
-    public void init() {
-        ExternalContext ec = FacesContext.getCurrentInstance().getExternalContext();
-        this.anyObject = ec.getRequestMap().get("anyObject");
-        Product tmp = (Product) this.anyObject;
-        System.out.println("Current shit name: " + tmp);
-    }
 
 	public String getName() {
 		return name;
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
 	}
 
 	public void setName(String name) {
@@ -80,6 +48,14 @@ public class Product {
 
 	public String getDescription() {
 		return description;
+	}
+
+	public List<Review> getReviews() {
+		return reviews;
+	}
+
+	public void setReviews(List<Review> reviews) {
+		this.reviews = reviews;
 	}
 
 	public void setDescription(String description) {

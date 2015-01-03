@@ -1,6 +1,5 @@
 package fr.jweb.app.mbeans;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,9 +13,7 @@ import javax.faces.bean.ManagedBean;
  *
  */
 @ManagedBean
-public class ReviewListMB implements Serializable {
-
-	private static final long serialVersionUID = 743855838330123360L;
+public class ReviewListMB {
 	
 	private List<Review>	userList = new ArrayList<Review>();
 	
