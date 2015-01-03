@@ -13,13 +13,25 @@ public class Review {
 
 	@DatabaseField(id = true)
 	private long	id;
+	@DatabaseField
 	private User	sourceUser;
+	@DatabaseField
 	private String	reviewContent;
+	@DatabaseField
 	private	int		rating;
+	@DatabaseField
+	private int		productId;
 	
 	public Review()
 	{
 		
+	}
+	public int getProductId() {
+		return productId;
+	}
+
+	public void setProductId(int productId) {
+		this.productId = productId;
 	}
 
 	public User getSourceUser() {

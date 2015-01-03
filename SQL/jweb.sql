@@ -1,20 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 4.1.14
+-- version 4.2.5
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: Jan 03, 2015 at 07:54 PM
--- Server version: 5.6.17
--- PHP Version: 5.5.12
+-- Host: localhost:8889
+-- Generation Time: Jan 03, 2015 at 10:14 PM
+-- Server version: 5.5.38
+-- PHP Version: 5.5.14
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `jweb`
@@ -26,13 +20,11 @@ SET time_zone = "+00:00";
 -- Table structure for table `news`
 --
 
-CREATE TABLE IF NOT EXISTS `news` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `news` (
+`id` int(11) NOT NULL,
   `title` varchar(255) NOT NULL,
   `content` text NOT NULL,
-  `timestamp` timestamp NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `id` (`id`)
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Caca' AUTO_INCREMENT=2 ;
 
 --
@@ -48,15 +40,74 @@ INSERT INTO `news` (`id`, `title`, `content`, `timestamp`) VALUES
 -- Table structure for table `product`
 --
 
-CREATE TABLE IF NOT EXISTS `product` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `product` (
+`id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `description` text NOT NULL,
-  `price` float NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `id` (`id`)
+  `price` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+`id` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `passwordHash` varchar(255) NOT NULL,
+  `inscriptionDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `newsletter` tinyint(1) NOT NULL,
+  `admin` tinyint(1) NOT NULL
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Julien sucks' AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id`, `username`, `email`, `passwordHash`, `inscriptionDate`, `newsletter`, `admin`) VALUES
+(3, 'MARACEULTIME', 'gsagas', '5eae5f7b3f495deff9b77521513fb18a88ed96a8', '2015-01-03 21:12:27', 1, 0);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `news`
+--
+ALTER TABLE `news`
+ ADD PRIMARY KEY (`id`), ADD KEY `id` (`id`);
+
+--
+-- Indexes for table `product`
+--
+ALTER TABLE `product`
+ ADD PRIMARY KEY (`id`), ADD KEY `id` (`id`);
+
+--
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `news`
+--
+ALTER TABLE `news`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `product`
+--
+ALTER TABLE `product`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;

@@ -10,4 +10,4 @@ Bonobo.iml
 .idea/
 *.iml
 bin/  
-*/DatabaseManagerMB.java
+src/fr/jweb/app/mbeans/DatabaseManagerMB.java

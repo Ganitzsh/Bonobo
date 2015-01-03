@@ -15,11 +15,17 @@ public class User {
 
 	@DatabaseField(id = true)
 	private long		id;
+	@DatabaseField
 	private String		username;
+	@DatabaseField
 	private String		email;
+	@DatabaseField
 	private String		passwordHash;
+	@DatabaseField
 	private	Timestamp	inscriptionDate;
+	@DatabaseField
 	private Boolean		newsletter;
+	@DatabaseField
 	private Boolean		admin;
 
 	public Boolean getAdmin() {

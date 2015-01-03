@@ -13,14 +13,26 @@ import javax.faces.bean.ManagedBean;
 @ManagedBean(name="authentication")
 @SessionScoped
 public abstract class AuthenticationMB {
-	
 
 	@ManagedProperty(value="dbManager")
 	private DatabaseManagerMB dbManager;
 	
 	public AuthenticationMB() {
 	}
-	
+
+	public DatabaseManagerMB getDbManager() {
+		return dbManager;
+	}
+
+	public void setDbManager(DatabaseManagerMB dbManager) {
+		this.dbManager = dbManager;
+	}
+
+	public String LogUser() {
+		
+		return ("index?faces-redirect=true");
+	}
+
 	public Boolean loginAction() {
 		return (true);
 	}

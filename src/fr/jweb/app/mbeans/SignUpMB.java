@@ -66,7 +66,8 @@ public class SignUpMB {
 		NewUser.setUsername(this.getUsername());
 		NewUser.setEmail(this.getEmail());
 		NewUser.setNewsletter(this.getNewsletter());
-		NewUser.setPasswordHash(new String(DigestUtils.sha1(this.getPassword())));
+		NewUser.setPasswordHash(DigestUtils.sha1Hex(this.getPassword()));
+		NewUser.setAdmin(false);
 
 		try {
 			dbManager.getUserDao().create(NewUser);
