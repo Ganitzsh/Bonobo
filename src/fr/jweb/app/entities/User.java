@@ -2,9 +2,6 @@ package fr.jweb.app.entities;
 
 import java.sql.Timestamp;
 
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
-
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
@@ -14,31 +11,27 @@ import com.j256.ormlite.table.DatabaseTable;
  *
  */
 @DatabaseTable(tableName="user")
-@ManagedBean(name="currentUser")
-@SessionScoped
 public class User {
 
 	@DatabaseField(id = true)
 	private long		id;
-	private String		username = "Guest";
+	private String		username;
 	private String		email;
-	private String		passwordHash; // SHA1 hash
+	private String		passwordHash;
 	private	Timestamp	inscriptionDate;
-	private Boolean		newsletter = true;
-	private Boolean		admin = true;
-	private Boolean		loggedIn = true;
-	
-	public Boolean getLoggedIn() {
-		return loggedIn;
+	private Boolean		newsletter;
+	private Boolean		admin;
+
+	public Boolean getAdmin() {
+		return admin;
 	}
 
-	public void setLoggedIn(Boolean loggedIn) {
-		this.loggedIn = loggedIn;
+	public void setAdmin(Boolean admin) {
+		this.admin = admin;
 	}
 
 	public User()
 	{
-		System.out.println("OMG!!");
 	}
 
 	public long getId() {
@@ -87,13 +80,5 @@ public class User {
 
 	public void setNewsletter(Boolean newsletter) {
 		this.newsletter = newsletter;
-	}
-
-	public Boolean getAdmin() {
-		return admin;
-	}
-
-	public void setAdmin(Boolean admin) {
-		this.admin = admin;
 	}
 }
