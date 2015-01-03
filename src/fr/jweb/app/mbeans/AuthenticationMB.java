@@ -1,6 +1,6 @@
 package fr.jweb.app.mbeans;
 
-import javax.annotation.ManagedBean;
+//import javax.annotation.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
 /**
@@ -8,7 +8,7 @@ import javax.faces.bean.SessionScoped;
  * @author Ganitzsh
  *
  */
-@ManagedBean(value="authentication")
+//@ManagedBean(value="authentication")
 @SessionScoped
 public abstract class AuthenticationMB {
 	public AuthenticationMB() {
