@@ -18,34 +18,34 @@
 						<div class="required field">
 					      <label>Username</label>
 					      	<div class="field">
-					          <h:inputText id="input_suername" value="#{currentUser.username}" />
+					          <h:inputText id="input_suername" value="#{signupUtility.username}" />
 					        </div>
 					    </div>
 					    <div class="required field">
 					      <label>E-Mail</label>
 					      	<div class="field">
-					          <h:inputSecret id="input_email" value="#{currentUser.email}" />
+					          <h:inputText id="input_email" value="#{signupUtility.email}" />
 					        </div>
 					    </div>
 					    <div class="required field">
 					      <label>Password</label>
 					      	<div class="field">
-					          <h:inputSecret id="input_pass_first" value="#{currentUser.passwordHash}" />
+					          <h:inputSecret id="input_pass_first" value="#{signupUtility.password}" />
 					        </div>
 					    </div>
 					    <div class="required hidden field">
 					      <label>Re-type your password</label>
 					      	<div class="field">
-					          <h:inputSecret id="input_pass_confirm" value="" />
+					          <h:inputSecret id="input_pass_confirm"/>
 					        </div>
 					    </div>
 					    <div class="inline field">
 					    	<div class="ui checkbox">
-					    		<h:selectBooleanCheckbox id="newsletter_chkbx" value="#{user.newsletter}"/>
+					    		<h:selectBooleanCheckbox id="newsletter_chkbx" value="#{signupUtility.newsletter}"/>
 					    		<label>Keep me posted about Bonobo2k15!</label>
 					    	</div>
 					    </div>
-					    <h:commandButton value="Submit" type="submit" action="#{user.goRegisterPage}" styleClass="ui primary button"/>
+					    <h:commandButton value="Submit" type="submit" action="#{signupUtility.newUser()}" styleClass="ui primary button"/>
 					</h:form>
 				</div>
 			</ui:fragment>
