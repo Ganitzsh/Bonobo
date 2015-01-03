@@ -41,10 +41,6 @@ public class NewsListMB {
 	@PostConstruct
 	public void init() {
 		try {
-<<<<<<< HEAD
-=======
-			System.out.println("OMG c'est execute :D");
->>>>>>> 79306cdb56472b1d39f4cf6139dc98851e3a3886
 			newsList = dbManager.getNewsDao().queryForAll();
 		} catch (SQLException e) {
 			System.out.println("SQLException while querying news: " + e.getMessage());
