@@ -19,7 +19,7 @@ public class News {
 	private String		title;
 	@DatabaseField(canBeNull = false)
 	private String		content;
-	@DatabaseField(canBeNull = true)
+	@DatabaseField(canBeNull = false)
 	private	Timestamp	timestamp;
 	
 	public News()

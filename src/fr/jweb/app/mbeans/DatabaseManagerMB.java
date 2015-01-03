@@ -21,7 +21,7 @@ public class DatabaseManagerMB {
 	
 	private final static String URL = "jdbc:mysql://localhost/jweb";
 	private final static String USER = "root";
-	private final static String PASS = "root";
+	private final static String PASS = null;
 
 	private Dao<Review, Integer> reviewDao;
 	private Dao<User, Integer> userDao;
@@ -29,6 +29,35 @@ public class DatabaseManagerMB {
 	private Dao<Product, Integer> productDao;
 
 	private ConnectionSource conn;
+
+	public DatabaseManagerMB()
+	{
+		System.out.println("HOLY FUCK!");
+		try {
+			conn = new JdbcConnectionSource(URL, USER, PASS);
+			reviewDao = DaoManager.createDao(conn, Review.class);
+			userDao = DaoManager.createDao(conn, User.class);
+			newsDao = DaoManager.createDao(conn, News.class);
+			productDao = DaoManager.createDao(conn, Product.class);
+		} catch (SQLException ex) {
+		    System.out.println("SQLException: " + ex.getMessage());
+		    System.out.println("SQLState: " + ex.getSQLState());
+		    System.out.println("VendorError: " + ex.getErrorCode());
+		}
+		
+	}
+	
+	public static String getUrl() {
+		return URL;
+	}
+
+	public static String getUser() {
+		return USER;
+	}
+
+	public static String getPass() {
+		return PASS;
+	}
 
 	public Dao<Review, Integer> getReviewDao() {
 		return reviewDao;
@@ -60,22 +89,6 @@ public class DatabaseManagerMB {
 
 	public void setProductDao(Dao<Product, Integer> productDao) {
 		this.productDao = productDao;
-	}
-
-	// create a connection source to our database
-	public DatabaseManagerMB()
-	{
-		try {
-			conn = new JdbcConnectionSource(URL, USER, PASS);
-			reviewDao = DaoManager.createDao(conn, Review.class);
-			userDao = DaoManager.createDao(conn, User.class);
-			newsDao = DaoManager.createDao(conn, News.class);
-			productDao = DaoManager.createDao(conn, Product.class);
-		} catch (SQLException ex) {
-		    System.out.println("SQLException: " + ex.getMessage());
-		    System.out.println("SQLState: " + ex.getSQLState());
-		    System.out.println("VendorError: " + ex.getErrorCode());
-		}
 	}
 
 	public ConnectionSource getConn() {
