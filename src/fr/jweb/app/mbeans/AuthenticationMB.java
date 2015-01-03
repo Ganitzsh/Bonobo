@@ -14,8 +14,11 @@ import javax.faces.bean.ManagedBean;
 @SessionScoped
 public abstract class AuthenticationMB {
 
-	@ManagedProperty(value="dbManager")
+	@ManagedProperty(value="#{dbManager}")
 	private DatabaseManagerMB dbManager;
+	
+	@ManagedProperty(value="#{currentUser}")
+	private CurrentUserMB	currentUser;
 	
 	public AuthenticationMB() {
 	}
