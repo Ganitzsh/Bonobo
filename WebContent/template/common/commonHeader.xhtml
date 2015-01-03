@@ -13,7 +13,7 @@
 							<a href="sign_up.xhtml" class="ui red button">Sign Up</a>
 						</div>
 						<div class="item">
-							<a href="." class="ui primary button">Log In</a>
+							<a class="ui primary button" onclick="$('#login_modal').modal('show');">Log In</a>
 						</div>
 					</ui:fragment>
 					<ui:fragment rendered="#{currentUser.loggedIn == true and currentUser.admin == true}">
