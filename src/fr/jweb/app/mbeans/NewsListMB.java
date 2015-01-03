@@ -7,7 +7,6 @@ import java.util.List;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 
-import fr.jweb.app.daos.NewsDAO;
 import fr.jweb.app.entities.News;
 
 /**
@@ -20,7 +19,6 @@ import fr.jweb.app.entities.News;
 public class NewsListMB {
 
 	private List<News>	newsList = new ArrayList<News>();
-	private NewsDAO		dao = new NewsDAO();
 	
 	public NewsListMB()
 	{
@@ -56,13 +54,5 @@ public class NewsListMB {
 
 	public void setNewsList(List<News> newsList) {
 		this.newsList = newsList;
-	}
-
-	public NewsDAO getDao() {
-		return dao;
-	}
-
-	public void setDao(NewsDAO dao) {
-		this.dao = dao;
 	}
 }

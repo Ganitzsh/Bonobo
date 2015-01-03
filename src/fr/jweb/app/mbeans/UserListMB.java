@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ManagedProperty;
 
-import fr.jweb.app.daos.UserDAO;
 import fr.jweb.app.entities.User;
 
 /**
@@ -16,15 +16,8 @@ import fr.jweb.app.entities.User;
 @ManagedBean(name="users")
 public class UserListMB {
 	
-	private UserDAO	userDataSource;
-	
-	public UserDAO getUserDataSource() {
-		return userDataSource;
-	}
-
-	public void setUserDataSource(UserDAO userDataSource) {
-		this.userDataSource = userDataSource;
-	}
+	@ManagedProperty(value="dbManager")
+	private DatabaseManagerMB dbManager;
 	
 	private List<User>	userList = new ArrayList<User>();
 

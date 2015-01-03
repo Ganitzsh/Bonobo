@@ -6,8 +6,6 @@ import fr.jweb.app.entities.News;
 import fr.jweb.app.entities.Product;
 import fr.jweb.app.entities.Review;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.SQLException;
 import com.j256.ormlite.dao.DaoManager;
 import com.j256.ormlite.dao.Dao;
