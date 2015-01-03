@@ -29,26 +29,21 @@
 							<div class="required field">
 						      <label>E-Mail</label>
 						      	<div class="field">
-						          <h:inputText id="input_username"/>
+						          <h:inputText id="input_username" value="#{authentication.email}"/>
 						        </div>
 						    </div>
 						    <div class="required field">
 						      <label>Password</label>
 						      	<div class="field">
-						          <h:inputSecret id="input_email" />
+						          <h:inputSecret id="input_email" value="#{authentication.password}"/>
 						        </div>
 						    </div>
-						 </h:form>
+							<div class="ui black button">
+							Nope
+							</div>
+							<h:commandButton value="Log me in" type="submit" action="#{authentication.logUser()}" styleClass="ui positive right button" partialSubmit="true" ajax="true"/>
+						</h:form>
 				      </div>
-				    </div>
-				  </div>
-				  <div class="actions">
-				    <div class="ui black button">
-				      Nope
-				    </div>
-				    <div class="ui positive right labeled icon button">
-				      Log me in
-				      <i class="checkmark icon"></i>
 				    </div>
 				  </div>
 				</div>

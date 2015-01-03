@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:ui="http://java.sun.com/jsf/facelets">
 <body>
 	<ui:composition>
@@ -19,6 +20,13 @@
 					<ui:fragment rendered="#{currentUser.loggedIn == true and currentUser.actualUser.admin == true}">
 						<div class="item">
 							<a href="admin.xhtml" class="ui purple button">Administration</a>
+						</div>
+					</ui:fragment>
+					<ui:fragment rendered="#{currentUser.loggedIn == true}">
+						<div class="item">
+							<h:form>
+								<h:commandButton value="Deconnexion" type="submit" action="#{authentication.logoutUser()}" styleClass="ui purple button" partialSubmit="true" ajax="true"/>
+							</h:form>
 						</div>
 					</ui:fragment>
 					<div class="item">
