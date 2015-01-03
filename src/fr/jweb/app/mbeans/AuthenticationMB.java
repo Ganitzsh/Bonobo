@@ -19,7 +19,6 @@ public abstract class AuthenticationMB {
 	private DatabaseManagerMB dbManager;
 	
 	public AuthenticationMB() {
-		System.out.println("OMG!! IZIZIZs");
 	}
 	
 	public Boolean loginAction() {

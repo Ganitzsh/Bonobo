@@ -17,16 +17,18 @@ public class CurrentUserMB {
 	private User 		actualUser = new User();
 	private Boolean		loggedIn = true;
 
+	public CurrentUserMB() {
+		actualUser.setUsername("Guest");
+		actualUser.setAdmin(false);
+		loggedIn = false;
+	}
+	
 	public Boolean getLoggedIn() {
 		return loggedIn;
 	}
 
 	public void setLoggedIn(Boolean loggedIn) {
 		this.loggedIn = loggedIn;
-	}
-
-	public CurrentUserMB() {
-		
 	}
 
 	public User getActualUser() {

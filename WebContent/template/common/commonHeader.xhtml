@@ -16,7 +16,7 @@
 							<a class="ui primary button" onclick="$('#login_modal').modal('show');">Log In</a>
 						</div>
 					</ui:fragment>
-					<ui:fragment rendered="#{currentUser.loggedIn == true and currentUser.admin == true}">
+					<ui:fragment rendered="#{currentUser.loggedIn == true and currentUser.actualUser.admin == true}">
 						<div class="item">
 							<a href="admin.xhtml" class="ui purple button">Administration</a>
 						</div>
