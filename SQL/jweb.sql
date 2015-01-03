@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:8889
--- Generation Time: Jan 03, 2015 at 10:14 PM
+-- Generation Time: Jan 03, 2015 at 10:30 PM
 -- Server version: 5.5.38
 -- PHP Version: 5.5.14
 
@@ -50,6 +50,21 @@ CREATE TABLE `product` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `review`
+--
+
+CREATE TABLE `review` (
+`id` int(11) NOT NULL,
+  `userId` int(11) NOT NULL,
+  `review` text NOT NULL,
+  `rating` int(11) NOT NULL,
+  `productId` int(11) NOT NULL,
+  `posted` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='JULIEN SUCKS' AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `user`
 --
 
@@ -87,6 +102,12 @@ ALTER TABLE `product`
  ADD PRIMARY KEY (`id`), ADD KEY `id` (`id`);
 
 --
+-- Indexes for table `review`
+--
+ALTER TABLE `review`
+ ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
@@ -105,6 +126,11 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `review`
+--
+ALTER TABLE `review`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `user`

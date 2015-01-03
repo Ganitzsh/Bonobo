@@ -3,6 +3,8 @@ package fr.jweb.app.entities;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
+import java.security.Timestamp;
+
 /**
  * 
  * @author Ganitzsh
@@ -14,18 +16,36 @@ public class Review {
 	@DatabaseField(id = true)
 	private long	id;
 	@DatabaseField
-	private User	sourceUser;
+	private int		userId;
 	@DatabaseField
 	private String	reviewContent;
 	@DatabaseField
 	private	int		rating;
 	@DatabaseField
 	private int		productId;
-	
+	@DatabaseField
+	private Timestamp posted;
+
 	public Review()
 	{
 		
 	}
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public int getUserId() {
+		return userId;
+	}
+
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
+
 	public int getProductId() {
 		return productId;
 	}
@@ -34,12 +54,12 @@ public class Review {
 		this.productId = productId;
 	}
 
-	public User getSourceUser() {
-		return sourceUser;
+	public Timestamp getPosted() {
+		return posted;
 	}
 
-	public void setSourceUser(User sourceUser) {
-		this.sourceUser = sourceUser;
+	public void setPosted(Timestamp posted) {
+		this.posted = posted;
 	}
 
 	public String getReviewContent() {
