@@ -1,8 +1,5 @@
 package fr.jweb.app.entities;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
@@ -16,10 +13,12 @@ public class Product {
 
 	@DatabaseField(id = true)
 	private long	id;
+	@DatabaseField
 	private String	name;
+	@DatabaseField
 	private	String	description;
+	@DatabaseField
 	private float	price;
-	private List<Review>	reviews = new ArrayList<Review>();
 	
 	public Product()
 	{
@@ -43,14 +42,6 @@ public class Product {
 
 	public String getDescription() {
 		return description;
-	}
-
-	public List<Review> getReviews() {
-		return reviews;
-	}
-
-	public void setReviews(List<Review> reviews) {
-		this.reviews = reviews;
 	}
 
 	public void setDescription(String description) {

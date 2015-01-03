@@ -1,9 +1,13 @@
 package fr.jweb.app.mbeans;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
 import fr.jweb.app.entities.Product;
+import fr.jweb.app.entities.Review;
 
 /**
  * 
@@ -15,9 +19,18 @@ import fr.jweb.app.entities.Product;
 public class CurrentProductMB {
 
 	private Product	actualProduct = new Product();
+	private List<Review> reviews = new ArrayList<Review>();
 	
 	public CurrentProductMB()
 	{
+	}
+
+	public List<Review> getReviews() {
+		return reviews;
+	}
+
+	public void setReviews(List<Review> reviews) {
+		this.reviews = reviews;
 	}
 
 	public Product getActualProduct() {

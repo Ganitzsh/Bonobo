@@ -23,11 +23,11 @@ public class ProductListMB {
 	@ManagedProperty(value="#{dbManager}")
 	private DatabaseManagerMB dbManager;
 	
-	private List<Product> productList = new ArrayList<Product>();
-	
 	@ManagedProperty(value="#{currentProduct}")
 	private CurrentProductMB currentProduct;
 
+	private List<Product> productList = new ArrayList<Product>();
+	
 	public ProductListMB()
 	{
 		
@@ -39,7 +39,6 @@ public class ProductListMB {
 		try {
 			productList = dbManager.getProductDao().queryForAll();
 		} catch (SQLException e) {
-			
 			e.printStackTrace();
 		}
 	}
@@ -66,7 +65,6 @@ public class ProductListMB {
 		currentProduct.getActualProduct().setDescription(tmp.getDescription());
 		currentProduct.getActualProduct().setId(tmp.getId());
 		currentProduct.getActualProduct().setPrice(tmp.getPrice());
-		currentProduct.getActualProduct().setReviews(tmp.getReviews());
 		return ("single_product?faces-redirect=true");
 	}
 

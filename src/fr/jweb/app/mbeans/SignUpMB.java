@@ -1,6 +1,5 @@
 package fr.jweb.app.mbeans;
 
-import com.mysql.jdbc.exceptions.MySQLDataException;
 import fr.jweb.app.entities.User;
 
 import javax.faces.bean.ManagedBean;

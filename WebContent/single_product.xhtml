@@ -4,17 +4,17 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets">
 <h:body>
 	<ui:composition template="template/common/commonLayout.xhtml">
-		<ui:param name="pageTitle" value="#{currentProduct.name}" />
+		<ui:param name="pageTitle" value="#{currentProduct.actualProduct.name}" />
 		<ui:define name="content">
-		<h1 class="ui header">#{currentProduct.name}</h1>
+		<h1 class="ui header">#{currentProduct.actualProduct.name}</h1>
 		<p style="text-align: center;"><h:graphicImage library="images" name="test.png"/></p>
-		<h3 class="ui right aligned header">Price: #{currentProduct.price} €</h3>
+		<h3 class="ui right aligned header">Price: #{currentProduct.actualProduct.price} €</h3>
 		<div class="ui segment">
 			<div class="meta">
 				<p class="ui header">Descriptif</p>
 			</div>
 			<div class="description">
-				#{currentProduct.description}
+				#{currentProduct.actualProduct.description}
 			</div>
 		</div>
 		
