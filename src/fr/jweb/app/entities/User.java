@@ -25,8 +25,8 @@ public class User {
 	private String		passwordHash; // SHA1 hash
 	private	Timestamp	inscriptionDate;
 	private Boolean		newsletter = true;
-	private Boolean		admin;
-	private Boolean		loggedIn = false;
+	private Boolean		admin = true;
+	private Boolean		loggedIn = true;
 	
 	public Boolean getLoggedIn() {
 		return loggedIn;

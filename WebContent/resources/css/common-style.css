@@ -22,6 +22,7 @@
 	font-weight: bold;
 	text-align: center;
 	font-size: 25px;
+	margin-top: 20px;
 }
 
 #footer p
@@ -37,15 +38,5 @@
 #sign_up_form
 {
 	padding-top: 10px;
-	padding-bottom: 20px;
-}
-
-#product_page
-{
-	padding-bottom: 20px;
-}
-
-#product_list
-{
 	padding-bottom: 20px;
 }

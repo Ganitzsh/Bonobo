@@ -1,11 +1,13 @@
 package fr.jweb.app.mbeans;
 
 import java.io.Serializable;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
+import javax.faces.bean.ViewScoped;
 
 import fr.jweb.app.daos.NewsDAO;
 import fr.jweb.app.entities.News;
@@ -16,7 +18,7 @@ import fr.jweb.app.entities.News;
  *
  */
 @ManagedBean(name="news")
-@RequestScoped
+@ViewScoped
 public class NewsListMB implements Serializable {
 	
 	private static final long serialVersionUID = -4747832241684935467L;
@@ -25,7 +27,30 @@ public class NewsListMB implements Serializable {
 	
 	public NewsListMB()
 	{
+		java.util.Date date= new java.util.Date();
+		Timestamp tstamp = new Timestamp(date.getTime());
 		// TODO: Requests every news from web-service and allocate array with DAO
+		News tmp1 = new News();
+		tmp1.setTitle("Morbi suscipit");
+		tmp1.setContent("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non lorem in lorem lobortis vehicula vel mollis eros. Aenean pharetra id arcu interdum ultricies. In fringilla purus congue lectus eleifend ornare. Sed suscipit mi nec efficitur tincidunt. Maecenas dignissim, enim at hendrerit porttitor, ligula orci vulputate ipsum, ac ornare augue ligula elementum felis. Nullam ut nulla sit amet lectus hendrerit rhoncus.");
+		tmp1.setTimestamp(tstamp);
+		
+		News tmp2 = new News();
+		tmp2.setTitle("Ut consectetur tincidunt");
+		tmp2.setContent("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non lorem in lorem lobortis vehicula vel mollis eros. Aenean pharetra id arcu interdum ultricies. In fringilla purus congue lectus eleifend ornare. Sed suscipit mi nec efficitur tincidunt. Maecenas dignissim, enim at hendrerit porttitor, ligula orci vulputate ipsum, ac ornare augue ligula elementum felis. Nullam ut nulla sit amet lectus hendrerit rhoncus.");
+		tmp2.setTimestamp(tstamp);
+		
+		News tmp3 = new News();
+		tmp3.setTitle("Aliquam in quam");
+		tmp3.setContent("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non lorem in lorem lobortis vehicula vel mollis eros. Aenean pharetra id arcu interdum ultricies. In fringilla purus congue lectus eleifend ornare. Sed suscipit mi nec efficitur tincidunt. Maecenas dignissim, enim at hendrerit porttitor, ligula orci vulputate ipsum, ac ornare augue ligula elementum felis. Nullam ut nulla sit amet lectus hendrerit rhoncus.");
+		tmp3.setTimestamp(tstamp);
+		
+		newsList.add(tmp1);
+		newsList.add(tmp2);
+		newsList.add(tmp3);
+		newsList.add(tmp2);
+		newsList.add(tmp3);
+		newsList.add(tmp1);
 	}
 
 	public List<News> getNewsList() {

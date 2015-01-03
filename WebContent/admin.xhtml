@@ -50,7 +50,7 @@
 						<p class="center aligned header">No news at the time... Bummer!</p>
 					</div>
 				</ui:fragment>
-				<h:dataTable value="#{news.newsList}" var="news"
+				<h:dataTable value="#{news.newsList}" var="item"
 					styleClass="order-table" headerClass="order-table-header"
 					rowClasses="order-table-odd-row,order-table-even-row"
 					rendered="#{not empty news.newsList}">
@@ -59,12 +59,12 @@
 						<!-- column header -->
 						<f:facet name="header">Title</f:facet>
 						<!-- row record -->
-    				#{news.title}
+    				#{item.title}
     			</h:column>
 
 					<h:column>
 						<f:facet name="header">Posted at</f:facet>
-    				#{news.timestamp}
+    				#{item.timestamp}
     			</h:column>
 
 					<h:column>
