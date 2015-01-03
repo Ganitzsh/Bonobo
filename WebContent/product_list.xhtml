@@ -5,15 +5,38 @@
 <h:body>
 
 	<ui:composition template="template/common/commonLayout.xhtml">
-		<ui:param name="pageTitle" value="List of our products" />
+		<ui:param name="pageTitle" value="Our products" />
 		<ui:define name="content">
-			<!-- Display all news here -->
-			<h:outputText value="No products at this time"
-				rendered="#{empty products.newsList}" />
-			<ui:repeat value="#{products.productList}" var="item"
-				rendered="#{not empty products.productList">
-    			#{item.name}<br />
-			</ui:repeat>
+		<div id="product_list">
+			<ui:fragment rendered="#{empty products.productList}">
+				<div class="ui massive negative message">
+					<p class="center aligned header">No products available yet</p>
+				</div>
+			</ui:fragment>
+			<ui:fragment rendered="#{not empty products.productList}">
+				<div class="ui items">
+					<ui:repeat value="#{products.productList}" var="item">
+						<div class="item">
+							<div class="image">
+								<h:graphicImage library="images" name="test.png"/>
+	   						</div>
+	   						<div class="content">
+				    			<span class="header">#{item.name}</span>
+				    			<div class="meta">
+				    				<p>Price #{item.price}</p>
+				    			</div>
+				    			<div class="description">
+				    				#{item.description}
+				    			</div><br/>
+				    			<h:form>
+				    			<h:commandButton action="#{products.goToProductDescription(item.id)}" styleClass="ui right floated primary button" value="More" /> 
+								</h:form>
+							</div>
+						</div>
+					</ui:repeat>
+				</div>
+			</ui:fragment>
+		</div>
 		</ui:define>
 	</ui:composition>
 	

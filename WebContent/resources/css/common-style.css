@@ -1,1 +1,51 @@
-@CHARSET "ISO-8859-1";
+#content
+{
+	min-height: 200px;
+	margin: 0 auto;
+	width: 80%;
+	padding-top: 20px;
+}
+
+#header
+{
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 20px;
+	margin: 0 auto;
+}
+
+#footer
+{
+	color: white;
+	background-color: black;
+	height: 100px;
+	font-weight: bold;
+	text-align: center;
+	font-size: 25px;
+}
+
+#footer p
+{
+	line-height: 100px;
+}
+
+.section
+{
+	padding-bottom: 20px;
+}
+
+#sign_up_form
+{
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+
+#product_page
+{
+	padding-bottom: 20px;
+}
+
+#product_list
+{
+	padding-bottom: 20px;
+}

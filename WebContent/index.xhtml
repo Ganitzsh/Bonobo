@@ -7,15 +7,28 @@
 	<ui:composition template="template/common/commonLayout.xhtml">
 		<ui:param name="pageTitle" value="Bonobo 2k15 Official WebSite!" />
 		<ui:define name="content">
-			<!-- Display all news here -->
-			<h:outputText value="No news at this time"
-				rendered="#{empty nList.newsList}" />
-			<ui:repeat value="#{nList.newsList}" var="item"
-				rendered="#{not empty nList.newsList}">
-    			#{item.title}<br />
-			</ui:repeat>
+			<ui:fragment rendered="#{empty news.newsList}">
+				<div class="ui massive negative message">
+					<p class="center aligned header">No news at this time</p>
+				</div>
+			</ui:fragment>
+			<ui:fragment rendered="#{not empty news.newsList}">
+				<div class="ui items">
+					<ui:repeat value="#{news.newsList}" var="item" rendered="#{not empty news.newsList}">
+						<div class="item">
+			    			<h2 class="header">#{item.title}</h2><br />
+			    			<div class="meta">
+			    				<p>Posted #{item.timestamp}</p>
+			    			</div>
+			    			<div class="description">
+			    				#{item.content}
+			    			</div>
+						</div>
+					</ui:repeat>
+				</div>
+			</ui:fragment>
 		</ui:define>
 	</ui:composition>
-
+	
 </h:body>
 </html>

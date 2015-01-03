@@ -3,13 +3,27 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets">
 <body>
 	<ui:composition>
-		<div class="ui blue menu">
+		<div class="ui borderless inverted large menu">
 			<div class="container">
-				<a class="active item"> <i class="home icon"></i> Home
-				</a> <a class="item"> <i class="user icon"></i> About
-				</a>
+				<a class="item" href="index.xhtml"><i class="home icon"></i>Home</a>
+				<a class="item" href="product_list.xhtml"><i class="shop icon"></i>Products</a>
 				<div class="right menu">
-					<p class="item"><i class="github icon"></i> Bonobo 2k15</p>
+					<ui:fragment rendered="#{currentUser.loggedIn == false}">
+						<div class="item">
+							<a href="sign_up.xhtml" class="ui red button">Sign Up</a>
+						</div>
+						<div class="item">
+							<a href="." class="ui primary button">Log In</a>
+						</div>
+					</ui:fragment>
+					<ui:fragment rendered="#{currentUser.loggedIn == true and currentUser.admin == true}">
+						<div class="item">
+							<a href="admin.xhtml" class="ui purple button">Administration</a>
+						</div>
+					</ui:fragment>
+					<div class="item">
+						<i class="user icon"></i> Hello, #{currentUser.username}
+					</div>
 				</div>
 			</div>
 		</div>

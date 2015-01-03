@@ -15,7 +15,7 @@ import fr.jweb.app.entities.News;
  * @author Ganitzsh
  *
  */
-@ManagedBean(name="nList")
+@ManagedBean(name="news")
 @RequestScoped
 public class NewsListMB implements Serializable {
 	

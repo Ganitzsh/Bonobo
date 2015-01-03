@@ -1,10 +1,57 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta charset="ISO-8859-1"/>
-<title>Sign-up</title>
-</head>
-<body>
-
-</body>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:body>
+	<ui:composition template="template/common/commonLayout.xhtml">
+		<ui:param name="pageTitle" value="Sign Up now!" />
+		<ui:define name="content">
+		<div id="sign_up_form">
+			<ui:fragment rendered="#{currentUser.loggedIn == true}">
+				<div class="ui massive negative message">
+					<p class="center aligned header">Already logged in!</p>
+				</div>
+			</ui:fragment>
+			<ui:fragment rendered="#{currentUser.loggedIn == false}">
+				<div class="ui form">
+					<h:form id="signup_form">
+						<div class="required field">
+					      <label>Username</label>
+					      	<div class="field">
+					          <h:inputText id="input_suername" value="#{currentUser.username}" />
+					        </div>
+					    </div>
+					    <div class="required field">
+					      <label>E-Mail</label>
+					      	<div class="field">
+					          <h:inputSecret id="input_email" value="#{currentUser.email}" />
+					        </div>
+					    </div>
+					    <div class="required field">
+					      <label>Password</label>
+					      	<div class="field">
+					          <h:inputSecret id="input_pass_first" value="#{currentUser.passwordHash}" />
+					        </div>
+					    </div>
+					    <div class="required hidden field">
+					      <label>Re-type your password</label>
+					      	<div class="field">
+					          <h:inputSecret id="input_pass_confirm" value="" />
+					        </div>
+					    </div>
+					    <div class="inline field">
+					    	<div class="ui checkbox">
+					    		<h:selectBooleanCheckbox id="newsletter_chkbx" value="#{user.newsletter}"/>
+					    		<label>Keep me posted about Bonobo2k15!</label>
+					    	</div>
+					    </div>
+					    <h:commandButton value="Submit" type="submit" action="#{user.goRegisterPage}" styleClass="ui primary button"/>
+					</h:form>
+				</div>
+			</ui:fragment>
+		</div>
+		</ui:define>
+	</ui:composition>
+	
+</h:body>
 </html>

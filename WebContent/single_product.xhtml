@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:body>
+	<ui:composition template="template/common/commonLayout.xhtml">
+		<ui:param name="pageTitle" value="#{currentProduct.name}" />
+		<ui:define name="content">
+		<h1 class="ui header">#{currentProduct.name}</h1>
+		<p style="text-align: center;"><h:graphicImage library="images" name="test.png"/></p>
+		<h3 class="ui right aligned header">Price: #{currentProduct.price} €</h3>
+		<div class="ui segment">
+			<div class="meta">
+				<p class="ui header">Descriptif</p>
+			</div>
+			<div class="description">
+				#{currentProduct.description}
+			</div>
+		</div>
+		
+		<div id="product_page">
+			<ui:fragment rendered="#{currentUser.loggedIn == true}">
+				
+			</ui:fragment>
+			<ui:fragment rendered="#{currentUser.loggedIn == false}">
+				<div class="ui negative message">
+					<h2 class="header">You need to be logged in to post a review.</h2>
+				</div>
+			</ui:fragment>
+			<ui:fragment rendered="#{empty currentProduct.reviews}">
+				<div class="ui blue message">
+					<h2 class="header">There are no reviews for that product yet.</h2>
+				</div>
+			</ui:fragment>
+			<ui:fragment rendered="#{not empty currentProduct.reviews}">
+				<div class="ui items">
+					<ui:repeat value="#{currentProduct.reviews}" var="item">
+						<div class="item">
+			    			<h2 class="header">#{item.user.username}</h2><br />
+			    			<div class="meta">
+			    				<p>Note #{item.rating}</p>
+			    			</div>
+			    			<div class="description">
+			    				#{item.reviewContent}
+			    			</div>
+						</div>
+					</ui:repeat>
+				</div>
+			</ui:fragment>
+		</div>
+		</ui:define>
+	</ui:composition>
+	
+</h:body>
+</html>

@@ -14,7 +14,7 @@ import fr.jweb.app.entities.User;
  * @author Ganitzsh
  *
  */
-@ManagedBean
+@ManagedBean(name="users")
 public class UserListMB implements Serializable {
 	
 	private UserDAO	userDataSource;
