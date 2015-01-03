@@ -24,11 +24,19 @@ public class Review {
 	@DatabaseField
 	private int		productId;
 	@DatabaseField
-	private Timestamp posted;
+	private String posted;
 
 	public Review()
 	{
 		
+	}
+
+	public String getPosted() {
+		return posted;
+	}
+
+	public void setPosted(String posted) {
+		this.posted = posted;
 	}
 	public long getId() {
 		return id;
@@ -54,13 +62,6 @@ public class Review {
 		this.productId = productId;
 	}
 
-	public Timestamp getPosted() {
-		return posted;
-	}
-
-	public void setPosted(Timestamp posted) {
-		this.posted = posted;
-	}
 
 	public String getReviewContent() {
 		return reviewContent;

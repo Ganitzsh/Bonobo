@@ -22,7 +22,7 @@ public class User {
 	@DatabaseField
 	private String		passwordHash;
 	@DatabaseField
-	private	Timestamp	inscriptionDate;
+	private	String	inscriptionDate;
 	@DatabaseField
 	private Boolean		newsletter;
 	@DatabaseField
@@ -39,7 +39,13 @@ public class User {
 	public User()
 	{
 	}
+	public String getInscriptionDate() {
+		return inscriptionDate;
+	}
 
+	public void setInscriptionDate(String inscriptionDate) {
+		this.inscriptionDate = inscriptionDate;
+	}
 	public long getId() {
 		return id;
 	}
@@ -72,13 +78,6 @@ public class User {
 		this.passwordHash = passwordHash;
 	}
 
-	public Timestamp getInscriptionDate() {
-		return inscriptionDate;
-	}
-
-	public void setInscriptionDate(Timestamp inscriptionDate) {
-		this.inscriptionDate = inscriptionDate;
-	}
 
 	public Boolean getNewsletter() {
 		return newsletter;
