@@ -19,7 +19,7 @@ import fr.jweb.app.entities.Review;
  * ProductPage ManagedBean
  * Handle the display of a single product informations
  */
-@ManagedBean(name = "productPage")w
+@ManagedBean(name = "productPage")
 @ViewScoped
 public class ProductPageMB implements Serializable {
 
