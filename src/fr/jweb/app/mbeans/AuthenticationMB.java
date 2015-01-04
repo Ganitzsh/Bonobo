@@ -99,9 +99,6 @@ public class AuthenticationMB implements Serializable {
 		return ("index?faces-redirect=true");
 	}
 	public String logoutUser() {
-//		currentUser.setLoggedIn(false);
-//		currentUser.getActualUser().setAdmin(false);
-//		currentUser.getActualUser().setUsername("Guest");
 		((HttpSession)FacesContext.getCurrentInstance().getExternalContext().getSession(false)).invalidate();
 		return ("index?faces-redirect=true");
 	}
