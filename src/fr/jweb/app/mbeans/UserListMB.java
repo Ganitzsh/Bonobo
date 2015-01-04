@@ -10,11 +10,6 @@ import javax.faces.bean.ManagedProperty;
 
 import fr.jweb.app.entities.User;
 
-/**
- * 
- * @author Ganitzsh
- *
- */
 @ManagedBean(name="users")
 public class UserListMB {
 	
@@ -31,10 +26,9 @@ public class UserListMB {
 	@PostConstruct
 	public void init() {
 		try {
-			System.out.println("OMG c'est executé :D");
 			userList = dbManager.getUserDao().queryForAll();
 		} catch (SQLException e) {
-			System.out.println("SQLException while querying news: " + e.getMessage());
+			System.out.println("SQLException while querying users: " + e.getMessage());
 		}
 	}
 	

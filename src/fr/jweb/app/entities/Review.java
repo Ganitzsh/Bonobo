@@ -4,75 +4,77 @@ import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
 /**
- * 
- * @author Ganitzsh
- *
+ * Review model class
+ * Contains a username, some content and a rating
+ * It is also associated with a product with a product PK
  */
-@DatabaseTable(tableName="review")
+@DatabaseTable(tableName = "review")
 public class Review {
 
-	@DatabaseField(id = true)
-	private long	id;
-	@DatabaseField
-	private String	username;
-	@DatabaseField
-	private String	review;
-	@DatabaseField
-	private	int		rating;
-	@DatabaseField
-	private long	productId;
+    @DatabaseField(id = true)
+    private long id;
+    @DatabaseField
+    private String username;
+    @DatabaseField
+    private String review;
+    @DatabaseField
+    private int rating;
+    @DatabaseField
+    private long productId;
 
-	public Review()
-	{
-		
-	}
+    /**
+     * Review model constructor
+     */
+    public Review() {
 
-	public String getReview() {
-		return review;
-	}
+    }
 
-	public void setReview(String review) {
-		this.review = review;
-	}
-	
-	public long getId() {
-		return id;
-	}
+    public String getReview() {
+        return review;
+    }
 
-	public void setId(long id) {
-		this.id = id;
-	}
+    public void setReview(String review) {
+        this.review = review;
+    }
 
-	public String getUsername() {
-		return username;
-	}
+    public long getId() {
+        return id;
+    }
 
-	public void setUsername(String username) {
-		this.username = username;
-	}
+    public void setId(long id) {
+        this.id = id;
+    }
 
-	public long getProductId() {
-		return productId;
-	}
+    public String getUsername() {
+        return username;
+    }
 
-	public void setProductId(long productId) {
-		this.productId = productId;
-	}
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public long getProductId() {
+        return productId;
+    }
+
+    public void setProductId(long productId) {
+        this.productId = productId;
+    }
 
 
-	public String getReviewContent() {
-		return review;
-	}
+    public String getReviewContent() {
+        return review;
+    }
 
-	public void setReviewContent(String reviewContent) {
-		this.review = reviewContent;
-	}
+    public void setReviewContent(String reviewContent) {
+        this.review = reviewContent;
+    }
 
-	public int getRating() {
-		return rating;
-	}
+    public int getRating() {
+        return rating;
+    }
 
-	public void setRating(int rating) {
-		this.rating = rating;
-	}
+    public void setRating(int rating) {
+        this.rating = rating;
+    }
 }

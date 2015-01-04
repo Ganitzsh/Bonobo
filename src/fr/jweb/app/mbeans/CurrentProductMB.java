@@ -10,36 +10,35 @@ import javax.faces.bean.SessionScoped;
 import fr.jweb.app.entities.Product;
 import fr.jweb.app.entities.Review;
 
+
 /**
- * 
- * @author Ganitzsh
- *
+ * Product viewer ManagedBean
+ * Handle the reading of a selected product
  */
-@ManagedBean(name="currentProduct")
+@ManagedBean(name = "currentProduct")
 @SessionScoped
 public class CurrentProductMB implements Serializable {
 
-	private static final long serialVersionUID = 1L;
-	private Product	actualProduct = new Product();
-	private List<Review> reviews = new ArrayList<Review>();
-	
-	public CurrentProductMB()
-	{
-	}
+    private static final long serialVersionUID = 1L;
+    private Product actualProduct = new Product();
+    private List<Review> reviews = new ArrayList<Review>();
 
-	public List<Review> getReviews() {
-		return reviews;
-	}
+    public CurrentProductMB() {
+    }
 
-	public void setReviews(List<Review> reviews) {
-		this.reviews = reviews;
-	}
+    public List<Review> getReviews() {
+        return reviews;
+    }
 
-	public Product getActualProduct() {
-		return actualProduct;
-	}
+    public void setReviews(List<Review> reviews) {
+        this.reviews = reviews;
+    }
 
-	public void setActualProduct(Product actualProduct) {
-		this.actualProduct = actualProduct;
-	}
+    public Product getActualProduct() {
+        return actualProduct;
+    }
+
+    public void setActualProduct(Product actualProduct) {
+        this.actualProduct = actualProduct;
+    }
 }
