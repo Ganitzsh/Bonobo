@@ -10,18 +10,25 @@ import javax.faces.context.FacesContext;
 import java.sql.SQLException;
 import java.util.Map;
 
-@ManagedBean(name="edit_product")
+/**
+ * EditProduct ManagedBean
+ * Handle the edition of a selected product
+ */
+@ManagedBean(name = "edit_product")
 @ViewScoped
-public class EditProduct {
-
+public class EditProductMB {
     @ManagedProperty(value = "#{dbManager}")
     private DatabaseManagerMB dbManager;
 
     private Product oldProduct;
-    private String  name;
-    private String  description;
-    private float   price;
+    private String name;
+    private String description;
+    private float price;
 
+    /**
+     * Initialize the bean
+     * Get the id of the Product to edit in the url
+     */
     @PostConstruct
     public void _init() {
         Map<String, String> requestParams = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap();
@@ -30,24 +37,29 @@ public class EditProduct {
             name = oldProduct.getName();
             description = oldProduct.getDescription();
             price = oldProduct.getPrice();
-        }
-        catch (SQLException e) {
+        } catch (SQLException e) {
             System.out.println("SQLException while getting product: " + e.getMessage());
         }
     }
+
+    /**
+     * Update the Products table with product informations
+     *
+     * @return Redirection to the administration panel
+     */
     public String updateProduct() {
         try {
             oldProduct.setDescription(this.getDescription());
             oldProduct.setPrice(this.getPrice());
             oldProduct.setName(this.getName());
             dbManager.getProductDao().update(oldProduct);
-        }
-        catch (SQLException e) {
+        } catch (SQLException e) {
             System.out.println("SQLException while updating product: " + e.getMessage());
             e.printStackTrace();
         }
         return ("admin?faces-redirect=true");
     }
+
     public DatabaseManagerMB getDbManager() {
         return dbManager;
     }

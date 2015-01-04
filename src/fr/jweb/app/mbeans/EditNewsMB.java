@@ -10,7 +10,11 @@ import javax.faces.context.FacesContext;
 import java.sql.SQLException;
 import java.util.Map;
 
-@ManagedBean(name="edit_news")
+/**
+ * EditNews ManagedBean
+ * Handle the edition the a selected news
+ */
+@ManagedBean(name = "edit_news")
 @ViewScoped
 public class EditNewsMB {
 
@@ -21,6 +25,10 @@ public class EditNewsMB {
     private String title;
     private String content;
 
+    /**
+     * Initialize the bean
+     * Get the id of the News to edit in the url
+     */
     @PostConstruct
     public void _init() {
         Map<String, String> requestParams = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap();
@@ -28,23 +36,28 @@ public class EditNewsMB {
             oldNews = dbManager.getNewsDao().queryForId(Integer.parseInt(requestParams.get("id")));
             title = oldNews.getTitle();
             content = oldNews.getContent();
-        }
-        catch (SQLException e) {
-            System.out.println("SQLException while getting user: " + e.getMessage());
+        } catch (SQLException e) {
+            System.out.println("SQLException while getting news: " + e.getMessage());
         }
     }
+
+    /**
+     * Update the News table with news informations
+     *
+     * @return Redirection to the administration panel
+     */
     public String updateNews() {
         try {
             oldNews.setTitle(this.getTitle());
             oldNews.setContent(this.getContent());
             dbManager.getNewsDao().update(oldNews);
-        }
-        catch (SQLException e) {
+        } catch (SQLException e) {
             System.out.println("SQLException while updating news: " + e.getMessage());
             e.printStackTrace();
         }
         return ("admin?faces-redirect=true");
     }
+
     public DatabaseManagerMB getDbManager() {
         return dbManager;
     }

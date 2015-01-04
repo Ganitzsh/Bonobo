@@ -9,90 +9,98 @@ import javax.faces.bean.ViewScoped;
 
 import fr.jweb.app.entities.Review;
 
-@ManagedBean(name="reviewPoster")
+/**
+ * ReviewPoster ManagedBean
+ * Handle the posting of a new review for a selected product
+ */
+@ManagedBean(name = "reviewPoster")
 @ViewScoped
 public class ReviewPosterMB implements Serializable {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	@ManagedProperty(value="#{dbManager}")
-	private DatabaseManagerMB dbManager;
-	
-	@ManagedProperty(value="#{currentProduct}")
-	private CurrentProductMB currentProduct;
-	
-	@ManagedProperty(value="#{currentUser}")
-	private CurrentUserMB currentUser;
-	
-	private String	reviewTitle;
-	private String	reviewContent;
-	private int		rating;
-	
-	public DatabaseManagerMB getDbManager() {
-		return dbManager;
-	}
+    @ManagedProperty(value = "#{dbManager}")
+    private DatabaseManagerMB dbManager;
 
-	public void setDbManager(DatabaseManagerMB dbManager) {
-		this.dbManager = dbManager;
-	}
+    @ManagedProperty(value = "#{currentProduct}")
+    private CurrentProductMB currentProduct;
 
-	public int getRating() {
-		return rating;
-	}
+    @ManagedProperty(value = "#{currentUser}")
+    private CurrentUserMB currentUser;
 
-	public CurrentProductMB getCurrentProduct() {
-		return currentProduct;
-	}
+    private String reviewTitle;
+    private String reviewContent;
+    private int rating;
 
-	public void setCurrentProduct(CurrentProductMB currentProduct) {
-		this.currentProduct = currentProduct;
-	}
+    public DatabaseManagerMB getDbManager() {
+        return dbManager;
+    }
 
-	public CurrentUserMB getCurrentUser() {
-		return currentUser;
-	}
+    public void setDbManager(DatabaseManagerMB dbManager) {
+        this.dbManager = dbManager;
+    }
 
-	public void setCurrentUser(CurrentUserMB currentUser) {
-		this.currentUser = currentUser;
-	}
+    public int getRating() {
+        return rating;
+    }
 
-	public void setRating(int rating) {
-		this.rating = rating;
-	}
+    public CurrentProductMB getCurrentProduct() {
+        return currentProduct;
+    }
 
-	public ReviewPosterMB()
-	{
-		
-	}
-	
-	public String getReviewTitle() {
-		return reviewTitle;
-	}
+    public void setCurrentProduct(CurrentProductMB currentProduct) {
+        this.currentProduct = currentProduct;
+    }
 
-	public void setReviewTitle(String reviewTitle) {
-		this.reviewTitle = reviewTitle;
-	}
+    public CurrentUserMB getCurrentUser() {
+        return currentUser;
+    }
 
-	public String getReviewContent() {
-		return reviewContent;
-	}
+    public void setCurrentUser(CurrentUserMB currentUser) {
+        this.currentUser = currentUser;
+    }
 
-	public void setReviewContent(String reviewContent) {
-		this.reviewContent = reviewContent;
-	}
-	
-	public String newReview() {
-		try {
-			Review tmp = new Review();
-			tmp.setProductId(currentProduct.getActualProduct().getId());
-			tmp.setRating(this.rating);
-			tmp.setReviewContent(this.reviewContent);
-			tmp.setUsername(currentUser.getActualUser().getUsername());
-			dbManager.getReviewDao().create(tmp);
-		} catch (SQLException e) {
-			System.out.println("SQLException: exception caught while creating review: " + e.getMessage());
-			e.printStackTrace();
-		}
-		return ("single_product");
-	}
+    public void setRating(int rating) {
+        this.rating = rating;
+    }
+
+    public ReviewPosterMB() {
+
+    }
+
+    public String getReviewTitle() {
+        return reviewTitle;
+    }
+
+    public void setReviewTitle(String reviewTitle) {
+        this.reviewTitle = reviewTitle;
+    }
+
+    public String getReviewContent() {
+        return reviewContent;
+    }
+
+    public void setReviewContent(String reviewContent) {
+        this.reviewContent = reviewContent;
+    }
+
+    /**
+     * Handle the posting of a new review with the given informations
+     *
+     * @return redirection to the product with the new review
+     */
+    public String newReview() {
+        try {
+            Review tmp = new Review();
+            tmp.setProductId(currentProduct.getActualProduct().getId());
+            tmp.setRating(this.rating);
+            tmp.setReviewContent(this.reviewContent);
+            tmp.setUsername(currentUser.getActualUser().getUsername());
+            dbManager.getReviewDao().create(tmp);
+        } catch (SQLException e) {
+            System.out.println("SQLException: exception caught while creating review: " + e.getMessage());
+            e.printStackTrace();
+        }
+        return ("single_product");
+    }
 }
