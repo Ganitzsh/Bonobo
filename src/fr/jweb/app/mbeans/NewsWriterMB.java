@@ -9,58 +9,66 @@ import javax.faces.bean.SessionScoped;
 
 import fr.jweb.app.entities.News;
 
-@ManagedBean(name="newsWriter")
+/**
+ * NewsWriter ManagedBean
+ * Handle the posting of a new news in the administration panel
+ */
+@ManagedBean(name = "newsWriter")
 @SessionScoped
 public class NewsWriterMB implements Serializable {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	@ManagedProperty(value="#{dbManager}")
-	private DatabaseManagerMB dbManager;
-	private String title;
-	private String content;
-	
-	public NewsWriterMB()
-	{
-		
-	}
-	
-	public String postNews() {
-		try {
-			News tmp = new News();
-			tmp.setContent(content);
-			tmp.setTitle(title);
-			dbManager.getNewsDao().create(tmp);
-			content = "";
-			title = "";
-		} catch (SQLException e) {
-			e.printStackTrace();
-			System.out.println("SQLException: while posting news: " + e.getMessage());
-		}
-		return ("index");
-	}
-	
-	public DatabaseManagerMB getDbManager() {
-		return dbManager;
-	}
+    @ManagedProperty(value = "#{dbManager}")
+    private DatabaseManagerMB dbManager;
+    private String title;
+    private String content;
 
-	public void setDbManager(DatabaseManagerMB dbManager) {
-		this.dbManager = dbManager;
-	}
+    public NewsWriterMB() {
 
-	public String getTitle() {
-		return title;
-	}
+    }
 
-	public void setTitle(String title) {
-		this.title = title;
-	}
+    /**
+     * Post a news in the Database with the given informations
+     *
+     * @return Redirection to the index
+     */
+    public String postNews() {
+        try {
+            News tmp = new News();
+            tmp.setContent(content);
+            tmp.setTitle(title);
+            dbManager.getNewsDao().create(tmp);
+            content = "";
+            title = "";
+        } catch (SQLException e) {
+            e.printStackTrace();
+            System.out.println("SQLException: while posting news: " + e.getMessage());
+        }
+        return ("index");
+    }
 
-	public String getContent() {
-		return content;
-	}
+    public DatabaseManagerMB getDbManager() {
+        return dbManager;
+    }
 
-	public void setContent(String content) {
-		this.content = content;
-	}
+    public void setDbManager(DatabaseManagerMB dbManager) {
+        this.dbManager = dbManager;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
 }

@@ -11,46 +11,46 @@ import javax.faces.bean.ManagedProperty;
 import fr.jweb.app.entities.User;
 
 /**
- * 
- * @author Ganitzsh
- *
+ * UserList ManagedBean
+ * Handle the display of all users in the administration panel
  */
-@ManagedBean(name="users")
+@ManagedBean(name = "users")
 public class UserListMB {
-	
-	@ManagedProperty(value="#{dbManager}")
-	private DatabaseManagerMB dbManager;
-	
-	private List<User>	userList = new ArrayList<User>();
 
-	public UserListMB()
-	{
-		
-	}
-	
-	@PostConstruct
-	public void init() {
-		try {
-			System.out.println("OMG c'est executé :D");
-			userList = dbManager.getUserDao().queryForAll();
-		} catch (SQLException e) {
-			System.out.println("SQLException while querying news: " + e.getMessage());
-		}
-	}
-	
-	public DatabaseManagerMB getDbManager() {
-		return dbManager;
-	}
+    @ManagedProperty(value = "#{dbManager}")
+    private DatabaseManagerMB dbManager;
 
-	public void setDbManager(DatabaseManagerMB dbManager) {
-		this.dbManager = dbManager;
-	}
+    private List<User> userList = new ArrayList<User>();
 
-	public List<User> getUserList() {
-		return userList;
-	}
+    public UserListMB() {
 
-	public void setUserList(List<User> userList) {
-		this.userList = userList;
-	}
+    }
+
+    /**
+     * Query the database for all users
+     */
+    @PostConstruct
+    public void init() {
+        try {
+            userList = dbManager.getUserDao().queryForAll();
+        } catch (SQLException e) {
+            System.out.println("SQLException while querying users: " + e.getMessage());
+        }
+    }
+
+    public DatabaseManagerMB getDbManager() {
+        return dbManager;
+    }
+
+    public void setDbManager(DatabaseManagerMB dbManager) {
+        this.dbManager = dbManager;
+    }
+
+    public List<User> getUserList() {
+        return userList;
+    }
+
+    public void setUserList(List<User> userList) {
+        this.userList = userList;
+    }
 }

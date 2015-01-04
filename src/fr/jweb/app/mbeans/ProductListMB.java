@@ -13,78 +13,83 @@ import javax.faces.bean.ViewScoped;
 import fr.jweb.app.entities.Product;
 
 /**
- * 
- * @author Ganitzsh
- *
+ * ProductList ManagedBean
+ * Handle the list content of the products
  */
-@ManagedBean(name="products")
+@ManagedBean(name = "products")
 @ViewScoped
 public class ProductListMB implements Serializable {
-	
-	private static final long serialVersionUID = 1L;
 
-	@ManagedProperty(value="#{dbManager}")
-	private DatabaseManagerMB dbManager;
-	
-	@ManagedProperty(value="#{currentProduct}")
-	private CurrentProductMB currentProduct;
+    private static final long serialVersionUID = 1L;
 
-	private List<Product> productList = new ArrayList<Product>();
-	
-	public ProductListMB()
-	{
-		
-	}
-	
-	@PostConstruct
-	public void init()
-	{
-		try {
-			productList = dbManager.getProductDao().queryForAll();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-	}
-	
-	public DatabaseManagerMB getDbManager() {
-		return dbManager;
-	}
+    @ManagedProperty(value = "#{dbManager}")
+    private DatabaseManagerMB dbManager;
 
-	public void setDbManager(DatabaseManagerMB dbManager) {
-		this.dbManager = dbManager;
-	}
-	
-	public List<Product> getProductList() {
-		return productList;
-	}
+    @ManagedProperty(value = "#{currentProduct}")
+    private CurrentProductMB currentProduct;
 
-	public void setProductList(List<Product> productList) {
-		this.productList = productList;
-	}
-	
-	public String goToProductDescription(long id) {
-		Product tmp = getProductById(id);
-		currentProduct.getActualProduct().setName(tmp.getName());
-		currentProduct.getActualProduct().setDescription(tmp.getDescription());
-		currentProduct.getActualProduct().setId(tmp.getId());
-		currentProduct.getActualProduct().setPrice(tmp.getPrice());
-		return ("single_product?faces-redirect=true");
-	}
+    private List<Product> productList = new ArrayList<Product>();
+
+    public ProductListMB() {
+
+    }
+
+    @PostConstruct
+    public void init() {
+        try {
+            productList = dbManager.getProductDao().queryForAll();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public DatabaseManagerMB getDbManager() {
+        return dbManager;
+    }
+
+    public void setDbManager(DatabaseManagerMB dbManager) {
+        this.dbManager = dbManager;
+    }
+
+    public List<Product> getProductList() {
+        return productList;
+    }
+
+    public void setProductList(List<Product> productList) {
+        this.productList = productList;
+    }
+
+    /**
+     * @param id The product ID
+     * @return Redirection to the product reading page
+     */
+    public String goToProductDescription(long id) {
+        Product tmp = getProductById(id);
+        currentProduct.getActualProduct().setName(tmp.getName());
+        currentProduct.getActualProduct().setDescription(tmp.getDescription());
+        currentProduct.getActualProduct().setId(tmp.getId());
+        currentProduct.getActualProduct().setPrice(tmp.getPrice());
+        return ("single_product?faces-redirect=true");
+    }
 
 
-	public CurrentProductMB getCurrentProduct() {
-		return currentProduct;
-	}
+    public CurrentProductMB getCurrentProduct() {
+        return currentProduct;
+    }
 
-	public void setCurrentProduct(CurrentProductMB currentProduct) {
-		this.currentProduct = currentProduct;
-	}
+    public void setCurrentProduct(CurrentProductMB currentProduct) {
+        this.currentProduct = currentProduct;
+    }
 
-	public Product getProductById(long id) {
-		for (Product p : productList) {
-			if (p.getId() == id)
-				return (p);
-		}
-		return (null);
-	}
+    /**
+     * @param id The id of the wanted product
+     * @return Product found with the corresponding ID
+     */
+    public Product getProductById(long id) {
+        for (Product p : productList) {
+            if (p.getId() == id)
+                return (p);
+        }
+        return (null);
+    }
 }

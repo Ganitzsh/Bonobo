@@ -4,55 +4,57 @@ import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
 /**
- * 
- * @author Ganitzsh
- *
+ * Product model class
+ * Contains a name, a description and a price
  */
-@DatabaseTable(tableName="product")
+@DatabaseTable(tableName = "product")
 public class Product {
 
-	@DatabaseField(id = true)
-	private long	id;
-	@DatabaseField
-	private String	name;
-	@DatabaseField
-	private	String	description;
-	@DatabaseField
-	private float	price;
-	
-	public Product()
-	{
-	}
+    @DatabaseField(id = true)
+    private long id;
+    @DatabaseField
+    private String name;
+    @DatabaseField
+    private String description;
+    @DatabaseField
+    private float price;
 
-	public String getName() {
-		return name;
-	}
 
-	public long getId() {
-		return id;
-	}
+    /**
+     * Product model constructor
+     */
+    public Product() {
+    }
 
-	public void setId(long id) {
-		this.id = id;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public long getId() {
+        return id;
+    }
 
-	public String getDescription() {
-		return description;
-	}
+    public void setId(long id) {
+        this.id = id;
+    }
 
-	public void setDescription(String description) {
-		this.description = description;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public float getPrice() {
-		return price;
-	}
+    public String getDescription() {
+        return description;
+    }
 
-	public void setPrice(float price) {
-		this.price = price;
-	}
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public float getPrice() {
+        return price;
+    }
+
+    public void setPrice(float price) {
+        this.price = price;
+    }
 }

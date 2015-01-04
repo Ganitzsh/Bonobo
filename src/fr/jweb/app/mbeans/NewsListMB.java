@@ -13,48 +13,46 @@ import javax.faces.bean.ViewScoped;
 import fr.jweb.app.entities.News;
 
 /**
- * 
- * @author Ganitzsh
- *
+ * NewsList Managedbean
+ * Handle the news list content
  */
-@ManagedBean(name="news")
+@ManagedBean(name = "news")
 @ViewScoped
 public class NewsListMB implements Serializable {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	private List<News>	newsList = new ArrayList<News>();
-	
-	@ManagedProperty(value="#{dbManager}")
-	private DatabaseManagerMB dbManager;
-	
-	public DatabaseManagerMB getDbManager() {
-		return dbManager;
-	}
+    private List<News> newsList = new ArrayList<News>();
 
-	public void setDbManager(DatabaseManagerMB dbManager) {
-		this.dbManager = dbManager;
-	}
-	
-	public NewsListMB()
-	{
-		
-	}
-	
-	@PostConstruct
-	public void init() {
-		try {
-			newsList = dbManager.getNewsDao().queryForAll();
-		} catch (SQLException e) {
-			System.out.println("SQLException while querying news: " + e.getMessage());
-		}
-	}
+    @ManagedProperty(value = "#{dbManager}")
+    private DatabaseManagerMB dbManager;
 
-	public List<News> getNewsList() {
-		return newsList;
-	}
+    public DatabaseManagerMB getDbManager() {
+        return dbManager;
+    }
 
-	public void setNewsList(List<News> newsList) {
-		this.newsList = newsList;
-	}
+    public void setDbManager(DatabaseManagerMB dbManager) {
+        this.dbManager = dbManager;
+    }
+
+    public NewsListMB() {
+
+    }
+
+    @PostConstruct
+    public void init() {
+        try {
+            newsList = dbManager.getNewsDao().queryForAll();
+        } catch (SQLException e) {
+            System.out.println("SQLException while querying news: " + e.getMessage());
+        }
+    }
+
+    public List<News> getNewsList() {
+        return newsList;
+    }
+
+    public void setNewsList(List<News> newsList) {
+        this.newsList = newsList;
+    }
 }

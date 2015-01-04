@@ -10,6 +10,10 @@ import javax.faces.context.FacesContext;
 import java.sql.SQLException;
 import java.util.Map;
 
+/**
+ * EditUser ManagedBean
+ * Handle the edition of a selected user
+ */
 @ManagedBean(name="edit_user")
 @ViewScoped
 public class EditUserMB {
@@ -22,6 +26,10 @@ public class EditUserMB {
     private String username;
     private Boolean newsletter;
 
+    /**
+     * Initialize the bean
+     * Get the id of the User to edit in the url
+     */
     @PostConstruct
     public void _init() {
         Map<String, String> requestParams = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap();
@@ -34,6 +42,24 @@ public class EditUserMB {
         catch (SQLException e) {
             System.out.println("SQLException while getting user: " + e.getMessage());
         }
+    }
+    /**
+     * Update the Products table with product informations
+     *
+     * @return Redirection to the administration panel
+     */
+    public String updateUser() {
+        try {
+            oldUser.setUsername(this.getUsername());
+            oldUser.setEmail(this.getUsername());
+            oldUser.setNewsletter(this.getNewsletter());
+            dbManager.getUserDao().update(oldUser);
+        }
+        catch (SQLException e) {
+            System.out.println("SQLException while update new user: " + e.getMessage());
+            e.printStackTrace();
+        }
+        return ("admin?faces-redirect=true");
     }
 
     public User getOldUser() {
@@ -75,20 +101,4 @@ public class EditUserMB {
     public void setDbManager(DatabaseManagerMB dbManager) {
         this.dbManager = dbManager;
     }
-
-    public String updateUser() {
-        try {
-            oldUser.setUsername(this.getUsername());
-            oldUser.setEmail(this.getUsername());
-            oldUser.setNewsletter(this.getNewsletter());
-            dbManager.getUserDao().update(oldUser);
-        }
-        catch (SQLException e) {
-            System.out.println("SQLException while update new user: " + e.getMessage());
-            e.printStackTrace();
-        }
-        return ("admin?faces-redirect=true");
-    }
-
-
 }

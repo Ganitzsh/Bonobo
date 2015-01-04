@@ -18,18 +18,13 @@ import javax.faces.context.FacesContext;
 import javax.servlet.http.HttpSession;
 
 /**
- * 
- * @author Ganitzsh
- *
+ * Authentication managedBean
+ * Handle the users authentication after checking the credentials they gave
  */
-
 @ManagedBean(name="authentication")
 @SessionScoped
 public class AuthenticationMB implements Serializable {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	private	String	email;
 	private String	password;
@@ -75,6 +70,11 @@ public class AuthenticationMB implements Serializable {
 		this.dbManager = dbManager;
 	}
 
+	/**
+	 * Method handling the user authentication
+	 * Verify the credential and then set the CurrentUser session variables
+	 * @return Redirection to the index page
+	 */
 	public String logUser() {
 		Map<String,Object> map = new HashMap<>();
 		map.put("email", this.getEmail());
@@ -97,6 +97,11 @@ public class AuthenticationMB implements Serializable {
 		}
 		return ("index?faces-redirect=true");
 	}
+
+	/**
+	 * Disconnect the user
+	 * @return Redirection to the index page
+	 */
 	public String logoutUser() {
 		((HttpSession)FacesContext.getCurrentInstance().getExternalContext().getSession(false)).invalidate();
 		return ("index?faces-redirect=true");

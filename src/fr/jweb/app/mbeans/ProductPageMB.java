@@ -15,67 +15,73 @@ import javax.faces.bean.ViewScoped;
 import fr.jweb.app.entities.Product;
 import fr.jweb.app.entities.Review;
 
-@ManagedBean(name="productPage")
+/**
+ * ProductPage ManagedBean
+ * Handle the display of a single product informations
+ */
+@ManagedBean(name = "productPage")w
 @ViewScoped
 public class ProductPageMB implements Serializable {
 
-	private static final long serialVersionUID = 1L;
-	
-	@ManagedProperty(value="#{dbManager}")
-	private DatabaseManagerMB dbManager;
-	
-	@ManagedProperty(value="#{currentProduct}")
-	private CurrentProductMB currentProduct;
-	
-	private Product product;
-	private List<Review> reviews = new ArrayList<Review>();
-	
-	public DatabaseManagerMB getDbManager() {
-		return dbManager;
-	}
+    private static final long serialVersionUID = 1L;
 
-	public void setDbManager(DatabaseManagerMB dbManager) {
-		this.dbManager = dbManager;
-	}
-	
-	public List<Review> getReviews() {
-		return reviews;
-	}
+    @ManagedProperty(value = "#{dbManager}")
+    private DatabaseManagerMB dbManager;
 
-	public void setReviews(List<Review> reviews) {
-		this.reviews = reviews;
-	}
+    @ManagedProperty(value = "#{currentProduct}")
+    private CurrentProductMB currentProduct;
 
-	public CurrentProductMB getCurrentProduct() {
-		return currentProduct;
-	}
+    private Product product;
+    private List<Review> reviews = new ArrayList<Review>();
 
-	public void setCurrentProduct(CurrentProductMB currentProduct) {
-		this.currentProduct = currentProduct;
-	}
+    public DatabaseManagerMB getDbManager() {
+        return dbManager;
+    }
 
-	public Product getProduct() {
-		return product;
-	}
+    public void setDbManager(DatabaseManagerMB dbManager) {
+        this.dbManager = dbManager;
+    }
 
-	public void setProduct(Product product) {
-		this.product = product;
-	}
+    public List<Review> getReviews() {
+        return reviews;
+    }
 
-	public ProductPageMB()
-	{
-		
-	}
-	
-	@PostConstruct
-	public void init() {
-		product = currentProduct.getActualProduct();
-		try {
-			Map<String,Object> map = new HashMap<>();
-			map.put("productId", currentProduct.getActualProduct().getId());
-			reviews = dbManager.getReviewDao().queryForFieldValues(map);
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-	}
+    public void setReviews(List<Review> reviews) {
+        this.reviews = reviews;
+    }
+
+    public CurrentProductMB getCurrentProduct() {
+        return currentProduct;
+    }
+
+    public void setCurrentProduct(CurrentProductMB currentProduct) {
+        this.currentProduct = currentProduct;
+    }
+
+    public Product getProduct() {
+        return product;
+    }
+
+    public void setProduct(Product product) {
+        this.product = product;
+    }
+
+    public ProductPageMB() {
+
+    }
+
+    /**
+     * Query the database for the selected product
+     */
+    @PostConstruct
+    public void init() {
+        product = currentProduct.getActualProduct();
+        try {
+            Map<String, Object> map = new HashMap<>();
+            map.put("productId", currentProduct.getActualProduct().getId());
+            reviews = dbManager.getReviewDao().queryForFieldValues(map);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }
