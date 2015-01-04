@@ -14,28 +14,27 @@ public class Review {
 	@DatabaseField(id = true)
 	private long	id;
 	@DatabaseField
-	private int		userId;
+	private String	username;
 	@DatabaseField
-	private String	reviewContent;
+	private String	review;
 	@DatabaseField
 	private	int		rating;
 	@DatabaseField
-	private int		productId;
-	@DatabaseField
-	private String posted;
+	private long	productId;
 
 	public Review()
 	{
 		
 	}
 
-	public String getPosted() {
-		return posted;
+	public String getReview() {
+		return review;
 	}
 
-	public void setPosted(String posted) {
-		this.posted = posted;
+	public void setReview(String review) {
+		this.review = review;
 	}
+	
 	public long getId() {
 		return id;
 	}
@@ -44,29 +43,29 @@ public class Review {
 		this.id = id;
 	}
 
-	public int getUserId() {
-		return userId;
+	public String getUsername() {
+		return username;
 	}
 
-	public void setUserId(int userId) {
-		this.userId = userId;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
-	public int getProductId() {
+	public long getProductId() {
 		return productId;
 	}
 
-	public void setProductId(int productId) {
+	public void setProductId(long productId) {
 		this.productId = productId;
 	}
 
 
 	public String getReviewContent() {
-		return reviewContent;
+		return review;
 	}
 
 	public void setReviewContent(String reviewContent) {
-		this.reviewContent = reviewContent;
+		this.review = reviewContent;
 	}
 
 	public int getRating() {
