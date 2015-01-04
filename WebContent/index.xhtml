@@ -17,9 +17,6 @@
 					<ui:repeat value="#{news.newsList}" var="item" rendered="#{not empty news.newsList}">
 						<div class="item">
 			    			<h2 class="header">#{item.title}</h2><br />
-			    			<div class="meta">
-			    				<p>Posted #{item.timestamp}</p>
-			    			</div>
 			    			<div class="description">
 			    				#{item.content}
 			    			</div>

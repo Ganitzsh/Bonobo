@@ -1,7 +1,5 @@
 package fr.jweb.app.entities;
 
-import java.sql.Timestamp;
-
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
@@ -19,8 +17,6 @@ public class News {
 	private String		title;
 	@DatabaseField(canBeNull = false)
 	private String		content;
-	@DatabaseField(canBeNull = false)
-	private	Timestamp	timestamp;
 	
 	public News()
 	{
@@ -47,13 +43,5 @@ public class News {
 
 	public void setContent(String content) {
 		this.content = content;
-	}
-
-	public Timestamp getTimestamp() {
-		return timestamp;
-	}
-
-	public void setTimestamp(Timestamp timestamp) {
-		this.timestamp = timestamp;
 	}
 }

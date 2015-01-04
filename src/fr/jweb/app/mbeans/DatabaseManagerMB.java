@@ -26,9 +26,9 @@ public class DatabaseManagerMB implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 
-	private final static String URL = "jdbc:mysql://localhost:8889/jweb";
+	private final static String URL = "jdbc:mysql://localhost/jweb";
 	private final static String USER = "root";
-	private final static String PASS = "root";
+	private final static String PASS = null;
 
 	private Dao<Review, Integer> reviewDao;
 	private Dao<User, Integer> userDao;

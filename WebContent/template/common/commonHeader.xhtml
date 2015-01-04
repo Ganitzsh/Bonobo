@@ -19,6 +19,9 @@
 					</ui:fragment>
 					<ui:fragment rendered="#{currentUser.loggedIn == true and currentUser.actualUser.admin == true}">
 						<div class="item">
+							<a class="ui primary button" onclick="$('#write_news_modal').modal('show');">Write a news</a>
+						</div>
+						<div class="item">
 							<a href="admin.xhtml" class="ui purple button">Administration</a>
 						</div>
 					</ui:fragment>
