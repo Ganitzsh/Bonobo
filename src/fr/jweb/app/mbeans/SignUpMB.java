@@ -5,18 +5,27 @@ import fr.jweb.app.entities.User;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.RequestScoped;
+
+import java.io.Serializable;
 import java.sql.SQLException;
+
 import org.apache.commons.codec.digest.DigestUtils;
 
 @ManagedBean(name="signupUtility")
 @RequestScoped
-public class SignUpMB {
+public class SignUpMB implements Serializable {
 
+	private static final long serialVersionUID = 1L;
 	private String	email;
 	private String	username;
 	private String	password;
 	private Boolean	newsletter;
 
+	public SignUpMB()
+	{
+		
+	}
+	
 	public DatabaseManagerMB getDbManager() {
 		return dbManager;
 	}
@@ -62,24 +71,20 @@ public class SignUpMB {
 	}
 
 	public String newUser() {
-		User NewUser = new User();
-		NewUser.setUsername(this.getUsername());
-		NewUser.setEmail(this.getEmail());
-		NewUser.setNewsletter(this.getNewsletter());
-		NewUser.setPasswordHash(DigestUtils.sha1Hex(this.getPassword()));
-		NewUser.setAdmin(false);
-
+		
 		try {
-			dbManager.getUserDao().create(NewUser);
+			User tmp = new User();
+			tmp.setUsername(this.username);
+			tmp.setEmail(this.email);
+			tmp.setNewsletter(this.newsletter);
+			tmp.setPasswordHash(DigestUtils.sha1Hex(this.password));
+			tmp.setAdmin(false);
+			dbManager.getUserDao().create(tmp);
 		}
 		catch (SQLException e) {
 			System.out.println("SQLException while creating new user: " + e.getMessage());
+			e.printStackTrace();
 		}
 		return ("index?faces-redirect=true");
-	}
-
-	public SignUpMB()
-	{
-		
 	}
 }

@@ -1,5 +1,7 @@
 package fr.jweb.app.mbeans;
 
+import java.io.Serializable;
+
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
@@ -12,8 +14,9 @@ import fr.jweb.app.entities.User;
  */
 @ManagedBean(name="currentUser")
 @SessionScoped
-public class CurrentUserMB {
+public class CurrentUserMB implements Serializable {
 
+	private static final long serialVersionUID = 1L;
 	private User 		actualUser = new User();
 	private Boolean		loggedIn = true;
 

@@ -1,5 +1,6 @@
 package fr.jweb.app.mbeans;
 
+import java.io.Serializable;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,8 +19,10 @@ import fr.jweb.app.entities.Product;
  */
 @ManagedBean(name="products")
 @ViewScoped
-public class ProductListMB {
+public class ProductListMB implements Serializable {
 	
+	private static final long serialVersionUID = 1L;
+
 	@ManagedProperty(value="#{dbManager}")
 	private DatabaseManagerMB dbManager;
 	

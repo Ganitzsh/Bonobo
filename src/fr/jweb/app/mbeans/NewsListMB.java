@@ -1,5 +1,6 @@
 package fr.jweb.app.mbeans;
 
+import java.io.Serializable;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +19,9 @@ import fr.jweb.app.entities.News;
  */
 @ManagedBean(name="news")
 @ViewScoped
-public class NewsListMB {
+public class NewsListMB implements Serializable {
+
+	private static final long serialVersionUID = 1L;
 
 	private List<News>	newsList = new ArrayList<News>();
 	

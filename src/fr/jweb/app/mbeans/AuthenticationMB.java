@@ -1,15 +1,19 @@
 package fr.jweb.app.mbeans;
 
 import fr.jweb.app.entities.User;
+
 import org.apache.commons.codec.digest.DigestUtils;
 
 import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.SessionScoped;
 import javax.faces.bean.ManagedBean;
+
+import java.io.Serializable;
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.List;
+
 import javax.faces.context.FacesContext;
 import javax.servlet.http.HttpSession;
 
@@ -21,8 +25,12 @@ import javax.servlet.http.HttpSession;
 
 @ManagedBean(name="authentication")
 @SessionScoped
-public class AuthenticationMB {
+public class AuthenticationMB implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private	String	email;
 	private String	password;
 	List<User> list = null;

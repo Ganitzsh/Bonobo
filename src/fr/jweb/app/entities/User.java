@@ -1,7 +1,5 @@
 package fr.jweb.app.entities;
 
-import java.sql.Timestamp;
-
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
@@ -22,8 +20,6 @@ public class User {
 	@DatabaseField
 	private String		passwordHash;
 	@DatabaseField
-	private	String	inscriptionDate;
-	@DatabaseField
 	private Boolean		newsletter;
 	@DatabaseField
 	private Boolean		admin;
@@ -39,13 +35,7 @@ public class User {
 	public User()
 	{
 	}
-	public String getInscriptionDate() {
-		return inscriptionDate;
-	}
-
-	public void setInscriptionDate(String inscriptionDate) {
-		this.inscriptionDate = inscriptionDate;
-	}
+	
 	public long getId() {
 		return id;
 	}

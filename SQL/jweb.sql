@@ -1,14 +1,20 @@
 -- phpMyAdmin SQL Dump
--- version 4.2.5
+-- version 4.1.14
 -- http://www.phpmyadmin.net
 --
--- Host: localhost:8889
--- Generation Time: Jan 03, 2015 at 10:38 PM
--- Server version: 5.5.38
--- PHP Version: 5.5.14
+-- Host: 127.0.0.1
+-- Generation Time: Jan 04, 2015 at 01:01 AM
+-- Server version: 5.6.17
+-- PHP Version: 5.5.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `jweb`
@@ -20,11 +26,13 @@ SET time_zone = "+00:00";
 -- Table structure for table `news`
 --
 
-CREATE TABLE `news` (
-`id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `news` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
   `content` text NOT NULL,
-  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `id` (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Caca' AUTO_INCREMENT=2 ;
 
 --
@@ -40,12 +48,22 @@ INSERT INTO `news` (`id`, `title`, `content`, `timestamp`) VALUES
 -- Table structure for table `product`
 --
 
-CREATE TABLE `product` (
-`id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `product` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) CHARACTER SET latin1 NOT NULL,
   `description` text CHARACTER SET latin1 NOT NULL,
-  `price` float NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+  `price` float NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `id` (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `product`
+--
+
+INSERT INTO `product` (`id`, `name`, `description`, `price`) VALUES
+(1, 'AK-47', 'The AK-47 is a selective-fire, gas-operated 7.62×39mm assault rifle, first developed in the Soviet Union by Mikhail Kalashnikov. It is officially known in the Soviet documentation as Avtomat Kalashnikova. It is also known as Kalashnikov, AK, or in Russian slang, Kalash.', 1.02),
+(2, 'M67 Grenade', 'The M67 grenade is a fragmentation hand grenade used by the United States military. The M67 is a further development of the M33 grenade, itself a replacement for the M26-series grenades used during the Korean and Vietnam Wars, and the older Mk 2 "pineapple" grenade used since World War II. The M67 hand grenade has an effective casualty radius of about 5 metres (16 ft) .', 12.47);
 
 -- --------------------------------------------------------
 
@@ -53,13 +71,14 @@ CREATE TABLE `product` (
 -- Table structure for table `review`
 --
 
-CREATE TABLE `review` (
-`id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `review` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `userId` int(11) NOT NULL,
   `review` text NOT NULL,
   `rating` int(11) NOT NULL,
   `productId` int(11) NOT NULL,
-  `posted` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `posted` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='JULIEN SUCKS' AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -68,72 +87,25 @@ CREATE TABLE `review` (
 -- Table structure for table `user`
 --
 
-CREATE TABLE `user` (
-`id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `passwordHash` varchar(255) NOT NULL,
-  `inscriptionDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `newsletter` tinyint(1) NOT NULL,
-  `admin` tinyint(1) NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Julien sucks' AUTO_INCREMENT=4 ;
+  `admin` tinyint(1) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Julien sucks' AUTO_INCREMENT=7 ;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `username`, `email`, `passwordHash`, `inscriptionDate`, `newsletter`, `admin`) VALUES
-(3, 'MARACEULTIME', 'gsagas', '5eae5f7b3f495deff9b77521513fb18a88ed96a8', '2015-01-03 21:12:27', 1, 0);
+INSERT INTO `user` (`id`, `username`, `email`, `passwordHash`, `newsletter`, `admin`) VALUES
+(3, 'MARACEULTIME', 'gsagas', '5eae5f7b3f495deff9b77521513fb18a88ed96a8', 1, 0),
+(4, 'Ganitzsh', 'lol', '356a192b7913b04c54574d18c28d46e6395428ab', 0, 0),
+(6, 'Ganitzsh', 'lol', '356a192b7913b04c54574d18c28d46e6395428ab', 0, 0);
 
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `news`
---
-ALTER TABLE `news`
- ADD PRIMARY KEY (`id`), ADD KEY `id` (`id`);
-
---
--- Indexes for table `product`
---
-ALTER TABLE `product`
- ADD PRIMARY KEY (`id`), ADD KEY `id` (`id`);
-
---
--- Indexes for table `review`
---
-ALTER TABLE `review`
- ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `user`
---
-ALTER TABLE `user`
- ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `news`
---
-ALTER TABLE `news`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT for table `product`
---
-ALTER TABLE `product`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `review`
---
-ALTER TABLE `review`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `user`
---
-ALTER TABLE `user`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -1,5 +1,6 @@
 package fr.jweb.app.mbeans;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,8 +17,9 @@ import fr.jweb.app.entities.Review;
  */
 @ManagedBean(name="currentProduct")
 @SessionScoped
-public class CurrentProductMB {
+public class CurrentProductMB implements Serializable {
 
+	private static final long serialVersionUID = 1L;
 	private Product	actualProduct = new Product();
 	private List<Review> reviews = new ArrayList<Review>();
 	

@@ -2,14 +2,19 @@ package fr.jweb.app.mbeans;
 
 import com.j256.ormlite.jdbc.JdbcConnectionSource;
 import com.j256.ormlite.support.ConnectionSource;
+
 import fr.jweb.app.entities.News;
 import fr.jweb.app.entities.Product;
 import fr.jweb.app.entities.Review;
 
+import java.io.Serializable;
 import java.sql.SQLException;
+
 import com.j256.ormlite.dao.DaoManager;
 import com.j256.ormlite.dao.Dao;
+
 import fr.jweb.app.entities.User;
+
 
 
 import javax.faces.bean.ManagedBean;
@@ -17,8 +22,9 @@ import javax.faces.bean.SessionScoped;
 
 @ManagedBean(name="dbManager")
 @SessionScoped
-public class DatabaseManagerMB {
+public class DatabaseManagerMB implements Serializable {
 	
+	private static final long serialVersionUID = 1L;
 	private final static String URL = "jdbc:mysql://localhost/jweb";
 	private final static String USER = "root";
 	private final static String PASS = null;
@@ -32,7 +38,6 @@ public class DatabaseManagerMB {
 
 	public DatabaseManagerMB()
 	{
-		System.out.println("HOLY FUCK!");
 		try {
 			conn = new JdbcConnectionSource(URL, USER, PASS);
 			reviewDao = DaoManager.createDao(conn, Review.class);
@@ -44,7 +49,6 @@ public class DatabaseManagerMB {
 		    System.out.println("SQLState: " + ex.getSQLState());
 		    System.out.println("VendorError: " + ex.getErrorCode());
 		}
-		
 	}
 	
 	public static String getUrl() {
