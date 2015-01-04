@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:body>
+    <ui:composition template="template/common/commonLayout.xhtml">
+        <ui:param name="pageTitle" value="Edit Product" />
+        <ui:define name="content">
+            <div id="edit_user_form">
+                <ui:fragment rendered="#{currentUser.loggedIn == true}">
+                    <div class="ui form">
+                        <h:form id="signup_form">
+                            <div class="required field">
+                                <label>Name</label>
+                                <div class="field">
+                                    <h:inputText id="input_suername" value="#{edit_product.name}" />
+                                </div>
+                            </div>
+                            <div class="required field">
+                                <label>Description</label>
+                                <div class="field">
+                                    <h:inputTextarea id="input_email" value="#{edit_product.description}" />
+                                </div>
+                            </div>
+                            <div class="required field">
+                                <label>Price</label>
+                                <div class="field">
+                                    <h:inputText id="input_price" value="#{edit_product.price}" />
+                                </div>
+                            </div>
+                            <h:commandButton value="Submit" type="submit" action="#{edit_product.updateProduct()}" styleClass="ui primary button" partialSubmit="true" ajax="true"/>
+                        </h:form>
+                    </div>
+                </ui:fragment>
+            </div>
+        </ui:define>
+    </ui:composition>
+
+</h:body>
+</html>

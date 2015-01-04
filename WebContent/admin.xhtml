@@ -1,108 +1,116 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:ui="http://java.sun.com/jsf/facelets">
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
 <h:body>
 
-	<ui:composition template="template/common/commonLayout.xhtml">
-		<ui:define name="content">
-			<div class="user_table section">
-				<H2 class="ui header">User table</H2>
-				<ui:fragment rendered="#{empty users.userList}">
-					<div class="ui massive negative message">
-						<p class="center aligned header">No users at the time... Bummer!</p>
-					</div>
-				</ui:fragment>
-				<h:dataTable value="#{users.userList}" var="user"
-					styleClass="order-table" headerClass="order-table-header"
-					rowClasses="order-table-odd-row,order-table-even-row"
-					rendered="#{not empty users.userList}">
+    <ui:composition template="template/common/commonLayout.xhtml">
+        <ui:define name="content">
+            <div class="user_table section">
+                <H2 class="ui header">User table</H2>
+                <ui:fragment rendered="#{empty users.userList}">
+                    <div class="ui massive negative message">
+                        <p class="center aligned header">No users at the time... Bummer!</p>
+                    </div>
+                </ui:fragment>
+                <h:dataTable value="#{users.userList}" var="user"
+                             styleClass="order-table" headerClass="order-table-header"
+                             rowClasses="order-table-odd-row,order-table-even-row"
+                             rendered="#{not empty users.userList}">
 
-					<h:column>
-						<!-- column header -->
-						<f:facet name="header">Username</f:facet>
-						<!-- row record -->
-    				#{user.username}
-    			</h:column>
+                    <h:column>
+                        <!-- column header -->
+                        <f:facet name="header">Username</f:facet>
+                        <!-- row record -->
+                        #{user.username}
+                    </h:column>
 
-					<h:column>
-						<f:facet name="header">E-Mail</f:facet>
-    				#{user.email}
-    			</h:column>
+                    <h:column>
+                        <f:facet name="header">E-Mail</f:facet>
+                        #{user.email}
+                    </h:column>
 
-					<h:column>
-						<f:facet name="header">Type</f:facet>
-    				#{user.type}
-    			</h:column>
+                    <h:column>
+                        <f:facet name="header">Admin</f:facet>
+                        #{user.admin}
+                    </h:column>
 
-					<h:column>
-						<f:facet name="header">Action</f:facet>
-						<h:link>Remove</h:link>|<h:link>Edit</h:link>
-					</h:column>
+                    <h:column>
+                        <f:facet name="header">Action</f:facet>
+                        <h:form>
+                            <h:commandLink action="#{administration.deleteUser(user.id)}">Remove</h:commandLink>
+                            <h:commandLink action="#{administration.editUser(user.id)}">Edit</h:commandLink>
+                        </h:form>
+                    </h:column>
+                </h:dataTable>
+            </div>
+            <div class="news_table section">
+                <H2 class="ui header">News table</H2>
+                <ui:fragment rendered="#{empty news.newsList}">
+                    <div class="ui massive negative message">
+                        <p class="center aligned header">No news at the time... Bummer!</p>
+                    </div>
+                </ui:fragment>
+                <h:dataTable value="#{news.newsList}" var="item"
+                             styleClass="order-table" headerClass="order-table-header"
+                             rowClasses="order-table-odd-row,order-table-even-row"
+                             rendered="#{not empty news.newsList}">
 
-				</h:dataTable>
-			</div>
-			<div class="news_table section">
-				<H2 class="ui header">News table</H2>
-				<ui:fragment rendered="#{empty news.newsList}">
-					<div class="ui massive negative message">
-						<p class="center aligned header">No news at the time... Bummer!</p>
-					</div>
-				</ui:fragment>
-				<h:dataTable value="#{news.newsList}" var="item"
-					styleClass="order-table" headerClass="order-table-header"
-					rowClasses="order-table-odd-row,order-table-even-row"
-					rendered="#{not empty news.newsList}">
+                    <h:column>
+                        <!-- column header -->
+                        <f:facet name="header">Title</f:facet>
+                        <!-- row record -->
+                        #{item.title}
+                    </h:column>
 
-					<h:column>
-						<!-- column header -->
-						<f:facet name="header">Title</f:facet>
-						<!-- row record -->
-    				#{item.title}
-    			</h:column>
+                    <h:column>
+                        <f:facet name="header">Posted at</f:facet>
+                        #{item.timestamp}
+                    </h:column>
 
-					<h:column>
-						<f:facet name="header">Posted at</f:facet>
-    				#{item.timestamp}
-    			</h:column>
+                    <h:column>
+                        <f:facet name="header">Action</f:facet>
+                        <h:form>
+                            <h:commandLink action="#{administration.deleteNews(item.id)}">Remove</h:commandLink>
+                            <h:commandLink action="#{administration.editNews(item.id)}">Edit</h:commandLink>
+                        </h:form>
+                    </h:column>
 
-					<h:column>
-						<f:facet name="header">Action</f:facet>
-						<h:link>Remove</h:link>|<h:link>Edit</h:link>
-					</h:column>
+                </h:dataTable>
+            </div>
+            <div class="product_table section">
+                <H2 class="ui header">Product table</H2>
+                <ui:fragment rendered="#{empty products.productList}">
+                    <div class="ui massive negative message">
+                        <p class="center aligned header">No products at the time... Bummer!</p>
+                    </div>
+                </ui:fragment>
+                <h:dataTable value="#{products.productList}" var="product"
+                             styleClass="order-table" headerClass="order-table-header"
+                             rowClasses="order-table-odd-row,order-table-even-row"
+                             rendered="#{not empty products.productList}">
 
-				</h:dataTable>
-			</div>
-			<div class="product_table section">
-				<H2 class="ui header">Product table</H2>
-				<ui:fragment rendered="#{empty products.productList}">
-					<div class="ui massive negative message">
-						<p class="center aligned header">No products at the time... Bummer!</p>
-					</div>
-				</ui:fragment>
-				<h:dataTable value="#{products.productList}" var="product"
-					styleClass="order-table" headerClass="order-table-header"
-					rowClasses="order-table-odd-row,order-table-even-row"
-					rendered="#{not empty products.productList}">
+                    <h:column>
+                        <!-- column header -->
+                        <f:facet name="header">Name</f:facet>
+                        <!-- row record -->
+                        #{product.name}
+                    </h:column>
 
-					<h:column>
-						<!-- column header -->
-						<f:facet name="header">Name</f:facet>
-						<!-- row record -->
-    				#{product.name}
-    			</h:column>
+                    <h:column>
+                        <f:facet name="header">Action</f:facet>
+                        <h:form>
+                            <h:commandLink action="#{administration.deleteProduct(product.id)}">Remove</h:commandLink>
+                            <h:commandLink action="#{administration.editProduct(product.id)}">Edit</h:commandLink>
+                        </h:form>
+                    </h:column>
 
-					<h:column>
-						<f:facet name="header">Action</f:facet>
-						<h:link>Remove</h:link>|<h:link>Edit</h:link>
-					</h:column>
-
-				</h:dataTable>
-			</div>
-		</ui:define>
-		<ui:param name="pageTitle" value="Administration office" />
-	</ui:composition>
+                </h:dataTable>
+            </div>
+        </ui:define>
+        <ui:param name="pageTitle" value="Administration office"/>
+    </ui:composition>
 
 </h:body>
 </html>
