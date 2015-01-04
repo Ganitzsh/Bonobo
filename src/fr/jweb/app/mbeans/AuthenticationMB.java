@@ -88,7 +88,6 @@ public class AuthenticationMB implements Serializable {
 					currentUser.getActualUser().setNewsletter(user.getNewsletter());
 					currentUser.getActualUser().setPasswordHash(DigestUtils.sha1Hex(this.getPassword()));
 					currentUser.getActualUser().setEmail(user.getEmail());
-					currentUser.getActualUser().setInscriptionDate(user.getInscriptionDate());
 					currentUser.getActualUser().setId(user.getId());
 				}
 			}
