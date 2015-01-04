@@ -86,5 +86,25 @@ public class AdministrationMB {
     public String editProduct(int id) {
         return ("edit_product?id=" + id + "&faces-redirect=true");
     }
+    /**
+     * @param id of the review to delete
+     * @return Redirection to the administration panel
+     */
+    public String deleteReview(int id) {
+        try {
+            dbManager.getReviewDao().delete(dbManager.getReviewDao().queryForId(id));
+        } catch (SQLException e) {
+            System.out.println("SQLException while deleting review: " + e.getMessage());
+        }
+        return ("admin?faces-redirect=true");
+    }
+
+    /**
+     * @param id id of the review to edit
+     * @return Redirection to the administration panel
+     */
+    public String editReview(int id) {
+        return ("edit_review?id=" + id + "&faces-redirect=true");
+    }
 
 }

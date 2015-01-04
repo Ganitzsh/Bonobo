@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
       xmlns:ui="http://java.sun.com/jsf/facelets">
 <h:body>
     <ui:composition template="template/common/commonLayout.xhtml">
@@ -33,6 +34,40 @@
                     </div>
                 </ui:fragment>
             </div>
+            <div class="user_table section">
+                <H2 class="ui header">Reviews for this product : </H2>
+                <ui:fragment rendered="#{empty edit_product.reviews}">
+                    <div class="ui massive negative message">
+                        <p class="center aligned header">No review for this product ... Bummer!</p>
+                    </div>
+                </ui:fragment>
+                <h:dataTable value="#{edit_product.reviews}" var="review"
+                             styleClass="order-table ui stripped celled table" headerClass="order-table-header three wide"
+                             rowClasses="order-table-odd-row,order-table-even-row"
+                             rendered="#{not empty edit_product.reviews}">
+
+                    <h:column styleClass="">
+                        <f:facet styleClass="three wide" name="header">Content</f:facet>
+                        #{review.review}
+                    </h:column>
+
+                    <h:column>
+                        <f:facet styleClass="three wide" name="header">Rating</f:facet>
+                        #{review.rating}
+                    </h:column>
+
+                    <h:column>
+                        <f:facet styleClass="three wide" name="header">Action</f:facet>
+                        <div style="text-align: right; width: 100%;">
+                            <h:form>
+                                <h:commandLink styleClass="ui negative button" action="#{administration.deleteReview(review.id)}">Remove</h:commandLink>
+                                <h:commandLink styleClass="ui positive button" action="#{administration.editReview(review.id)}">Edit</h:commandLink>
+                            </h:form>
+                        </div>
+                    </h:column>
+                </h:dataTable>
+            </div>
+
         </ui:define>
     </ui:composition>
 

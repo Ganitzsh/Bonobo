@@ -43,7 +43,6 @@ public class EditNewsMB {
 
     /**
      * Update the News table with news informations
-     *
      * @return Redirection to the administration panel
      */
     public String updateNews() {

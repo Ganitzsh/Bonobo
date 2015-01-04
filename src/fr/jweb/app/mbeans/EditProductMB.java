@@ -1,6 +1,7 @@
 package fr.jweb.app.mbeans;
 
 import fr.jweb.app.entities.Product;
+import fr.jweb.app.entities.Review;
 
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
@@ -8,6 +9,9 @@ import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.ViewScoped;
 import javax.faces.context.FacesContext;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -21,6 +25,8 @@ public class EditProductMB {
     private DatabaseManagerMB dbManager;
 
     private Product oldProduct;
+    private List<Review> reviews = new ArrayList<Review>();
+
     private String name;
     private String description;
     private float price;
@@ -34,6 +40,11 @@ public class EditProductMB {
         Map<String, String> requestParams = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap();
         try {
             oldProduct = dbManager.getProductDao().queryForId(Integer.parseInt(requestParams.get("id")));
+
+            Map<String, Object> map = new HashMap<>();
+            map.put("productId", requestParams.get("id"));
+            reviews = dbManager.getReviewDao().queryForFieldValues(map);
+
             name = oldProduct.getName();
             description = oldProduct.getDescription();
             price = oldProduct.getPrice();
@@ -58,6 +69,14 @@ public class EditProductMB {
             e.printStackTrace();
         }
         return ("admin?faces-redirect=true");
+    }
+
+    public List<Review> getReviews() {
+        return reviews;
+    }
+
+    public void setReviews(List<Review> reviews) {
+        this.reviews = reviews;
     }
 
     public DatabaseManagerMB getDbManager() {

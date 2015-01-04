@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:body>
+    <ui:composition template="template/common/commonLayout.xhtml">
+        <ui:param name="pageTitle" value="Edit News" />
+        <ui:define name="content">
+            <div id="edit_user_form">
+                <ui:fragment rendered="#{currentUser.loggedIn == true}">
+                    <div class="ui form">
+                        <h:form id="signup_form">
+                            <div class="two fields">
+                                <div class="eight wide field">
+                                    <label>Feeling</label>
+                                    <h:selectOneMenu value="#{edit_review.rating}" styleClass="ui dropdown">
+                                        <f:selectItem itemValue="1" itemLabel="Nul" />
+                                        <f:selectItem itemValue="2" itemLabel="Presque nul" />
+                                        <f:selectItem itemValue="3" itemLabel="Pas terrible" />
+                                        <f:selectItem itemValue="4" itemLabel="Sympa" />
+                                        <f:selectItem itemValue="5" itemLabel="Super uber cool!" />
+                                    </h:selectOneMenu>
+                                </div>
+                            </div>
+                            <div class="required field">
+                                <label>Title</label>
+                                <div class="field">
+                                    <h:inputTextarea id="input_suername" value="#{edit_review.reviewContent}" />
+                                </div>
+                            </div>
+                            <h:commandButton value="Submit" type="submit" action="#{edit_review.updateReview()}" styleClass="ui primary button" partialSubmit="true" ajax="true"/>
+                        </h:form>
+                    </div>
+                </ui:fragment>
+            </div>
+        </ui:define>
+    </ui:composition>
+
+</h:body>
+</html>
