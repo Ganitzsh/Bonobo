@@ -27,9 +27,7 @@
 					</ui:fragment>
 					<ui:fragment rendered="#{currentUser.loggedIn == true}">
 						<div class="item">
-							<h:form>
-								<h:commandButton value="Deconnexion" type="submit" action="#{authentication.logoutUser()}" styleClass="ui purple button" partialSubmit="true" ajax="true"/>
-							</h:form>
+							<a class="ui blue button" onclick="$('#log_out_modal').modal('show');">Log out</a>
 						</div>
 					</ui:fragment>
 					<div class="item">

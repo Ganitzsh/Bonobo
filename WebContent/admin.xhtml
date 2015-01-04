@@ -15,33 +15,35 @@
                     </div>
                 </ui:fragment>
                 <h:dataTable value="#{users.userList}" var="user"
-                             styleClass="order-table" headerClass="order-table-header"
+                             styleClass="order-table ui stripped celled table" headerClass="order-table-header four wide"
                              rowClasses="order-table-odd-row,order-table-even-row"
                              rendered="#{not empty users.userList}">
 
-                    <h:column>
+                    <h:column styleClass="">
                         <!-- column header -->
-                        <f:facet name="header">Username</f:facet>
+                        <f:facet styleClass="four wide" name="header">Username</f:facet>
                         <!-- row record -->
                         #{user.username}
                     </h:column>
 
                     <h:column>
-                        <f:facet name="header">E-Mail</f:facet>
+                        <f:facet styleClass="four wide" name="header">E-Mail</f:facet>
                         #{user.email}
                     </h:column>
 
                     <h:column>
-                        <f:facet name="header">Admin</f:facet>
+                        <f:facet styleClass="four wide" name="header">Admin</f:facet>
                         #{user.admin}
                     </h:column>
 
                     <h:column>
-                        <f:facet name="header">Action</f:facet>
+                        <f:facet styleClass="four wide" name="header">Action</f:facet>
+                        <div style="text-align: right; width: 100%;">
                         <h:form>
-                            <h:commandLink action="#{administration.deleteUser(user.id)}">Remove</h:commandLink>
-                            <h:commandLink action="#{administration.editUser(user.id)}">Edit</h:commandLink>
+                            <h:commandLink styleClass="ui negative button" action="#{administration.deleteUser(user.id)}">Remove</h:commandLink>
+                            <h:commandLink styleClass="ui positive button" action="#{administration.editUser(user.id)}">Edit</h:commandLink>
                         </h:form>
+                        </div>
                     </h:column>
                 </h:dataTable>
             </div>
@@ -53,7 +55,7 @@
                     </div>
                 </ui:fragment>
                 <h:dataTable value="#{news.newsList}" var="item"
-                             styleClass="order-table" headerClass="order-table-header"
+                             styleClass="order-table ui two column stripped celled table" headerClass="order-table-header"
                              rowClasses="order-table-odd-row,order-table-even-row"
                              rendered="#{not empty news.newsList}">
 
@@ -66,10 +68,12 @@
 
                     <h:column>
                         <f:facet name="header">Action</f:facet>
+                        <div style="text-align: right; width: 100%;">
                         <h:form>
-                            <h:commandLink action="#{administration.deleteNews(item.id)}">Remove</h:commandLink>
-                            <h:commandLink action="#{administration.editNews(item.id)}">Edit</h:commandLink>
+                            <h:commandLink styleClass="ui negative button" action="#{administration.deleteNews(item.id)}">Remove</h:commandLink>
+                            <h:commandLink styleClass="ui positive button" action="#{administration.editNews(item.id)}">Edit</h:commandLink>
                         </h:form>
+                        </div>
                     </h:column>
 
                 </h:dataTable>
@@ -82,7 +86,7 @@
                     </div>
                 </ui:fragment>
                 <h:dataTable value="#{products.productList}" var="product"
-                             styleClass="order-table" headerClass="order-table-header"
+                             styleClass="order-table ui two column stripped celled table" headerClass="order-table-header"
                              rowClasses="order-table-odd-row,order-table-even-row"
                              rendered="#{not empty products.productList}">
 
@@ -95,10 +99,12 @@
 
                     <h:column>
                         <f:facet name="header">Action</f:facet>
+                        <div style="text-align: right; width: 100%;">
                         <h:form>
-                            <h:commandLink action="#{administration.deleteProduct(product.id)}">Remove</h:commandLink>
-                            <h:commandLink action="#{administration.editProduct(product.id)}">Edit</h:commandLink>
+                            <h:commandLink styleClass="ui right aligned negative button" action="#{administration.deleteProduct(product.id)}">Remove</h:commandLink>
+                            <h:commandLink styleClass="ui positive button" action="#{administration.editProduct(product.id)}">Edit</h:commandLink>
                         </h:form>
+                        </div>
                     </h:column>
 
                 </h:dataTable>

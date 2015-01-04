@@ -23,14 +23,17 @@
 	   						<div class="content">
 				    			<span class="header">#{item.name}</span>
 				    			<div class="meta">
-				    				<p>Price #{item.price}</p>
+				    				<p>Price <span style="font-weight: bold; font-size: 15px;">#{item.price} €</span></p>
 				    			</div>
-				    			<div class="description">
+				    			<div class="ui segment">
 				    				#{item.description}
-				    			</div><br/>
-				    			<h:form>
-				    			<h:commandButton action="#{products.goToProductDescription(item.id)}" styleClass="ui right floated primary button" value="More" /> 
-								</h:form>
+				    			</div>
+				    			<div class="ui divider"></div>
+				    			<div class="extra">
+				    				<h:form>
+					    				<h:commandButton action="#{products.goToProductDescription(item.id)}" styleClass="ui right floated primary button" value="More" /> 
+									</h:form>
+				    			</div>
 							</div>
 						</div>
 					</ui:repeat>

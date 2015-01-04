@@ -59,15 +59,17 @@
 			<ui:fragment rendered="#{not empty productPage.reviews}">
 				<div class="ui items">
 					<ui:repeat value="#{productPage.reviews}" var="item">
-						<div class="content">
-				    			<h4 class="header">#{item.username}</h4>
-				    			<div class="meta">
-				    				<p>Note: #{item.rating}</p>
-				    			</div>
-				    			<div class="description">
-				    				#{item.review}
-				    			</div>
+						<div class="item">
+							<div class="content">
+								<span class="header">#{item.username}</span>
 							</div>
+							<div class="meta">
+								<p>Note: <span style="font-weight: bold; font-size: 15px;">#{item.rating}</span></p>
+							</div>
+							<div class="ui segment">
+								#{item.review}
+							</div>
+						</div>
 					</ui:repeat>
 				</div>
 			</ui:fragment>

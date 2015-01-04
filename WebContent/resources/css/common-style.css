@@ -1,9 +1,22 @@
+html,
+body {
+margin:0;
+padding:0;
+height:100%;
+}
+
 #content
 {
 	min-height: 200px;
 	margin: 0 auto;
-	width: 80%;
+	width: 60%;
 	padding-top: 20px;
+	padding-bottom:120px;
+}
+
+#page {
+	min-height:100%;
+	position:relative;
 }
 
 #header
@@ -23,6 +36,9 @@
 	text-align: center;
 	font-size: 25px;
 	margin-top: 20px;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
 }
 
 #footer p
@@ -39,4 +55,15 @@
 {
 	padding-top: 10px;
 	padding-bottom: 20px;
+}
+
+#product_list .item
+{
+	height: 200px;
+}
+
+#product_list .segment
+{
+	height: 70px;
+	overflow-y: auto;
 }

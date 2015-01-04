@@ -15,7 +15,6 @@
     <h:body>
  
 		<div id="page">
-		
 			<ui:fragment rendered="#{currentUser.loggedIn == true and currentUser.actualUser.admin == true}">
 				<div class="ui modal" id="write_news_modal">
 				  <i class="close icon"></i>
@@ -79,6 +78,26 @@
 				      </div>
 				    </div>
 				  </div>
+				</div>
+			</ui:fragment>
+			
+			<ui:fragment rendered="#{currentUser.loggedIn == true}">
+				<div class="ui modal" id="log_out_modal">
+				  <i class="close icon"></i>
+				  <div class="header">
+				    Logging out
+				  </div>
+				  <div class="content">
+				    <div class="description">
+				     	<h3 class="ui center aligned header">Are you sure you want to log out?</h3>
+				     	<div class="ui form">
+						  <h:form>
+							  <h:commandLink value="Log Out" type="submit" action="#{authentication.logoutUser()}" styleClass="ui positive right icon button" partialSubmit="true" ajax="true"/>
+						  </h:form>
+				 		</div>
+				    </div>
+				  </div>
+				  
 				</div>
 			</ui:fragment>
 			

@@ -16,10 +16,11 @@
 				<div class="ui items">
 					<ui:repeat value="#{news.newsList}" var="item" rendered="#{not empty news.newsList}">
 						<div class="item">
-			    			<h2 class="header">#{item.title}</h2><br />
-			    			<div class="description">
-			    				#{item.content}
-			    			</div>
+							<div class="content">
+				    			<span class="header">#{item.title}</span>
+				    			<div class="ui divider"></div>
+				    			<div class="ui segment">#{item.content}</div>
+							</div>
 						</div>
 					</ui:repeat>
 				</div>
