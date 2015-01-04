@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:body>
+    <ui:composition template="template/common/commonLayout.xhtml">
+        <ui:param name="pageTitle" value="Edit User" />
+        <ui:define name="content">
+            <div id="edit_user_form">
+                <ui:fragment rendered="#{currentUser.loggedIn == true}">
+                    <div class="ui form">
+                        <h:form id="signup_form">
+                            <div class="required field">
+                                <label>Username</label>
+                                <div class="field">
+                                    <h:inputText id="input_suername" value="#{edit_user.username}" />
+                                </div>
+                            </div>
+                            <div class="required field">
+                                <label>E-Mail</label>
+                                <div class="field">
+                                    <h:inputText id="input_email" value="#{edit_user.email}" />
+                                </div>
+                            </div>
+                            <div class="inline field">
+                                <div class="ui checkbox">
+                                    <h:selectBooleanCheckbox id="newsletter_chkbx" value="#{edit_user.newsletter}"/>
+                                    <label>Keep me posted about Bonobo2k15!</label>
+                                </div>
+                            </div>
+                            <h:commandButton value="Submit" type="submit" action="#{edit_user.updateUser()}" styleClass="ui primary button" partialSubmit="true" ajax="true"/>
+                        </h:form>
+                    </div>
+                </ui:fragment>
+            </div>
+        </ui:define>
+    </ui:composition>
+
+</h:body>
+</html>
