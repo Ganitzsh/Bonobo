@@ -11,6 +11,7 @@ import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.ViewScoped;
+import javax.faces.context.FacesContext;
 
 import fr.jweb.app.entities.Product;
 import fr.jweb.app.entities.Review;
@@ -32,6 +33,8 @@ public class ProductPageMB implements Serializable {
     private CurrentProductMB currentProduct;
 
     private Product product;
+    private String	title;
+    private Boolean alreadyPosted = false;
     private List<Review> reviews = new ArrayList<Review>();
 
     public DatabaseManagerMB getDbManager() {
@@ -75,13 +78,27 @@ public class ProductPageMB implements Serializable {
      */
     @PostConstruct
     public void init() {
-        product = currentProduct.getActualProduct();
+    	Map<String, String> requestParams = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap();
+    	
         try {
-            Map<String, Object> map = new HashMap<>();
-            map.put("productId", currentProduct.getActualProduct().getId());
+			product = dbManager.getProductDao().queryForId(Integer.parseInt(requestParams.get("id")));
+			title = (product == null) ? "No product found" : product.getName();
+			Map<String, Object> map = new HashMap<>();
+            map.put("productId", product.getId());
             reviews = dbManager.getReviewDao().queryForFieldValues(map);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+            System.out.println("Number of reviews: " + reviews.size());
+		} catch (NumberFormatException e1) {
+			e1.printStackTrace();
+		} catch (SQLException e1) {
+			e1.printStackTrace();
+		}
     }
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
 }

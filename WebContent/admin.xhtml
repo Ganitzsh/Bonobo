@@ -7,6 +7,7 @@
 
     <ui:composition template="template/common/commonLayout.xhtml">
         <ui:define name="content">
+        	<ui:fragment rendered="#{currentUser.loggedIn == true and currentUser.actualUser.admin == true}">
             <div class="user_table section">
                 <H2 class="ui header">User table</H2>
                 <ui:fragment rendered="#{empty users.userList}">
@@ -109,6 +110,12 @@
 
                 </h:dataTable>
             </div>
+            </ui:fragment>
+            <ui:fragment rendered="#{currentUser.actualUser.admin == false or currentAdmin.loggedIn == false}">
+            		<div class="ui massive negative message">
+                        <p class="center aligned header">You can't be there!</p>
+                    </div>
+            </ui:fragment>
         </ui:define>
         <ui:param name="pageTitle" value="Administration office"/>
     </ui:composition>

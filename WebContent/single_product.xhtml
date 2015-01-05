@@ -5,8 +5,14 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets">
 <h:body>
 	<ui:composition template="template/common/commonLayout.xhtml">
-		<ui:param name="pageTitle" value="#{productPage.product.name}" />
+		<ui:param name="pageTitle" value="#{productPage.title}" />
 		<ui:define name="content">
+		<ui:fragment rendered="#{productPage.product == null}">
+			<div class="ui massive negative message">
+				<p class="center aligned header">Could not find the product</p>
+            </div>
+		</ui:fragment>
+		<ui:fragment rendered="#{productPage.product != null}">
 		<h1 class="ui header">#{productPage.product.name}</h1>
 		<p style="text-align: center;"><h:graphicImage library="images" name="test.png"/></p>
 		<h3 class="ui right aligned header">Price: #{productPage.product.price} €</h3>
@@ -74,6 +80,7 @@
 				</div>
 			</ui:fragment>
 		</div>
+		</ui:fragment>
 		</ui:define>
 	</ui:composition>
 	

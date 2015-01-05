@@ -64,12 +64,12 @@ public class ProductListMB implements Serializable {
      * @return Redirection to the product reading page
      */
     public String goToProductDescription(long id) {
-        Product tmp = getProductById(id);
-        currentProduct.getActualProduct().setName(tmp.getName());
-        currentProduct.getActualProduct().setDescription(tmp.getDescription());
-        currentProduct.getActualProduct().setId(tmp.getId());
-        currentProduct.getActualProduct().setPrice(tmp.getPrice());
-        return ("single_product?faces-redirect=true");
+//        Product tmp = getProductById(id);
+//        currentProduct.getActualProduct().setName(tmp.getName());
+//        currentProduct.getActualProduct().setDescription(tmp.getDescription());
+//        currentProduct.getActualProduct().setId(tmp.getId());
+//        currentProduct.getActualProduct().setPrice(tmp.getPrice());
+        return ("single_product?faces-redirect=true&id=" + id);
     }
 
 
