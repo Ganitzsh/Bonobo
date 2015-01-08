@@ -87,6 +87,8 @@ public class OrderMB implements Serializable {
 			tmp.setQuantity(quantity);
 			tmp.setAddress(address);
 			product.setQuantity(product.getQuantity() - quantity);
+			String[] to = {currentUser.getActualUser().getEmail()};
+			dbManager.getMailSender().sendMail("Order" , "You ordered " + quantity + " units of " + product.getName(), to);
 			try {
 				dbManager.getOrderDao().create(tmp);
 				dbManager.getProductDao().update(product);
