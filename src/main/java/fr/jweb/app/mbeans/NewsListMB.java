@@ -36,7 +36,6 @@ public class NewsListMB implements Serializable {
     }
 
     public NewsListMB() {
-
     }
 
     @PostConstruct
