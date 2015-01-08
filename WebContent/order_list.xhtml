@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:body>
+
+    <ui:composition template="template/common/commonLayout.xhtml">
+    	<ui:param name="pageTitle" value="Your orders" />
+        <ui:define name="content">
+        	<ui:fragment rendered="#{currentUser.loggedIn == false}">
+        		<div class="ui massive negative message">
+					<p class="center aligned header">You must log in to access that page.</p>
+				</div>
+        	</ui:fragment>
+        	<ui:fragment rendered="#{currentUser.loggedIn == true}">
+            <div class="order_table section">
+                <H2 class="ui header">My orders</H2>
+                <ui:fragment rendered="#{empty users.userList}">
+                    <div class="ui massive negative message">
+                        <p class="center aligned header">No orders</p>
+                    </div>
+                </ui:fragment>
+                <h:dataTable value="#{orderList.list}" var="item"
+                             styleClass="order-table ui stripped celled table" headerClass="order-table-header four wide"
+                             rowClasses="order-table-odd-row,order-table-even-row"
+                             rendered="#{not empty orderList.list}">
+
+                    <h:column styleClass="">
+                        <!-- column header -->
+                        <f:facet styleClass="four wide" name="header">Shipment Address</f:facet>
+                        <!-- row record -->
+                        #{item.address}
+                    </h:column>
+
+                    <h:column>
+                        <f:facet styleClass="four wide" name="header">Product</f:facet>
+                        #{item.product.name}
+                    </h:column>
+
+                    <h:column>
+                        <f:facet styleClass="four wide" name="header">Quantity</f:facet>
+                        #{item.quantity}
+                    </h:column>
+
+                    <h:column>
+                        <f:facet styleClass="four wide" name="header">ID</f:facet>
+                        #{item.id}
+                    </h:column>
+                </h:dataTable>
+            </div>
+            </ui:fragment>
+            </ui:define>
+            </ui:composition>
+            </h:body>
+            </html>

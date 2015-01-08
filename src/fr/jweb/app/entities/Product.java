@@ -18,6 +18,8 @@ public class Product {
     private String description;
     @DatabaseField
     private float price;
+    @DatabaseField
+    private int quantity;
 
 
     /**
@@ -57,4 +59,13 @@ public class Product {
     public void setPrice(float price) {
         this.price = price;
     }
+
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+    
 }

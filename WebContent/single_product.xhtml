@@ -16,6 +16,7 @@
 		<h1 class="ui header">#{productPage.product.name}</h1>
 		<p style="text-align: center;"><h:graphicImage styleClass="ui centered medium image" library="images" name="test.png"/></p>
 		<h3 class="ui right aligned header">Price: #{productPage.product.price} €</h3>
+		<h3 class="ui right aligned header">Quantity: #{productPage.product.quantity} units</h3>
 		<div class="ui segment">
 			<div class="meta">
 				<p class="ui header">Description</p>
@@ -24,7 +25,17 @@
 				#{productPage.product.description}
 			</div>
 		</div>
-		
+		<ui:fragment rendered="#{currentUser.loggedIn == true and productPage.product.quantity != 0}">
+			<h:form>
+				<h:commandButton value="Order" type="submit" action="#{productPage.order(productPage.product.id)}" styleClass="ui primary button" partialSubmit="true" ajax="true"/>
+			</h:form>
+			<br/>
+		</ui:fragment>
+		<ui:fragment rendered="#{currentUser.loggedIn == true and productPage.product.quantity == 0}">
+			<div class="ui massive negative message">
+				<p class="center aligned header">Product not available.</p>
+            </div>
+		</ui:fragment>
 		<div id="product_page">
 			<ui:fragment rendered="#{productPage.alreadyPosted == true}">
 				<h4 class="ui dividing header">Your review</h4>
@@ -62,7 +73,7 @@
 					  		<label>Comment</label>
 						    <h:inputTextarea value="#{reviewPoster.reviewContent}" styleClass="ui input"/>
 					  	</div>
-					  	<h:commandButton value="Envoyer" type="submit" action="#{reviewPoster.newReview(productPage.product)}" styleClass="ui primary button" partialSubmit="true" ajax="true"/>
+					  	<h:commandButton value="Submit" type="submit" action="#{reviewPoster.newReview(productPage.product)}" styleClass="ui primary button" partialSubmit="true" ajax="true"/>
 					</div>
 				</h:form>
 			</ui:fragment>
@@ -73,9 +84,14 @@
 				</div>
 			</ui:fragment>
 			<h4 class="ui dividing header">User reviews</h4>
-			<ui:fragment rendered="#{empty productPage.reviews}">
+			<ui:fragment rendered="#{empty productPage.reviews and productPage.alreadyPosted == false}">
 				<div class="ui blue message">
 					<h2 class="header">There are no reviews for that product yet.</h2>
+				</div>
+			</ui:fragment>
+			<ui:fragment rendered="#{empty productPage.reviews and productPage.alreadyPosted == true}">
+				<div class="ui blue message">
+					<h2 class="header">There are no other reviews for that product yet.</h2>
 				</div>
 			</ui:fragment>
 			<ui:fragment rendered="#{not empty productPage.reviews}">

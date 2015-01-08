@@ -10,7 +10,7 @@
 		<div id="product_list">
 			<ui:fragment rendered="#{empty products.productList}">
 				<div class="ui massive negative message">
-					<p class="center aligned header">No products available yet</p>
+					<p class="center aligned header">Not available yet</p>
 				</div>
 			</ui:fragment>
 			<ui:fragment rendered="#{not empty products.productList}">
@@ -24,6 +24,9 @@
 				    			<span class="header">#{item.name}</span>
 				    			<div class="meta">
 				    				<p>Price <span style="font-weight: bold; font-size: 15px;">#{item.price} €</span></p>
+				    			</div>
+				    			<div class="meta">
+				    				<p>Quantity:  <span style="font-weight: bold; font-size: 15px;">#{item.quantity}</span></p>
 				    			</div>
 				    			<div class="ui segment">
 				    				#{item.description}

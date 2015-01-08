@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:body>
+    <ui:composition template="template/common/commonLayout.xhtml">
+        <ui:param name="pageTitle" value="#{order.title}" />
+        <ui:define name="content">
+            <div id="order_form">
+            	<ui:fragment rendered="#{currentUser.loggedIn == false}">
+            		<div class="ui negative message">
+						<h2 class="header">You are not allowed to be there.</h2>
+					</div>
+            	</ui:fragment>
+                <ui:fragment rendered="#{currentUser.loggedIn == true}">
+                    <div class="ui form">
+                        <h:form>
+                       	 	<div class="field">
+                                <label>#{order.product.name}</label>
+                            </div>
+                            <div class="required field">
+                                <label>Shipment address</label>
+                                <div class="field">
+                                    <h:inputText id="input_address" value="#{order.address}" />
+                                </div>
+                            </div>
+                            <div class="required field">
+                                <label>Quantity</label>
+                                <div class="field">
+                                    <h:inputText id="input_quantity" value="#{order.quantity}" />
+                                </div>
+                            </div>
+                            <div class="field">
+						  		<label>Shipment provider</label>
+						  		<h:selectOneMenu value="#{order.shipment}" styleClass="ui dropdown">
+								   	<f:selectItem itemValue="1" itemLabel="UPS (24h)" />
+								   	<f:selectItem itemValue="2" itemLabel="Chronopost (2 to 3 open days)" />
+								</h:selectOneMenu>
+						  	</div>
+                            <h:commandButton value="Confirm order" type="submit" action="#{order.newOrder()}" styleClass="ui primary button" partialSubmit="true" ajax="true"/>
+                        </h:form>
+                    </div>
+                </ui:fragment>
+            </div>
+        </ui:define>
+    </ui:composition>
+
+</h:body>
+</html>

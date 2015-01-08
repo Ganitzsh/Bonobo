@@ -4,6 +4,7 @@ import com.j256.ormlite.jdbc.JdbcConnectionSource;
 import com.j256.ormlite.support.ConnectionSource;
 
 import fr.jweb.app.entities.News;
+import fr.jweb.app.entities.Order;
 import fr.jweb.app.entities.Product;
 import fr.jweb.app.entities.Review;
 
@@ -40,7 +41,8 @@ public class DatabaseManagerMB implements Serializable {
     private Dao<User, Integer> userDao;
     private Dao<News, Integer> newsDao;
     private Dao<Product, Integer> productDao;
-
+    private Dao<Order, Integer> orderDao;
+    
     private ConnectionSource conn;
 
     /**
@@ -55,6 +57,7 @@ public class DatabaseManagerMB implements Serializable {
             userDao = DaoManager.createDao(conn, User.class);
             newsDao = DaoManager.createDao(conn, News.class);
             productDao = DaoManager.createDao(conn, Product.class);
+            orderDao = DaoManager.createDao(conn, Order.class);
             logger.info("Database connection established successfully");
         } catch (SQLException ex) {
         	logger.error("SQLException: " + ex.getMessage());
@@ -63,7 +66,17 @@ public class DatabaseManagerMB implements Serializable {
         }
     }
 
-    public static String getUrl() {
+    public Dao<Order, Integer> getOrderDao() {
+		return orderDao;
+	}
+
+
+	public void setOrderDao(Dao<Order, Integer> orderDao) {
+		this.orderDao = orderDao;
+	}
+
+
+	public static String getUrl() {
         return URL;
     }
 

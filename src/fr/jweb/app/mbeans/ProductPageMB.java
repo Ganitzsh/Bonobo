@@ -105,6 +105,10 @@ public class ProductPageMB implements Serializable {
     	}
     }
 
+    public String order(long id) {
+    	return ("order?faces-redirect=true&id=" + id);
+    }
+    
 	public Review getCurrentUserReview() {
 		return currentUserReview;
 	}
