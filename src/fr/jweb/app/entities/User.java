@@ -1,5 +1,7 @@
 package fr.jweb.app.entities;
 
+import java.io.Serializable;
+
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
@@ -9,9 +11,10 @@ import com.j256.ormlite.table.DatabaseTable;
  * Contains a username, an email, a password (crypted with sha1)
  */
 @DatabaseTable(tableName = "user")
-public class User {
+public class User implements Serializable {
 
-    @DatabaseField(id = true)
+	private static final long serialVersionUID = 1L;
+	@DatabaseField(id = true)
     private long id;
     @DatabaseField
     private String username;

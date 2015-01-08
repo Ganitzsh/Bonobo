@@ -20,6 +20,11 @@
 				    			<span class="header">#{item.title}</span>
 				    			<div class="ui divider"></div>
 				    			<div class="ui segment">#{item.content}</div>
+				    			<ui:fragment rendered="#{currentUser.actualUser.admin == true}">
+								<h:form>
+		                            <h:commandLink styleClass="ui negative button" action="#{news.deleteNews(item.id)}">Remove</h:commandLink>
+		                        </h:form>
+                        		</ui:fragment>
 							</div>
 						</div>
 					</ui:repeat>

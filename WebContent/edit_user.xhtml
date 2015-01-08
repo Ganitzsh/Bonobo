@@ -27,6 +27,10 @@
                                     <h:selectBooleanCheckbox id="newsletter_chkbx" value="#{edit_user.newsletter}"/>
                                     <label>Keep me posted about Bonobo2k15!</label>
                                 </div>
+                                <div class="ui checkbox">
+                                    <h:selectBooleanCheckbox id="admin_chkbx" value="#{edit_user.admin}"/>
+                                    <label>Is admin</label>
+                                </div>
                             </div>
                             <h:commandButton value="Submit" type="submit" action="#{edit_user.updateUser()}" styleClass="ui primary button" partialSubmit="true" ajax="true"/>
                         </h:form>

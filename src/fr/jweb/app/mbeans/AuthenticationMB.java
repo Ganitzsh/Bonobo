@@ -28,7 +28,16 @@ public class AuthenticationMB implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private	String	email;
 	private String	password;
+	private Boolean	failed = false;
 	List<User> list = null;
+
+	public Boolean getFailed() {
+		return failed;
+	}
+
+	public void setFailed(Boolean failed) {
+		this.failed = failed;
+	}
 
 	@ManagedProperty(value="#{dbManager}")
 	private DatabaseManagerMB dbManager;
@@ -89,8 +98,11 @@ public class AuthenticationMB implements Serializable {
 					currentUser.getActualUser().setPasswordHash(DigestUtils.sha1Hex(this.getPassword()));
 					currentUser.getActualUser().setEmail(user.getEmail());
 					currentUser.getActualUser().setId(user.getId());
+					failed = false;
 				}
 			}
+			if (!currentUser.getLoggedIn())
+				failed = true;
 		}
 		catch (SQLException e) {
 			System.out.println("SQLException while getting users: " + e.getMessage());

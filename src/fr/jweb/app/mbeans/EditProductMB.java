@@ -40,11 +40,9 @@ public class EditProductMB {
         Map<String, String> requestParams = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap();
         try {
             oldProduct = dbManager.getProductDao().queryForId(Integer.parseInt(requestParams.get("id")));
-
             Map<String, Object> map = new HashMap<>();
             map.put("productId", requestParams.get("id"));
-            reviews = dbManager.getReviewDao().queryForFieldValues(map);
-
+            reviews = dbManager.getReviewDao().queryBuilder().where().eq("product_id", oldProduct.getId()).query();
             name = oldProduct.getName();
             description = oldProduct.getDescription();
             price = oldProduct.getPrice();

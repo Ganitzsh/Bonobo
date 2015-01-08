@@ -48,6 +48,16 @@ public class NewsListMB implements Serializable {
         }
     }
 
+    public String deleteNews(long id) {
+    	try {
+			dbManager.getNewsDao().deleteById((int) id);
+		} catch (SQLException e) {
+			e.printStackTrace();
+			System.out.println("SQLException: Could not remove news with id " + id);
+		}
+    	return ("index?faces-redirect=true");
+    }
+    
     public List<News> getNewsList() {
         return newsList;
     }

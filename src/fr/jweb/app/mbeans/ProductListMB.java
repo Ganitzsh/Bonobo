@@ -25,9 +25,6 @@ public class ProductListMB implements Serializable {
     @ManagedProperty(value = "#{dbManager}")
     private DatabaseManagerMB dbManager;
 
-    @ManagedProperty(value = "#{currentProduct}")
-    private CurrentProductMB currentProduct;
-
     private List<Product> productList = new ArrayList<Product>();
 
     public ProductListMB() {
@@ -64,21 +61,7 @@ public class ProductListMB implements Serializable {
      * @return Redirection to the product reading page
      */
     public String goToProductDescription(long id) {
-//        Product tmp = getProductById(id);
-//        currentProduct.getActualProduct().setName(tmp.getName());
-//        currentProduct.getActualProduct().setDescription(tmp.getDescription());
-//        currentProduct.getActualProduct().setId(tmp.getId());
-//        currentProduct.getActualProduct().setPrice(tmp.getPrice());
         return ("single_product?faces-redirect=true&id=" + id);
-    }
-
-
-    public CurrentProductMB getCurrentProduct() {
-        return currentProduct;
-    }
-
-    public void setCurrentProduct(CurrentProductMB currentProduct) {
-        this.currentProduct = currentProduct;
     }
 
     /**

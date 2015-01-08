@@ -25,8 +25,9 @@ public class EditUserMB {
     private String email;
     private String username;
     private Boolean newsletter;
-
-    /**
+    private Boolean admin;
+    
+	/**
      * Initialize the bean
      * Get the id of the User to edit in the url
      */
@@ -38,11 +39,20 @@ public class EditUserMB {
             email = oldUser.getEmail();
             username = oldUser.getUsername();
             newsletter = oldUser.getNewsletter();
+            admin = oldUser.getAdmin();
         }
         catch (SQLException e) {
             System.out.println("SQLException while getting user: " + e.getMessage());
         }
     }
+    
+    public Boolean getAdmin() {
+		return admin;
+	}
+	public void setAdmin(Boolean admin) {
+		this.admin = admin;
+	}
+	
     /**
      * Update the Products table with product informations
      *
@@ -53,6 +63,7 @@ public class EditUserMB {
             oldUser.setUsername(this.getUsername());
             oldUser.setEmail(this.getUsername());
             oldUser.setNewsletter(this.getNewsletter());
+            oldUser.setAdmin(this.admin);
             dbManager.getUserDao().update(oldUser);
         }
         catch (SQLException e) {

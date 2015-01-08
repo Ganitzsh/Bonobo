@@ -105,6 +105,11 @@
 		    <div id="header">
 			<ui:insert name="header" >
 			  <ui:include src="/template/common/commonHeader.xhtml" />
+			  <ui:fragment rendered="#{authentication.failed == true}">
+				<div class="ui massive negative message">
+					<p class="center aligned header">Invalid e-mail or password</p>
+	            </div>
+			</ui:fragment>
 			</ui:insert>
 		    </div>
 	 

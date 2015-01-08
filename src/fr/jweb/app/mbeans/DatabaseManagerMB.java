@@ -15,8 +15,10 @@ import com.j256.ormlite.dao.Dao;
 
 import fr.jweb.app.entities.User;
 
+import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
+
+import org.apache.log4j.Logger;
 
 /**
  * DatabaseManager ManagedBean
@@ -24,14 +26,15 @@ import javax.faces.bean.SessionScoped;
  * Contain the DAO for each entities : News, Product, Review, User
  */
 @ManagedBean(name = "dbManager")
-@SessionScoped
+@ApplicationScoped
 public class DatabaseManagerMB implements Serializable {
 
     private static final long serialVersionUID = 1L;
+    private static final Logger logger = Logger.getLogger(DatabaseManagerMB.class);
 
-    private final static String URL = "jdbc:mysql://localhost:8889/jweb";
+    private final static String URL = "jdbc:mysql://localhost/jweb";
     private final static String USER = "root";
-    private final static String PASS = "root";
+    private final static String PASS = null;
 
     private Dao<Review, Integer> reviewDao;
     private Dao<User, Integer> userDao;
@@ -52,10 +55,11 @@ public class DatabaseManagerMB implements Serializable {
             userDao = DaoManager.createDao(conn, User.class);
             newsDao = DaoManager.createDao(conn, News.class);
             productDao = DaoManager.createDao(conn, Product.class);
+            logger.info("Database connection established successfully");
         } catch (SQLException ex) {
-            System.out.println("SQLException: " + ex.getMessage());
-            System.out.println("SQLState: " + ex.getSQLState());
-            System.out.println("VendorError: " + ex.getErrorCode());
+        	logger.error("SQLException: " + ex.getMessage());
+        	logger.error("SQLState: " + ex.getSQLState());
+        	logger.error("VendorError: " + ex.getErrorCode());
         }
     }
 

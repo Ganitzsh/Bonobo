@@ -4,6 +4,7 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.SessionScoped;
 import java.sql.SQLException;
+import org.apache.log4j.Logger;
 
 /**
  * Administration managedBean
@@ -13,6 +14,8 @@ import java.sql.SQLException;
 @SessionScoped
 public class AdministrationMB {
 
+	final static Logger logger = Logger.getLogger(AdministrationMB.class);
+	
     @ManagedProperty(value = "#{dbManager}")
     private DatabaseManagerMB dbManager;
 
@@ -32,7 +35,7 @@ public class AdministrationMB {
         try {
             dbManager.getUserDao().delete(dbManager.getUserDao().queryForId(id));
         } catch (SQLException e) {
-            System.out.println("SQLException while deleting user: " + e.getMessage());
+            logger.error("SQLException while deleting user: " + e.getMessage());
         }
         return ("admin?faces-redirect=true");
     }

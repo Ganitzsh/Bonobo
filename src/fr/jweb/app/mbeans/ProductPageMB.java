@@ -3,9 +3,10 @@ package fr.jweb.app.mbeans;
 import java.io.Serializable;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import org.apache.log4j.Logger;
 
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
@@ -26,17 +27,28 @@ public class ProductPageMB implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    final static Logger logger = Logger.getLogger(ProductPageMB.class);
+    
     @ManagedProperty(value = "#{dbManager}")
     private DatabaseManagerMB dbManager;
-
-    @ManagedProperty(value = "#{currentProduct}")
-    private CurrentProductMB currentProduct;
+    
+    @ManagedProperty(value = "#{currentUser}")
+    private CurrentUserMB currentUser;
 
     private Product product;
     private String	title;
     private Boolean alreadyPosted = false;
-    private List<Review> reviews = new ArrayList<Review>();
+    private Review currentUserReview = null;
+	private List<Review> reviews = new ArrayList<Review>();
 
+	public Boolean getAlreadyPosted() {
+		return alreadyPosted;
+	}
+
+	public void setAlreadyPosted(Boolean alreadyPosted) {
+		this.alreadyPosted = alreadyPosted;
+	}
+	
     public DatabaseManagerMB getDbManager() {
         return dbManager;
     }
@@ -51,14 +63,6 @@ public class ProductPageMB implements Serializable {
 
     public void setReviews(List<Review> reviews) {
         this.reviews = reviews;
-    }
-
-    public CurrentProductMB getCurrentProduct() {
-        return currentProduct;
-    }
-
-    public void setCurrentProduct(CurrentProductMB currentProduct) {
-        this.currentProduct = currentProduct;
     }
 
     public Product getProduct() {
@@ -79,20 +83,43 @@ public class ProductPageMB implements Serializable {
     @PostConstruct
     public void init() {
     	Map<String, String> requestParams = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap();
-    	
-        try {
-			product = dbManager.getProductDao().queryForId(Integer.parseInt(requestParams.get("id")));
-			title = (product == null) ? "No product found" : product.getName();
-			Map<String, Object> map = new HashMap<>();
-            map.put("productId", product.getId());
-            reviews = dbManager.getReviewDao().queryForFieldValues(map);
-            System.out.println("Number of reviews: " + reviews.size());
-		} catch (NumberFormatException e1) {
-			e1.printStackTrace();
-		} catch (SQLException e1) {
-			e1.printStackTrace();
-		}
+    	if (requestParams.get("id") != null) {
+	        try {
+	        	List<Review> tmp = dbManager.getReviewDao().queryBuilder().where().eq("user_id", currentUser.getActualUser().getId()).query();
+	        	if (tmp.size() > 0) {
+	    			alreadyPosted = true;
+	    			currentUserReview = tmp.get(0);
+	        	}
+				product = dbManager.getProductDao().queryForId(Integer.parseInt(requestParams.get("id")));
+				title = (product == null) ? "No product found" : product.getName();
+	            reviews = dbManager.getReviewDao().queryBuilder().where().eq("product_id", product.getId()).query();
+			} catch (NumberFormatException e1) {
+				e1.printStackTrace();
+			} catch (SQLException e1) {
+				e1.printStackTrace();
+			}
+    	}
+    	else {
+    		title = "Not found";
+    		logger.error("Missing id inside request");
+    	}
     }
+
+	public Review getCurrentUserReview() {
+		return currentUserReview;
+	}
+
+	public void setCurrentUserReview(Review currentUserReview) {
+		this.currentUserReview = currentUserReview;
+	}
+
+	public CurrentUserMB getCurrentUser() {
+		return currentUser;
+	}
+
+	public void setCurrentUser(CurrentUserMB currentUser) {
+		this.currentUser = currentUser;
+	}
 
 	public String getTitle() {
 		return title;

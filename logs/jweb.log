@@ -1,0 +1,922 @@
+2015-01-08 11:00:17 INFO  DatabaseManagerMB:58 - Database connection established successfully
+2015-01-08 11:00:17 ERROR ProductPageMB:101 - Missing id inside request
+2015-01-08 11:04:32 INFO  DatabaseManagerMB:58 - Database connection established successfully
+2015-01-08 11:06:01 ERROR ProductPageMB:101 - Missing id inside request
+2015-01-08 11:19:40 INFO  DatabaseManagerMB:58 - Database connection established successfully
+2015-01-08 11:20:02 ERROR ReviewPosterMB:95 - SQLException: exception caught while creating review: Unable to run insert stmt on object fr.jweb.app.entities.Review@4117e748: INSERT INTO `review` (`id` ,`user_id` ,`review` ,`rating` ,`product_id` ,`user_id` ) VALUES (?,?,?,?,?,?)
+2015-01-08 11:20:02 ERROR ProductPageMB:98 - Missing id inside request
+2015-01-08 11:20:37 INFO  DatabaseManagerMB:58 - Database connection established successfully
+2015-01-08 11:22:09 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.Product with reflection
+2015-01-08 11:22:09 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.User with reflection
+2015-01-08 11:22:09 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.Review with reflection
+2015-01-08 11:22:09 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.News with reflection
+2015-01-08 11:22:09 INFO  DatabaseManagerMB:58 - Database connection established successfully
+2015-01-08 11:22:09 DEBUG StatementBuilder:21 - built statement SELECT * FROM `product` 
+2015-01-08 11:22:09 DEBUG JdbcConnectionSource:21 - opened connection to jdbc:mysql://localhost/jweb got #1831188155
+2015-01-08 11:22:09 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `product` ' with 0 args
+2015-01-08 11:22:09 DEBUG SelectIterator:21 - starting iterator @520451205 for 'SELECT * FROM `product` '
+2015-01-08 11:22:09 DEBUG SelectIterator:21 - closed iterator @520451205 after 2 rows
+2015-01-08 11:22:09 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `product` ' returned 2 results
+2015-01-08 11:22:12 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 11:22:12 DEBUG StatementBuilder:21 - built statement SELECT * FROM `review` WHERE (`product_id` = 1 ) 
+2015-01-08 11:22:12 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `review` WHERE (`product_id` = 1 ) ' with 0 args
+2015-01-08 11:22:12 DEBUG SelectIterator:21 - starting iterator @25907622 for 'SELECT * FROM `review` WHERE (`product_id` = 1 ) '
+2015-01-08 11:22:12 DEBUG SelectIterator:21 - closed iterator @25907622 after 1 rows
+2015-01-08 11:22:12 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `review` WHERE (`product_id` = 1 ) ' returned 1 results
+2015-01-08 11:28:48 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.Product with reflection
+2015-01-08 11:28:48 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.User with reflection
+2015-01-08 11:28:48 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.Review with reflection
+2015-01-08 11:28:48 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.News with reflection
+2015-01-08 11:28:48 INFO  DatabaseManagerMB:58 - Database connection established successfully
+2015-01-08 11:28:48 DEBUG StatementBuilder:21 - built statement SELECT * FROM `product` 
+2015-01-08 11:28:48 DEBUG JdbcConnectionSource:21 - opened connection to jdbc:mysql://localhost/jweb got #572899454
+2015-01-08 11:28:48 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `product` ' with 0 args
+2015-01-08 11:28:48 DEBUG SelectIterator:21 - starting iterator @1489158609 for 'SELECT * FROM `product` '
+2015-01-08 11:28:48 DEBUG SelectIterator:21 - closed iterator @1489158609 after 2 rows
+2015-01-08 11:28:48 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `product` ' returned 2 results
+2015-01-08 11:28:51 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 11:28:51 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 11:28:51 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 11:28:51 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 11:28:51 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 11:28:51 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 11:29:32 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.Product with reflection
+2015-01-08 11:29:32 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.User with reflection
+2015-01-08 11:29:32 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.Review with reflection
+2015-01-08 11:29:32 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.News with reflection
+2015-01-08 11:29:32 INFO  DatabaseManagerMB:58 - Database connection established successfully
+2015-01-08 11:29:33 DEBUG JdbcConnectionSource:21 - opened connection to jdbc:mysql://localhost/jweb got #1789916536
+2015-01-08 11:29:33 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 11:29:33 DEBUG StatementBuilder:21 - built statement SELECT * FROM `review` WHERE (`product_id` = 1 ) 
+2015-01-08 11:29:33 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `review` WHERE (`product_id` = 1 ) ' with 0 args
+2015-01-08 11:29:33 DEBUG SelectIterator:21 - starting iterator @281950248 for 'SELECT * FROM `review` WHERE (`product_id` = 1 ) '
+2015-01-08 11:29:33 DEBUG SelectIterator:21 - closed iterator @281950248 after 1 rows
+2015-01-08 11:29:33 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `review` WHERE (`product_id` = 1 ) ' returned 1 results
+2015-01-08 11:33:03 DEBUG StatementBuilder:21 - built statement SELECT * FROM `news` 
+2015-01-08 11:33:03 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `news` ' with 0 args
+2015-01-08 11:33:03 DEBUG SelectIterator:21 - starting iterator @1472598123 for 'SELECT * FROM `news` '
+2015-01-08 11:33:03 DEBUG SelectIterator:21 - closed iterator @1472598123 after 2 rows
+2015-01-08 11:33:03 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 11:33:05 DEBUG StatementBuilder:21 - built statement SELECT * FROM `product` 
+2015-01-08 11:33:05 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `product` ' with 0 args
+2015-01-08 11:33:05 DEBUG SelectIterator:21 - starting iterator @646501809 for 'SELECT * FROM `product` '
+2015-01-08 11:33:05 DEBUG SelectIterator:21 - closed iterator @646501809 after 2 rows
+2015-01-08 11:33:05 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `product` ' returned 2 results
+2015-01-08 11:33:08 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 11:33:08 DEBUG StatementBuilder:21 - built statement SELECT * FROM `review` WHERE (`product_id` = 1 ) 
+2015-01-08 11:33:08 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `review` WHERE (`product_id` = 1 ) ' with 0 args
+2015-01-08 11:33:08 DEBUG SelectIterator:21 - starting iterator @616694626 for 'SELECT * FROM `review` WHERE (`product_id` = 1 ) '
+2015-01-08 11:33:08 DEBUG SelectIterator:21 - closed iterator @616694626 after 1 rows
+2015-01-08 11:33:08 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `review` WHERE (`product_id` = 1 ) ' returned 1 results
+2015-01-08 11:37:36 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.Product with reflection
+2015-01-08 11:37:36 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.User with reflection
+2015-01-08 11:37:36 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.Review with reflection
+2015-01-08 11:37:36 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.News with reflection
+2015-01-08 11:37:36 INFO  DatabaseManagerMB:58 - Database connection established successfully
+2015-01-08 11:37:36 DEBUG StatementBuilder:21 - built statement SELECT * FROM `news` 
+2015-01-08 11:37:37 DEBUG JdbcConnectionSource:21 - opened connection to jdbc:mysql://localhost/jweb got #1842123098
+2015-01-08 11:37:37 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `news` ' with 0 args
+2015-01-08 11:37:37 DEBUG SelectIterator:21 - starting iterator @980019831 for 'SELECT * FROM `news` '
+2015-01-08 11:37:37 DEBUG SelectIterator:21 - closed iterator @980019831 after 2 rows
+2015-01-08 11:37:37 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 11:37:39 DEBUG StatementBuilder:21 - built statement SELECT * FROM `product` 
+2015-01-08 11:37:39 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `product` ' with 0 args
+2015-01-08 11:37:39 DEBUG SelectIterator:21 - starting iterator @2017726072 for 'SELECT * FROM `product` '
+2015-01-08 11:37:39 DEBUG SelectIterator:21 - closed iterator @2017726072 after 2 rows
+2015-01-08 11:37:39 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `product` ' returned 2 results
+2015-01-08 11:37:41 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 11:37:41 DEBUG StatementBuilder:21 - built statement SELECT * FROM `review` WHERE (`product_id` = 1 ) 
+2015-01-08 11:37:41 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `review` WHERE (`product_id` = 1 ) ' with 0 args
+2015-01-08 11:37:41 DEBUG SelectIterator:21 - starting iterator @1054205189 for 'SELECT * FROM `review` WHERE (`product_id` = 1 ) '
+2015-01-08 11:37:41 DEBUG SelectIterator:21 - closed iterator @1054205189 after 1 rows
+2015-01-08 11:37:41 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `review` WHERE (`product_id` = 1 ) ' returned 1 results
+2015-01-08 11:41:03 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.Product with reflection
+2015-01-08 11:41:03 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.User with reflection
+2015-01-08 11:41:03 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.Review with reflection
+2015-01-08 11:41:03 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.News with reflection
+2015-01-08 11:41:03 INFO  DatabaseManagerMB:58 - Database connection established successfully
+2015-01-08 11:41:03 DEBUG StatementBuilder:21 - built statement SELECT * FROM `product` 
+2015-01-08 11:41:03 DEBUG JdbcConnectionSource:21 - opened connection to jdbc:mysql://localhost/jweb got #1226836207
+2015-01-08 11:41:03 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `product` ' with 0 args
+2015-01-08 11:41:03 DEBUG SelectIterator:21 - starting iterator @835033937 for 'SELECT * FROM `product` '
+2015-01-08 11:41:03 DEBUG SelectIterator:21 - closed iterator @835033937 after 2 rows
+2015-01-08 11:41:03 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `product` ' returned 2 results
+2015-01-08 11:41:05 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 11:41:05 DEBUG StatementBuilder:21 - built statement SELECT * FROM `review` WHERE `product_id` = 1 
+2015-01-08 11:41:05 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `review` WHERE `product_id` = 1 ' with 0 args
+2015-01-08 11:41:05 DEBUG SelectIterator:21 - starting iterator @113098775 for 'SELECT * FROM `review` WHERE `product_id` = 1 '
+2015-01-08 11:41:05 DEBUG SelectIterator:21 - closed iterator @113098775 after 1 rows
+2015-01-08 11:41:05 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `review` WHERE `product_id` = 1 ' returned 1 results
+2015-01-08 11:42:55 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.Product with reflection
+2015-01-08 11:42:55 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.User with reflection
+2015-01-08 11:42:55 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.Review with reflection
+2015-01-08 11:42:55 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.News with reflection
+2015-01-08 11:42:55 INFO  DatabaseManagerMB:58 - Database connection established successfully
+2015-01-08 11:42:55 DEBUG JdbcConnectionSource:21 - opened connection to jdbc:mysql://localhost/jweb got #938268725
+2015-01-08 11:42:55 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 11:42:55 DEBUG StatementBuilder:21 - built statement SELECT * FROM `review` WHERE `product_id` = 1 
+2015-01-08 11:42:55 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `review` WHERE `product_id` = 1 ' with 0 args
+2015-01-08 11:42:55 DEBUG SelectIterator:21 - starting iterator @162813981 for 'SELECT * FROM `review` WHERE `product_id` = 1 '
+2015-01-08 11:42:55 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 11:42:55 DEBUG SelectIterator:21 - closed iterator @162813981 after 1 rows
+2015-01-08 11:42:55 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `review` WHERE `product_id` = 1 ' returned 1 results
+2015-01-08 11:43:24 DEBUG StatementBuilder:21 - built statement SELECT * FROM `user` WHERE (`email` = 'lol' ) 
+2015-01-08 11:43:24 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `user` WHERE (`email` = 'lol' ) ' with 0 args
+2015-01-08 11:43:24 DEBUG SelectIterator:21 - starting iterator @364198516 for 'SELECT * FROM `user` WHERE (`email` = 'lol' ) '
+2015-01-08 11:43:24 DEBUG SelectIterator:21 - closed iterator @364198516 after 1 rows
+2015-01-08 11:43:24 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `user` WHERE (`email` = 'lol' ) ' returned 1 results
+2015-01-08 11:43:24 DEBUG StatementBuilder:21 - built statement SELECT * FROM `news` 
+2015-01-08 11:43:24 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `news` ' with 0 args
+2015-01-08 11:43:24 DEBUG SelectIterator:21 - starting iterator @1219017070 for 'SELECT * FROM `news` '
+2015-01-08 11:43:24 DEBUG SelectIterator:21 - closed iterator @1219017070 after 2 rows
+2015-01-08 11:43:24 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 11:43:27 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `news` ' with 0 args
+2015-01-08 11:43:27 DEBUG SelectIterator:21 - starting iterator @709038115 for 'SELECT * FROM `news` '
+2015-01-08 11:43:27 DEBUG SelectIterator:21 - closed iterator @709038115 after 2 rows
+2015-01-08 11:43:27 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 11:43:34 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `news` ' with 0 args
+2015-01-08 11:43:34 DEBUG SelectIterator:21 - starting iterator @1528787186 for 'SELECT * FROM `news` '
+2015-01-08 11:43:34 DEBUG SelectIterator:21 - closed iterator @1528787186 after 2 rows
+2015-01-08 11:43:34 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 11:43:50 DEBUG BaseMappedStatement:21 - insert data with statement 'INSERT INTO `user` (`id` ,`username` ,`email` ,`passwordHash` ,`newsletter` ,`admin` ) VALUES (?,?,?,?,?,?)' and 6 args, changed 1 rows
+2015-01-08 11:43:50 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `news` ' with 0 args
+2015-01-08 11:43:50 DEBUG SelectIterator:21 - starting iterator @926703611 for 'SELECT * FROM `news` '
+2015-01-08 11:43:50 DEBUG SelectIterator:21 - closed iterator @926703611 after 2 rows
+2015-01-08 11:43:50 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 11:43:55 DEBUG StatementBuilder:21 - built statement SELECT * FROM `user` WHERE (`email` = 'Test' ) 
+2015-01-08 11:43:55 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `user` WHERE (`email` = 'Test' ) ' with 0 args
+2015-01-08 11:43:55 DEBUG SelectIterator:21 - starting iterator @814440412 for 'SELECT * FROM `user` WHERE (`email` = 'Test' ) '
+2015-01-08 11:43:55 DEBUG SelectIterator:21 - closed iterator @814440412 after 1 rows
+2015-01-08 11:43:55 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `user` WHERE (`email` = 'Test' ) ' returned 1 results
+2015-01-08 11:43:55 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `news` ' with 0 args
+2015-01-08 11:43:55 DEBUG SelectIterator:21 - starting iterator @1283239169 for 'SELECT * FROM `news` '
+2015-01-08 11:43:56 DEBUG SelectIterator:21 - closed iterator @1283239169 after 2 rows
+2015-01-08 11:43:56 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 11:44:30 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `news` ' with 0 args
+2015-01-08 11:44:30 DEBUG SelectIterator:21 - starting iterator @884369368 for 'SELECT * FROM `news` '
+2015-01-08 11:44:30 DEBUG SelectIterator:21 - closed iterator @884369368 after 2 rows
+2015-01-08 11:44:30 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 11:44:34 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `news` ' with 0 args
+2015-01-08 11:44:34 DEBUG SelectIterator:21 - starting iterator @472587481 for 'SELECT * FROM `news` '
+2015-01-08 11:44:34 DEBUG SelectIterator:21 - closed iterator @472587481 after 2 rows
+2015-01-08 11:44:34 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 11:44:38 DEBUG StatementBuilder:21 - built statement SELECT * FROM `user` WHERE (`email` = 'Test' ) 
+2015-01-08 11:44:38 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `user` WHERE (`email` = 'Test' ) ' with 0 args
+2015-01-08 11:44:38 DEBUG SelectIterator:21 - starting iterator @1229625114 for 'SELECT * FROM `user` WHERE (`email` = 'Test' ) '
+2015-01-08 11:44:38 DEBUG SelectIterator:21 - closed iterator @1229625114 after 1 rows
+2015-01-08 11:44:38 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `user` WHERE (`email` = 'Test' ) ' returned 1 results
+2015-01-08 11:44:38 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `news` ' with 0 args
+2015-01-08 11:44:38 DEBUG SelectIterator:21 - starting iterator @925599531 for 'SELECT * FROM `news` '
+2015-01-08 11:44:38 DEBUG SelectIterator:21 - closed iterator @925599531 after 2 rows
+2015-01-08 11:44:38 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 11:45:18 DEBUG StatementBuilder:21 - built statement SELECT * FROM `product` 
+2015-01-08 11:45:18 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `product` ' with 0 args
+2015-01-08 11:45:18 DEBUG SelectIterator:21 - starting iterator @493888489 for 'SELECT * FROM `product` '
+2015-01-08 11:45:18 DEBUG SelectIterator:21 - closed iterator @493888489 after 2 rows
+2015-01-08 11:45:18 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `product` ' returned 2 results
+2015-01-08 11:45:20 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 11:45:20 DEBUG StatementBuilder:21 - built statement SELECT * FROM `review` WHERE `product_id` = 1 
+2015-01-08 11:45:20 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `review` WHERE `product_id` = 1 ' with 0 args
+2015-01-08 11:45:20 DEBUG SelectIterator:21 - starting iterator @1397835525 for 'SELECT * FROM `review` WHERE `product_id` = 1 '
+2015-01-08 11:45:20 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 11:45:20 DEBUG SelectIterator:21 - closed iterator @1397835525 after 1 rows
+2015-01-08 11:45:20 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `review` WHERE `product_id` = 1 ' returned 1 results
+2015-01-08 11:45:30 DEBUG BaseMappedStatement:21 - insert data with statement 'INSERT INTO `review` (`id` ,`user_id` ,`review` ,`rating` ,`product_id` ,`user_id` ) VALUES (?,?,?,?,?,?)' and 6 args, threw exception: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Column 'user_id' specified twice
+2015-01-08 11:45:30 ERROR ReviewPosterMB:95 - SQLException: exception caught while creating review: Unable to run insert stmt on object fr.jweb.app.entities.Review@65801906: INSERT INTO `review` (`id` ,`user_id` ,`review` ,`rating` ,`product_id` ,`user_id` ) VALUES (?,?,?,?,?,?)
+2015-01-08 11:45:30 ERROR ProductPageMB:98 - Missing id inside request
+2015-01-08 11:45:34 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `product` ' with 0 args
+2015-01-08 11:45:34 DEBUG SelectIterator:21 - starting iterator @389531869 for 'SELECT * FROM `product` '
+2015-01-08 11:45:34 DEBUG SelectIterator:21 - closed iterator @389531869 after 2 rows
+2015-01-08 11:45:34 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `product` ' returned 2 results
+2015-01-08 11:45:36 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 11:45:36 DEBUG StatementBuilder:21 - built statement SELECT * FROM `review` WHERE `product_id` = 1 
+2015-01-08 11:45:36 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `review` WHERE `product_id` = 1 ' with 0 args
+2015-01-08 11:45:36 DEBUG SelectIterator:21 - starting iterator @2100921006 for 'SELECT * FROM `review` WHERE `product_id` = 1 '
+2015-01-08 11:45:36 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 11:45:36 DEBUG SelectIterator:21 - closed iterator @2100921006 after 1 rows
+2015-01-08 11:45:36 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `review` WHERE `product_id` = 1 ' returned 1 results
+2015-01-08 11:46:38 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.Product with reflection
+2015-01-08 11:46:38 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.User with reflection
+2015-01-08 11:46:38 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.Review with reflection
+2015-01-08 11:46:38 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.News with reflection
+2015-01-08 11:46:38 INFO  DatabaseManagerMB:58 - Database connection established successfully
+2015-01-08 11:46:38 DEBUG StatementBuilder:21 - built statement SELECT * FROM `product` 
+2015-01-08 11:46:38 DEBUG JdbcConnectionSource:21 - opened connection to jdbc:mysql://localhost/jweb got #1636321474
+2015-01-08 11:46:38 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `product` ' with 0 args
+2015-01-08 11:46:38 DEBUG SelectIterator:21 - starting iterator @1326919645 for 'SELECT * FROM `product` '
+2015-01-08 11:46:38 DEBUG SelectIterator:21 - closed iterator @1326919645 after 2 rows
+2015-01-08 11:46:38 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `product` ' returned 2 results
+2015-01-08 11:46:41 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 11:46:41 DEBUG StatementBuilder:21 - built statement SELECT * FROM `review` WHERE `product_id` = 1 
+2015-01-08 11:46:41 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `review` WHERE `product_id` = 1 ' with 0 args
+2015-01-08 11:46:41 DEBUG SelectIterator:21 - starting iterator @335311361 for 'SELECT * FROM `review` WHERE `product_id` = 1 '
+2015-01-08 11:46:41 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 11:46:41 DEBUG SelectIterator:21 - closed iterator @335311361 after 1 rows
+2015-01-08 11:46:41 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `review` WHERE `product_id` = 1 ' returned 1 results
+2015-01-08 11:46:45 DEBUG StatementBuilder:21 - built statement SELECT * FROM `user` WHERE (`email` = 'Test' ) 
+2015-01-08 11:46:45 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `user` WHERE (`email` = 'Test' ) ' with 0 args
+2015-01-08 11:46:45 DEBUG SelectIterator:21 - starting iterator @2023664920 for 'SELECT * FROM `user` WHERE (`email` = 'Test' ) '
+2015-01-08 11:46:45 DEBUG SelectIterator:21 - closed iterator @2023664920 after 1 rows
+2015-01-08 11:46:45 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `user` WHERE (`email` = 'Test' ) ' returned 1 results
+2015-01-08 11:46:45 DEBUG StatementBuilder:21 - built statement SELECT * FROM `news` 
+2015-01-08 11:46:45 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `news` ' with 0 args
+2015-01-08 11:46:45 DEBUG SelectIterator:21 - starting iterator @1141770244 for 'SELECT * FROM `news` '
+2015-01-08 11:46:45 DEBUG SelectIterator:21 - closed iterator @1141770244 after 2 rows
+2015-01-08 11:46:45 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 11:46:49 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `product` ' with 0 args
+2015-01-08 11:46:49 DEBUG SelectIterator:21 - starting iterator @115595726 for 'SELECT * FROM `product` '
+2015-01-08 11:46:49 DEBUG SelectIterator:21 - closed iterator @115595726 after 2 rows
+2015-01-08 11:46:49 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `product` ' returned 2 results
+2015-01-08 11:46:51 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 11:46:51 DEBUG StatementBuilder:21 - built statement SELECT * FROM `review` WHERE `product_id` = 1 
+2015-01-08 11:46:51 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `review` WHERE `product_id` = 1 ' with 0 args
+2015-01-08 11:46:51 DEBUG SelectIterator:21 - starting iterator @2051178160 for 'SELECT * FROM `review` WHERE `product_id` = 1 '
+2015-01-08 11:46:51 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 11:46:51 DEBUG SelectIterator:21 - closed iterator @2051178160 after 1 rows
+2015-01-08 11:46:51 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `review` WHERE `product_id` = 1 ' returned 1 results
+2015-01-08 11:46:59 DEBUG BaseMappedStatement:21 - insert data with statement 'INSERT INTO `review` (`id` ,`review` ,`rating` ,`product_id` ,`user_id` ) VALUES (?,?,?,?,?)' and 5 args, changed 1 rows
+2015-01-08 11:46:59 ERROR ProductPageMB:98 - Missing id inside request
+2015-01-08 11:47:01 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `product` ' with 0 args
+2015-01-08 11:47:01 DEBUG SelectIterator:21 - starting iterator @398659950 for 'SELECT * FROM `product` '
+2015-01-08 11:47:01 DEBUG SelectIterator:21 - closed iterator @398659950 after 2 rows
+2015-01-08 11:47:01 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `product` ' returned 2 results
+2015-01-08 11:47:06 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 11:47:06 DEBUG StatementBuilder:21 - built statement SELECT * FROM `review` WHERE `product_id` = 1 
+2015-01-08 11:47:06 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `review` WHERE `product_id` = 1 ' with 0 args
+2015-01-08 11:47:06 DEBUG SelectIterator:21 - starting iterator @944783865 for 'SELECT * FROM `review` WHERE `product_id` = 1 '
+2015-01-08 11:47:06 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 11:47:06 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 11:47:06 DEBUG SelectIterator:21 - closed iterator @944783865 after 2 rows
+2015-01-08 11:47:06 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `review` WHERE `product_id` = 1 ' returned 2 results
+2015-01-08 11:48:28 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.Product with reflection
+2015-01-08 11:48:28 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.User with reflection
+2015-01-08 11:48:28 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.Review with reflection
+2015-01-08 11:48:28 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.News with reflection
+2015-01-08 11:48:28 INFO  DatabaseManagerMB:58 - Database connection established successfully
+2015-01-08 11:48:29 DEBUG StatementBuilder:21 - built statement SELECT * FROM `news` 
+2015-01-08 11:48:29 DEBUG JdbcConnectionSource:21 - opened connection to jdbc:mysql://localhost/jweb got #603075439
+2015-01-08 11:48:29 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `news` ' with 0 args
+2015-01-08 11:48:29 DEBUG SelectIterator:21 - starting iterator @138293208 for 'SELECT * FROM `news` '
+2015-01-08 11:48:29 DEBUG SelectIterator:21 - closed iterator @138293208 after 2 rows
+2015-01-08 11:48:29 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 11:50:19 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.Product with reflection
+2015-01-08 11:50:19 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.User with reflection
+2015-01-08 11:50:19 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.Review with reflection
+2015-01-08 11:50:19 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.News with reflection
+2015-01-08 11:50:19 INFO  DatabaseManagerMB:58 - Database connection established successfully
+2015-01-08 11:50:20 DEBUG StatementBuilder:21 - built statement SELECT * FROM `news` 
+2015-01-08 11:50:20 DEBUG JdbcConnectionSource:21 - opened connection to jdbc:mysql://localhost/jweb got #1709186851
+2015-01-08 11:50:20 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `news` ' with 0 args
+2015-01-08 11:50:20 DEBUG SelectIterator:21 - starting iterator @779654582 for 'SELECT * FROM `news` '
+2015-01-08 11:50:20 DEBUG SelectIterator:21 - closed iterator @779654582 after 2 rows
+2015-01-08 11:50:20 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 11:50:25 DEBUG StatementBuilder:21 - built statement SELECT * FROM `user` WHERE (`email` = 'Test' ) 
+2015-01-08 11:50:25 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `user` WHERE (`email` = 'Test' ) ' with 0 args
+2015-01-08 11:50:25 DEBUG SelectIterator:21 - starting iterator @134584875 for 'SELECT * FROM `user` WHERE (`email` = 'Test' ) '
+2015-01-08 11:50:25 DEBUG SelectIterator:21 - closed iterator @134584875 after 1 rows
+2015-01-08 11:50:25 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `user` WHERE (`email` = 'Test' ) ' returned 1 results
+2015-01-08 11:50:25 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `news` ' with 0 args
+2015-01-08 11:50:25 DEBUG SelectIterator:21 - starting iterator @43371913 for 'SELECT * FROM `news` '
+2015-01-08 11:50:25 DEBUG SelectIterator:21 - closed iterator @43371913 after 2 rows
+2015-01-08 11:50:25 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 11:50:28 DEBUG StatementBuilder:21 - built statement SELECT * FROM `user` 
+2015-01-08 11:50:28 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `user` ' with 0 args
+2015-01-08 11:50:28 DEBUG SelectIterator:21 - starting iterator @1503498879 for 'SELECT * FROM `user` '
+2015-01-08 11:50:28 DEBUG SelectIterator:21 - closed iterator @1503498879 after 3 rows
+2015-01-08 11:50:28 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `user` ' returned 3 results
+2015-01-08 11:50:28 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `news` ' with 0 args
+2015-01-08 11:50:28 DEBUG SelectIterator:21 - starting iterator @1303769961 for 'SELECT * FROM `news` '
+2015-01-08 11:50:28 DEBUG SelectIterator:21 - closed iterator @1303769961 after 2 rows
+2015-01-08 11:50:28 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 11:50:28 DEBUG StatementBuilder:21 - built statement SELECT * FROM `product` 
+2015-01-08 11:50:28 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `product` ' with 0 args
+2015-01-08 11:50:28 DEBUG SelectIterator:21 - starting iterator @1876691628 for 'SELECT * FROM `product` '
+2015-01-08 11:50:28 DEBUG SelectIterator:21 - closed iterator @1876691628 after 2 rows
+2015-01-08 11:50:28 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `product` ' returned 2 results
+2015-01-08 11:50:50 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `user` ' with 0 args
+2015-01-08 11:50:50 DEBUG SelectIterator:21 - starting iterator @1946308207 for 'SELECT * FROM `user` '
+2015-01-08 11:50:50 DEBUG SelectIterator:21 - closed iterator @1946308207 after 3 rows
+2015-01-08 11:50:50 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `user` ' returned 3 results
+2015-01-08 11:50:50 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 11:51:09 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 11:51:40 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 11:51:50 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.Product with reflection
+2015-01-08 11:51:50 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.User with reflection
+2015-01-08 11:51:50 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.Review with reflection
+2015-01-08 11:51:50 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.News with reflection
+2015-01-08 11:51:50 INFO  DatabaseManagerMB:58 - Database connection established successfully
+2015-01-08 11:51:56 DEBUG StatementBuilder:21 - built statement SELECT * FROM `news` 
+2015-01-08 11:51:56 DEBUG JdbcConnectionSource:21 - opened connection to jdbc:mysql://localhost/jweb got #1165978503
+2015-01-08 11:51:56 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `news` ' with 0 args
+2015-01-08 11:51:56 DEBUG SelectIterator:21 - starting iterator @149401089 for 'SELECT * FROM `news` '
+2015-01-08 11:51:56 DEBUG SelectIterator:21 - closed iterator @149401089 after 2 rows
+2015-01-08 11:51:56 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 11:51:59 DEBUG StatementBuilder:21 - built statement SELECT * FROM `user` WHERE (`email` = 'Test' ) 
+2015-01-08 11:51:59 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `user` WHERE (`email` = 'Test' ) ' with 0 args
+2015-01-08 11:51:59 DEBUG SelectIterator:21 - starting iterator @1324775483 for 'SELECT * FROM `user` WHERE (`email` = 'Test' ) '
+2015-01-08 11:51:59 DEBUG SelectIterator:21 - closed iterator @1324775483 after 1 rows
+2015-01-08 11:51:59 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `user` WHERE (`email` = 'Test' ) ' returned 1 results
+2015-01-08 11:51:59 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `news` ' with 0 args
+2015-01-08 11:51:59 DEBUG SelectIterator:21 - starting iterator @599473203 for 'SELECT * FROM `news` '
+2015-01-08 11:51:59 DEBUG SelectIterator:21 - closed iterator @599473203 after 2 rows
+2015-01-08 11:51:59 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 11:52:03 DEBUG StatementBuilder:21 - built statement SELECT * FROM `user` 
+2015-01-08 11:52:03 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `user` ' with 0 args
+2015-01-08 11:52:03 DEBUG SelectIterator:21 - starting iterator @1899844143 for 'SELECT * FROM `user` '
+2015-01-08 11:52:03 DEBUG SelectIterator:21 - closed iterator @1899844143 after 3 rows
+2015-01-08 11:52:03 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `user` ' returned 3 results
+2015-01-08 11:52:03 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `news` ' with 0 args
+2015-01-08 11:52:03 DEBUG SelectIterator:21 - starting iterator @1937868503 for 'SELECT * FROM `news` '
+2015-01-08 11:52:03 DEBUG SelectIterator:21 - closed iterator @1937868503 after 2 rows
+2015-01-08 11:52:03 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 11:52:03 DEBUG StatementBuilder:21 - built statement SELECT * FROM `product` 
+2015-01-08 11:52:03 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `product` ' with 0 args
+2015-01-08 11:52:03 DEBUG SelectIterator:21 - starting iterator @951984594 for 'SELECT * FROM `product` '
+2015-01-08 11:52:03 DEBUG SelectIterator:21 - closed iterator @951984594 after 2 rows
+2015-01-08 11:52:03 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `product` ' returned 2 results
+2015-01-08 11:52:07 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `user` ' with 0 args
+2015-01-08 11:52:07 DEBUG SelectIterator:21 - starting iterator @1005636281 for 'SELECT * FROM `user` '
+2015-01-08 11:52:07 DEBUG SelectIterator:21 - closed iterator @1005636281 after 3 rows
+2015-01-08 11:52:07 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `user` ' returned 3 results
+2015-01-08 11:52:07 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 11:52:14 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `user` ' with 0 args
+2015-01-08 11:52:14 DEBUG SelectIterator:21 - starting iterator @1893626814 for 'SELECT * FROM `user` '
+2015-01-08 11:52:14 DEBUG SelectIterator:21 - closed iterator @1893626814 after 3 rows
+2015-01-08 11:52:14 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `user` ' returned 3 results
+2015-01-08 11:52:14 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `news` ' with 0 args
+2015-01-08 11:52:14 DEBUG SelectIterator:21 - starting iterator @141379965 for 'SELECT * FROM `news` '
+2015-01-08 11:52:14 DEBUG SelectIterator:21 - closed iterator @141379965 after 2 rows
+2015-01-08 11:52:14 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 11:52:14 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `product` ' with 0 args
+2015-01-08 11:52:14 DEBUG SelectIterator:21 - starting iterator @1616090960 for 'SELECT * FROM `product` '
+2015-01-08 11:52:14 DEBUG SelectIterator:21 - closed iterator @1616090960 after 2 rows
+2015-01-08 11:52:14 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `product` ' returned 2 results
+2015-01-08 11:52:14 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 11:52:18 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `news` ' with 0 args
+2015-01-08 11:52:18 DEBUG SelectIterator:21 - starting iterator @2063563516 for 'SELECT * FROM `news` '
+2015-01-08 11:52:18 DEBUG SelectIterator:21 - closed iterator @2063563516 after 2 rows
+2015-01-08 11:52:18 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 11:53:20 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `news` ' with 0 args
+2015-01-08 11:53:20 DEBUG SelectIterator:21 - starting iterator @32353739 for 'SELECT * FROM `news` '
+2015-01-08 11:53:20 DEBUG SelectIterator:21 - closed iterator @32353739 after 2 rows
+2015-01-08 11:53:20 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 11:53:23 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `user` ' with 0 args
+2015-01-08 11:53:23 DEBUG SelectIterator:21 - starting iterator @1426888415 for 'SELECT * FROM `user` '
+2015-01-08 11:53:23 DEBUG SelectIterator:21 - closed iterator @1426888415 after 3 rows
+2015-01-08 11:53:23 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `user` ' returned 3 results
+2015-01-08 11:53:23 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `news` ' with 0 args
+2015-01-08 11:53:23 DEBUG SelectIterator:21 - starting iterator @1927806655 for 'SELECT * FROM `news` '
+2015-01-08 11:53:23 DEBUG SelectIterator:21 - closed iterator @1927806655 after 2 rows
+2015-01-08 11:53:23 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 11:53:23 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `product` ' with 0 args
+2015-01-08 11:53:23 DEBUG SelectIterator:21 - starting iterator @1763255350 for 'SELECT * FROM `product` '
+2015-01-08 11:53:23 DEBUG SelectIterator:21 - closed iterator @1763255350 after 2 rows
+2015-01-08 11:53:23 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `product` ' returned 2 results
+2015-01-08 11:53:26 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `product` ' with 0 args
+2015-01-08 11:53:26 DEBUG SelectIterator:21 - starting iterator @607199338 for 'SELECT * FROM `product` '
+2015-01-08 11:53:26 DEBUG SelectIterator:21 - closed iterator @607199338 after 2 rows
+2015-01-08 11:53:26 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `product` ' returned 2 results
+2015-01-08 11:53:28 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 11:53:28 DEBUG StatementBuilder:21 - built statement SELECT * FROM `review` WHERE `product_id` = 1 
+2015-01-08 11:53:28 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `review` WHERE `product_id` = 1 ' with 0 args
+2015-01-08 11:53:28 DEBUG SelectIterator:21 - starting iterator @1629199513 for 'SELECT * FROM `review` WHERE `product_id` = 1 '
+2015-01-08 11:53:28 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 11:53:28 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 11:53:28 DEBUG SelectIterator:21 - closed iterator @1629199513 after 2 rows
+2015-01-08 11:53:28 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `review` WHERE `product_id` = 1 ' returned 2 results
+2015-01-08 11:54:39 DEBUG BaseMappedStatement:21 - insert data with statement 'INSERT INTO `review` (`id` ,`review` ,`rating` ,`product_id` ,`user_id` ) VALUES (?,?,?,?,?)' and 5 args, changed 1 rows
+2015-01-08 11:54:39 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 11:54:39 DEBUG StatementBuilder:21 - built statement SELECT * FROM `review` WHERE `product_id` = 1 
+2015-01-08 11:54:39 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `review` WHERE `product_id` = 1 ' with 0 args
+2015-01-08 11:54:39 DEBUG SelectIterator:21 - starting iterator @568847986 for 'SELECT * FROM `review` WHERE `product_id` = 1 '
+2015-01-08 11:54:39 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 11:54:39 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 11:54:39 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 11:54:39 DEBUG SelectIterator:21 - closed iterator @568847986 after 3 rows
+2015-01-08 11:54:39 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `review` WHERE `product_id` = 1 ' returned 3 results
+2015-01-08 11:54:46 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `news` ' with 0 args
+2015-01-08 11:54:46 DEBUG SelectIterator:21 - starting iterator @255923996 for 'SELECT * FROM `news` '
+2015-01-08 11:54:46 DEBUG SelectIterator:21 - closed iterator @255923996 after 2 rows
+2015-01-08 11:54:46 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 11:55:19 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `product` ' with 0 args
+2015-01-08 11:55:19 DEBUG SelectIterator:21 - starting iterator @1677388667 for 'SELECT * FROM `product` '
+2015-01-08 11:55:19 DEBUG SelectIterator:21 - closed iterator @1677388667 after 2 rows
+2015-01-08 11:55:19 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `product` ' returned 2 results
+2015-01-08 12:06:22 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `news` ' with 0 args
+2015-01-08 12:06:22 DEBUG SelectIterator:21 - starting iterator @353412624 for 'SELECT * FROM `news` '
+2015-01-08 12:06:22 DEBUG SelectIterator:21 - closed iterator @353412624 after 2 rows
+2015-01-08 12:06:22 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 12:08:56 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `news` ' with 0 args
+2015-01-08 12:08:56 DEBUG SelectIterator:21 - starting iterator @924996783 for 'SELECT * FROM `news` '
+2015-01-08 12:08:56 DEBUG SelectIterator:21 - closed iterator @924996783 after 2 rows
+2015-01-08 12:08:56 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 12:08:59 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `product` ' with 0 args
+2015-01-08 12:08:59 DEBUG SelectIterator:21 - starting iterator @877174166 for 'SELECT * FROM `product` '
+2015-01-08 12:08:59 DEBUG SelectIterator:21 - closed iterator @877174166 after 2 rows
+2015-01-08 12:08:59 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `product` ' returned 2 results
+2015-01-08 12:09:03 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:09:03 DEBUG StatementBuilder:21 - built statement SELECT * FROM `review` WHERE `product_id` = 1 
+2015-01-08 12:09:03 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `review` WHERE `product_id` = 1 ' with 0 args
+2015-01-08 12:09:03 DEBUG SelectIterator:21 - starting iterator @1354482044 for 'SELECT * FROM `review` WHERE `product_id` = 1 '
+2015-01-08 12:09:03 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:09:03 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:09:03 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:09:03 DEBUG SelectIterator:21 - closed iterator @1354482044 after 3 rows
+2015-01-08 12:09:03 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `review` WHERE `product_id` = 1 ' returned 3 results
+2015-01-08 12:09:07 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `news` ' with 0 args
+2015-01-08 12:09:07 DEBUG SelectIterator:21 - starting iterator @1989445585 for 'SELECT * FROM `news` '
+2015-01-08 12:09:07 DEBUG SelectIterator:21 - closed iterator @1989445585 after 2 rows
+2015-01-08 12:09:07 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 12:09:10 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `user` ' with 0 args
+2015-01-08 12:09:10 DEBUG SelectIterator:21 - starting iterator @1320046369 for 'SELECT * FROM `user` '
+2015-01-08 12:09:10 DEBUG SelectIterator:21 - closed iterator @1320046369 after 3 rows
+2015-01-08 12:09:10 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `user` ' returned 3 results
+2015-01-08 12:09:10 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `news` ' with 0 args
+2015-01-08 12:09:10 DEBUG SelectIterator:21 - starting iterator @1233497627 for 'SELECT * FROM `news` '
+2015-01-08 12:09:10 DEBUG SelectIterator:21 - closed iterator @1233497627 after 2 rows
+2015-01-08 12:09:10 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 12:09:10 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `product` ' with 0 args
+2015-01-08 12:09:10 DEBUG SelectIterator:21 - starting iterator @220071186 for 'SELECT * FROM `product` '
+2015-01-08 12:09:10 DEBUG SelectIterator:21 - closed iterator @220071186 after 2 rows
+2015-01-08 12:09:10 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `product` ' returned 2 results
+2015-01-08 12:09:14 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `user` ' with 0 args
+2015-01-08 12:09:14 DEBUG SelectIterator:21 - starting iterator @1365322988 for 'SELECT * FROM `user` '
+2015-01-08 12:09:14 DEBUG SelectIterator:21 - closed iterator @1365322988 after 3 rows
+2015-01-08 12:09:14 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `user` ' returned 3 results
+2015-01-08 12:09:14 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:09:14 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:09:14 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:09:14 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:09:14 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:09:14 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:09:14 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:10:16 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.Product with reflection
+2015-01-08 12:10:16 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.User with reflection
+2015-01-08 12:10:16 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.Review with reflection
+2015-01-08 12:10:16 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.News with reflection
+2015-01-08 12:10:16 INFO  DatabaseManagerMB:58 - Database connection established successfully
+2015-01-08 12:10:16 DEBUG JdbcConnectionSource:21 - opened connection to jdbc:mysql://localhost/jweb got #1472506732
+2015-01-08 12:10:16 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:10:16 DEBUG StatementBuilder:21 - built statement SELECT * FROM `review` WHERE `product_id` = 1 
+2015-01-08 12:10:16 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `review` WHERE `product_id` = 1 ' with 0 args
+2015-01-08 12:10:16 DEBUG SelectIterator:21 - starting iterator @1965154865 for 'SELECT * FROM `review` WHERE `product_id` = 1 '
+2015-01-08 12:10:16 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:10:16 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:10:16 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:10:16 DEBUG SelectIterator:21 - closed iterator @1965154865 after 3 rows
+2015-01-08 12:10:16 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `review` WHERE `product_id` = 1 ' returned 3 results
+2015-01-08 12:10:24 DEBUG StatementBuilder:21 - built statement SELECT * FROM `news` 
+2015-01-08 12:10:24 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `news` ' with 0 args
+2015-01-08 12:10:24 DEBUG SelectIterator:21 - starting iterator @1042022492 for 'SELECT * FROM `news` '
+2015-01-08 12:10:24 DEBUG SelectIterator:21 - closed iterator @1042022492 after 2 rows
+2015-01-08 12:10:24 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 12:11:03 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.Product with reflection
+2015-01-08 12:11:03 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.User with reflection
+2015-01-08 12:11:03 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.Review with reflection
+2015-01-08 12:11:03 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.News with reflection
+2015-01-08 12:11:03 INFO  DatabaseManagerMB:58 - Database connection established successfully
+2015-01-08 12:11:03 DEBUG StatementBuilder:21 - built statement SELECT * FROM `news` 
+2015-01-08 12:11:03 DEBUG JdbcConnectionSource:21 - opened connection to jdbc:mysql://localhost/jweb got #234641906
+2015-01-08 12:11:03 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `news` ' with 0 args
+2015-01-08 12:11:03 DEBUG SelectIterator:21 - starting iterator @2102790328 for 'SELECT * FROM `news` '
+2015-01-08 12:11:03 DEBUG SelectIterator:21 - closed iterator @2102790328 after 2 rows
+2015-01-08 12:11:03 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 12:11:21 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.Product with reflection
+2015-01-08 12:11:21 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.User with reflection
+2015-01-08 12:11:21 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.Review with reflection
+2015-01-08 12:11:21 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.News with reflection
+2015-01-08 12:11:21 INFO  DatabaseManagerMB:58 - Database connection established successfully
+2015-01-08 12:11:21 DEBUG StatementBuilder:21 - built statement SELECT * FROM `news` 
+2015-01-08 12:11:21 DEBUG JdbcConnectionSource:21 - opened connection to jdbc:mysql://localhost/jweb got #211282776
+2015-01-08 12:11:21 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `news` ' with 0 args
+2015-01-08 12:11:21 DEBUG SelectIterator:21 - starting iterator @886695148 for 'SELECT * FROM `news` '
+2015-01-08 12:11:21 DEBUG SelectIterator:21 - closed iterator @886695148 after 2 rows
+2015-01-08 12:11:21 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 12:11:25 DEBUG StatementBuilder:21 - built statement SELECT * FROM `user` WHERE (`email` = 'Test' ) 
+2015-01-08 12:11:25 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `user` WHERE (`email` = 'Test' ) ' with 0 args
+2015-01-08 12:11:25 DEBUG SelectIterator:21 - starting iterator @200773898 for 'SELECT * FROM `user` WHERE (`email` = 'Test' ) '
+2015-01-08 12:11:25 DEBUG SelectIterator:21 - closed iterator @200773898 after 1 rows
+2015-01-08 12:11:25 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `user` WHERE (`email` = 'Test' ) ' returned 1 results
+2015-01-08 12:11:25 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `news` ' with 0 args
+2015-01-08 12:11:25 DEBUG SelectIterator:21 - starting iterator @375498843 for 'SELECT * FROM `news` '
+2015-01-08 12:11:25 DEBUG SelectIterator:21 - closed iterator @375498843 after 2 rows
+2015-01-08 12:11:25 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 12:11:35 DEBUG StatementBuilder:21 - built statement SELECT * FROM `user` 
+2015-01-08 12:11:35 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `user` ' with 0 args
+2015-01-08 12:11:35 DEBUG SelectIterator:21 - starting iterator @1761740093 for 'SELECT * FROM `user` '
+2015-01-08 12:11:35 DEBUG SelectIterator:21 - closed iterator @1761740093 after 3 rows
+2015-01-08 12:11:35 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `user` ' returned 3 results
+2015-01-08 12:11:35 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `news` ' with 0 args
+2015-01-08 12:11:35 DEBUG SelectIterator:21 - starting iterator @841896283 for 'SELECT * FROM `news` '
+2015-01-08 12:11:35 DEBUG SelectIterator:21 - closed iterator @841896283 after 2 rows
+2015-01-08 12:11:35 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 12:11:35 DEBUG StatementBuilder:21 - built statement SELECT * FROM `product` 
+2015-01-08 12:11:35 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `product` ' with 0 args
+2015-01-08 12:11:35 DEBUG SelectIterator:21 - starting iterator @1991847738 for 'SELECT * FROM `product` '
+2015-01-08 12:11:35 DEBUG SelectIterator:21 - closed iterator @1991847738 after 2 rows
+2015-01-08 12:11:35 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `product` ' returned 2 results
+2015-01-08 12:11:38 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `user` ' with 0 args
+2015-01-08 12:11:38 DEBUG SelectIterator:21 - starting iterator @1795317282 for 'SELECT * FROM `user` '
+2015-01-08 12:11:38 DEBUG SelectIterator:21 - closed iterator @1795317282 after 3 rows
+2015-01-08 12:11:38 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `user` ' returned 3 results
+2015-01-08 12:11:38 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:11:38 DEBUG StatementBuilder:21 - built statement SELECT * FROM `review` WHERE `product_id` = 1 
+2015-01-08 12:11:38 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `review` WHERE `product_id` = 1 ' with 0 args
+2015-01-08 12:11:38 DEBUG SelectIterator:21 - starting iterator @747887671 for 'SELECT * FROM `review` WHERE `product_id` = 1 '
+2015-01-08 12:11:38 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:11:38 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:11:38 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:11:38 DEBUG SelectIterator:21 - closed iterator @747887671 after 3 rows
+2015-01-08 12:11:38 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `review` WHERE `product_id` = 1 ' returned 3 results
+2015-01-08 12:13:06 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `news` ' with 0 args
+2015-01-08 12:13:06 DEBUG SelectIterator:21 - starting iterator @1560384811 for 'SELECT * FROM `news` '
+2015-01-08 12:13:06 DEBUG SelectIterator:21 - closed iterator @1560384811 after 2 rows
+2015-01-08 12:13:06 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 12:13:20 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `product` ' with 0 args
+2015-01-08 12:13:20 DEBUG SelectIterator:21 - starting iterator @1341257820 for 'SELECT * FROM `product` '
+2015-01-08 12:13:20 DEBUG SelectIterator:21 - closed iterator @1341257820 after 2 rows
+2015-01-08 12:13:20 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `product` ' returned 2 results
+2015-01-08 12:13:45 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `news` ' with 0 args
+2015-01-08 12:13:45 DEBUG SelectIterator:21 - starting iterator @1983458794 for 'SELECT * FROM `news` '
+2015-01-08 12:13:45 DEBUG SelectIterator:21 - closed iterator @1983458794 after 2 rows
+2015-01-08 12:13:45 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 12:14:31 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.Product with reflection
+2015-01-08 12:14:31 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.User with reflection
+2015-01-08 12:14:31 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.Review with reflection
+2015-01-08 12:14:31 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.News with reflection
+2015-01-08 12:14:31 INFO  DatabaseManagerMB:58 - Database connection established successfully
+2015-01-08 12:14:31 DEBUG StatementBuilder:21 - built statement SELECT * FROM `news` 
+2015-01-08 12:14:31 DEBUG JdbcConnectionSource:21 - opened connection to jdbc:mysql://localhost/jweb got #1469969170
+2015-01-08 12:14:31 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `news` ' with 0 args
+2015-01-08 12:14:31 DEBUG SelectIterator:21 - starting iterator @1194297122 for 'SELECT * FROM `news` '
+2015-01-08 12:14:31 DEBUG SelectIterator:21 - closed iterator @1194297122 after 2 rows
+2015-01-08 12:14:31 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 12:14:35 DEBUG StatementBuilder:21 - built statement SELECT * FROM `product` 
+2015-01-08 12:14:35 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `product` ' with 0 args
+2015-01-08 12:14:35 DEBUG SelectIterator:21 - starting iterator @364015193 for 'SELECT * FROM `product` '
+2015-01-08 12:14:35 DEBUG SelectIterator:21 - closed iterator @364015193 after 2 rows
+2015-01-08 12:14:35 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `product` ' returned 2 results
+2015-01-08 12:14:37 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:14:37 DEBUG StatementBuilder:21 - built statement SELECT * FROM `review` WHERE `product_id` = 1 
+2015-01-08 12:14:37 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `review` WHERE `product_id` = 1 ' with 0 args
+2015-01-08 12:14:37 DEBUG SelectIterator:21 - starting iterator @872154079 for 'SELECT * FROM `review` WHERE `product_id` = 1 '
+2015-01-08 12:14:37 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:14:37 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:14:37 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:14:37 DEBUG SelectIterator:21 - closed iterator @872154079 after 3 rows
+2015-01-08 12:14:37 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `review` WHERE `product_id` = 1 ' returned 3 results
+2015-01-08 12:18:13 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.Product with reflection
+2015-01-08 12:18:14 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.User with reflection
+2015-01-08 12:18:14 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.Review with reflection
+2015-01-08 12:18:14 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.News with reflection
+2015-01-08 12:18:14 INFO  DatabaseManagerMB:58 - Database connection established successfully
+2015-01-08 12:18:14 DEBUG StatementBuilder:21 - built statement SELECT * FROM `news` 
+2015-01-08 12:18:14 DEBUG JdbcConnectionSource:21 - opened connection to jdbc:mysql://localhost/jweb got #919264664
+2015-01-08 12:18:14 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `news` ' with 0 args
+2015-01-08 12:18:14 DEBUG SelectIterator:21 - starting iterator @2094108387 for 'SELECT * FROM `news` '
+2015-01-08 12:18:14 DEBUG SelectIterator:21 - closed iterator @2094108387 after 2 rows
+2015-01-08 12:18:14 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 12:18:28 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `news` ' with 0 args
+2015-01-08 12:18:28 DEBUG SelectIterator:21 - starting iterator @1256268815 for 'SELECT * FROM `news` '
+2015-01-08 12:18:28 DEBUG SelectIterator:21 - closed iterator @1256268815 after 2 rows
+2015-01-08 12:18:28 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 12:18:29 DEBUG StatementBuilder:21 - built statement SELECT * FROM `product` 
+2015-01-08 12:18:29 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `product` ' with 0 args
+2015-01-08 12:18:29 DEBUG SelectIterator:21 - starting iterator @782622747 for 'SELECT * FROM `product` '
+2015-01-08 12:18:29 DEBUG SelectIterator:21 - closed iterator @782622747 after 2 rows
+2015-01-08 12:18:29 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `product` ' returned 2 results
+2015-01-08 12:18:33 DEBUG StatementBuilder:21 - built statement SELECT * FROM `user` WHERE (`email` = 'Test' ) 
+2015-01-08 12:18:33 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `user` WHERE (`email` = 'Test' ) ' with 0 args
+2015-01-08 12:18:33 DEBUG SelectIterator:21 - starting iterator @1487133662 for 'SELECT * FROM `user` WHERE (`email` = 'Test' ) '
+2015-01-08 12:18:33 DEBUG SelectIterator:21 - closed iterator @1487133662 after 1 rows
+2015-01-08 12:18:33 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `user` WHERE (`email` = 'Test' ) ' returned 1 results
+2015-01-08 12:18:33 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `news` ' with 0 args
+2015-01-08 12:18:33 DEBUG SelectIterator:21 - starting iterator @1159724651 for 'SELECT * FROM `news` '
+2015-01-08 12:18:33 DEBUG SelectIterator:21 - closed iterator @1159724651 after 2 rows
+2015-01-08 12:18:33 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 12:18:36 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `product` ' with 0 args
+2015-01-08 12:18:36 DEBUG SelectIterator:21 - starting iterator @1044970827 for 'SELECT * FROM `product` '
+2015-01-08 12:18:36 DEBUG SelectIterator:21 - closed iterator @1044970827 after 2 rows
+2015-01-08 12:18:36 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `product` ' returned 2 results
+2015-01-08 12:18:38 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:18:38 DEBUG StatementBuilder:21 - built statement SELECT * FROM `review` WHERE `product_id` = 1 
+2015-01-08 12:18:38 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `review` WHERE `product_id` = 1 ' with 0 args
+2015-01-08 12:18:38 DEBUG SelectIterator:21 - starting iterator @1464606096 for 'SELECT * FROM `review` WHERE `product_id` = 1 '
+2015-01-08 12:18:38 DEBUG SelectIterator:21 - closed iterator @1464606096 after 0 rows
+2015-01-08 12:18:38 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `review` WHERE `product_id` = 1 ' returned 0 results
+2015-01-08 12:18:51 DEBUG StatementBuilder:21 - built statement SELECT * FROM `review` WHERE `user_id` = 5 
+2015-01-08 12:18:51 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `review` WHERE `user_id` = 5 ' with 0 args
+2015-01-08 12:18:51 DEBUG SelectIterator:21 - starting iterator @1460525546 for 'SELECT * FROM `review` WHERE `user_id` = 5 '
+2015-01-08 12:18:51 DEBUG SelectIterator:21 - closed iterator @1460525546 after 0 rows
+2015-01-08 12:18:51 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `review` WHERE `user_id` = 5 ' returned 0 results
+2015-01-08 12:18:51 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:18:51 DEBUG StatementBuilder:21 - built statement SELECT * FROM `review` WHERE `product_id` = 1 
+2015-01-08 12:18:51 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `review` WHERE `product_id` = 1 ' with 0 args
+2015-01-08 12:18:51 DEBUG SelectIterator:21 - starting iterator @1378630613 for 'SELECT * FROM `review` WHERE `product_id` = 1 '
+2015-01-08 12:18:51 DEBUG SelectIterator:21 - closed iterator @1378630613 after 0 rows
+2015-01-08 12:18:51 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `review` WHERE `product_id` = 1 ' returned 0 results
+2015-01-08 12:19:28 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.Product with reflection
+2015-01-08 12:19:28 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.User with reflection
+2015-01-08 12:19:28 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.Review with reflection
+2015-01-08 12:19:28 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.News with reflection
+2015-01-08 12:19:28 INFO  DatabaseManagerMB:58 - Database connection established successfully
+2015-01-08 12:19:28 DEBUG StatementBuilder:21 - built statement SELECT * FROM `news` 
+2015-01-08 12:19:28 DEBUG JdbcConnectionSource:21 - opened connection to jdbc:mysql://localhost/jweb got #1743823361
+2015-01-08 12:19:28 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `news` ' with 0 args
+2015-01-08 12:19:28 DEBUG SelectIterator:21 - starting iterator @698700047 for 'SELECT * FROM `news` '
+2015-01-08 12:19:28 DEBUG SelectIterator:21 - closed iterator @698700047 after 2 rows
+2015-01-08 12:19:28 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 12:19:37 DEBUG StatementBuilder:21 - built statement SELECT * FROM `product` 
+2015-01-08 12:19:37 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `product` ' with 0 args
+2015-01-08 12:19:37 DEBUG SelectIterator:21 - starting iterator @560393597 for 'SELECT * FROM `product` '
+2015-01-08 12:19:37 DEBUG SelectIterator:21 - closed iterator @560393597 after 2 rows
+2015-01-08 12:19:37 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `product` ' returned 2 results
+2015-01-08 12:19:40 DEBUG StatementBuilder:21 - built statement SELECT * FROM `user` WHERE (`email` = 'Test' ) 
+2015-01-08 12:19:40 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `user` WHERE (`email` = 'Test' ) ' with 0 args
+2015-01-08 12:19:40 DEBUG SelectIterator:21 - starting iterator @946691125 for 'SELECT * FROM `user` WHERE (`email` = 'Test' ) '
+2015-01-08 12:19:40 DEBUG SelectIterator:21 - closed iterator @946691125 after 1 rows
+2015-01-08 12:19:40 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `user` WHERE (`email` = 'Test' ) ' returned 1 results
+2015-01-08 12:19:40 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `news` ' with 0 args
+2015-01-08 12:19:40 DEBUG SelectIterator:21 - starting iterator @1860959926 for 'SELECT * FROM `news` '
+2015-01-08 12:19:40 DEBUG SelectIterator:21 - closed iterator @1860959926 after 2 rows
+2015-01-08 12:19:40 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 12:19:43 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `product` ' with 0 args
+2015-01-08 12:19:43 DEBUG SelectIterator:21 - starting iterator @1651199904 for 'SELECT * FROM `product` '
+2015-01-08 12:19:43 DEBUG SelectIterator:21 - closed iterator @1651199904 after 2 rows
+2015-01-08 12:19:43 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `product` ' returned 2 results
+2015-01-08 12:19:45 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:19:45 DEBUG StatementBuilder:21 - built statement SELECT * FROM `review` WHERE `product_id` = 1 
+2015-01-08 12:19:45 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `review` WHERE `product_id` = 1 ' with 0 args
+2015-01-08 12:19:45 DEBUG SelectIterator:21 - starting iterator @2102791418 for 'SELECT * FROM `review` WHERE `product_id` = 1 '
+2015-01-08 12:19:45 DEBUG SelectIterator:21 - closed iterator @2102791418 after 0 rows
+2015-01-08 12:19:45 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `review` WHERE `product_id` = 1 ' returned 0 results
+2015-01-08 12:19:53 DEBUG StatementBuilder:21 - built statement SELECT * FROM `review` WHERE `user_id` = 5 
+2015-01-08 12:19:53 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `review` WHERE `user_id` = 5 ' with 0 args
+2015-01-08 12:19:53 DEBUG SelectIterator:21 - starting iterator @400063078 for 'SELECT * FROM `review` WHERE `user_id` = 5 '
+2015-01-08 12:19:53 DEBUG SelectIterator:21 - closed iterator @400063078 after 0 rows
+2015-01-08 12:19:53 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `review` WHERE `user_id` = 5 ' returned 0 results
+2015-01-08 12:19:53 DEBUG BaseMappedStatement:21 - insert data with statement 'INSERT INTO `review` (`id` ,`review` ,`rating` ,`product_id` ,`user_id` ) VALUES (?,?,?,?,?)' and 5 args, changed 1 rows
+2015-01-08 12:19:53 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:19:53 DEBUG StatementBuilder:21 - built statement SELECT * FROM `review` WHERE `product_id` = 1 
+2015-01-08 12:19:53 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `review` WHERE `product_id` = 1 ' with 0 args
+2015-01-08 12:19:53 DEBUG SelectIterator:21 - starting iterator @1731346986 for 'SELECT * FROM `review` WHERE `product_id` = 1 '
+2015-01-08 12:19:53 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:19:53 DEBUG SelectIterator:21 - closed iterator @1731346986 after 1 rows
+2015-01-08 12:19:53 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `review` WHERE `product_id` = 1 ' returned 1 results
+2015-01-08 12:20:01 DEBUG StatementBuilder:21 - built statement SELECT * FROM `review` WHERE `user_id` = 5 
+2015-01-08 12:20:01 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `review` WHERE `user_id` = 5 ' with 0 args
+2015-01-08 12:20:01 DEBUG SelectIterator:21 - starting iterator @784793121 for 'SELECT * FROM `review` WHERE `user_id` = 5 '
+2015-01-08 12:20:01 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:20:01 DEBUG SelectIterator:21 - closed iterator @784793121 after 1 rows
+2015-01-08 12:20:01 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `review` WHERE `user_id` = 5 ' returned 1 results
+2015-01-08 12:20:01 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:20:01 DEBUG StatementBuilder:21 - built statement SELECT * FROM `review` WHERE `product_id` = 1 
+2015-01-08 12:20:01 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `review` WHERE `product_id` = 1 ' with 0 args
+2015-01-08 12:20:01 DEBUG SelectIterator:21 - starting iterator @2090887809 for 'SELECT * FROM `review` WHERE `product_id` = 1 '
+2015-01-08 12:20:01 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:20:01 DEBUG SelectIterator:21 - closed iterator @2090887809 after 1 rows
+2015-01-08 12:20:01 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `review` WHERE `product_id` = 1 ' returned 1 results
+2015-01-08 12:23:07 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.Product with reflection
+2015-01-08 12:23:07 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.User with reflection
+2015-01-08 12:23:07 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.Review with reflection
+2015-01-08 12:23:07 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.News with reflection
+2015-01-08 12:23:07 INFO  DatabaseManagerMB:58 - Database connection established successfully
+2015-01-08 12:23:07 DEBUG JdbcConnectionSource:21 - opened connection to jdbc:mysql://localhost/jweb got #1263052623
+2015-01-08 12:23:07 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:23:07 DEBUG StatementBuilder:21 - built statement SELECT * FROM `review` WHERE `product_id` = 1 
+2015-01-08 12:23:07 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `review` WHERE `product_id` = 1 ' with 0 args
+2015-01-08 12:23:07 DEBUG SelectIterator:21 - starting iterator @1685811662 for 'SELECT * FROM `review` WHERE `product_id` = 1 '
+2015-01-08 12:23:07 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:23:07 DEBUG SelectIterator:21 - closed iterator @1685811662 after 1 rows
+2015-01-08 12:23:07 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `review` WHERE `product_id` = 1 ' returned 1 results
+2015-01-08 12:23:12 DEBUG StatementBuilder:21 - built statement SELECT * FROM `user` WHERE (`email` = 'Test' ) 
+2015-01-08 12:23:12 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `user` WHERE (`email` = 'Test' ) ' with 0 args
+2015-01-08 12:23:12 DEBUG SelectIterator:21 - starting iterator @1227732142 for 'SELECT * FROM `user` WHERE (`email` = 'Test' ) '
+2015-01-08 12:23:12 DEBUG SelectIterator:21 - closed iterator @1227732142 after 1 rows
+2015-01-08 12:23:12 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `user` WHERE (`email` = 'Test' ) ' returned 1 results
+2015-01-08 12:23:12 DEBUG StatementBuilder:21 - built statement SELECT * FROM `news` 
+2015-01-08 12:23:12 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `news` ' with 0 args
+2015-01-08 12:23:12 DEBUG SelectIterator:21 - starting iterator @338521410 for 'SELECT * FROM `news` '
+2015-01-08 12:23:12 DEBUG SelectIterator:21 - closed iterator @338521410 after 2 rows
+2015-01-08 12:23:12 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 12:23:15 DEBUG StatementBuilder:21 - built statement SELECT * FROM `product` 
+2015-01-08 12:23:15 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `product` ' with 0 args
+2015-01-08 12:23:15 DEBUG SelectIterator:21 - starting iterator @2008933657 for 'SELECT * FROM `product` '
+2015-01-08 12:23:15 DEBUG SelectIterator:21 - closed iterator @2008933657 after 2 rows
+2015-01-08 12:23:15 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `product` ' returned 2 results
+2015-01-08 12:23:17 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:23:17 DEBUG StatementBuilder:21 - built statement SELECT * FROM `review` WHERE `product_id` = 1 
+2015-01-08 12:23:17 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `review` WHERE `product_id` = 1 ' with 0 args
+2015-01-08 12:23:17 DEBUG SelectIterator:21 - starting iterator @385410429 for 'SELECT * FROM `review` WHERE `product_id` = 1 '
+2015-01-08 12:23:17 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:23:17 DEBUG SelectIterator:21 - closed iterator @385410429 after 1 rows
+2015-01-08 12:23:17 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `review` WHERE `product_id` = 1 ' returned 1 results
+2015-01-08 12:23:17 DEBUG StatementBuilder:21 - built statement SELECT * FROM `review` WHERE `user_id` = 5 
+2015-01-08 12:23:17 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `review` WHERE `user_id` = 5 ' with 0 args
+2015-01-08 12:23:17 DEBUG SelectIterator:21 - starting iterator @1557628953 for 'SELECT * FROM `review` WHERE `user_id` = 5 '
+2015-01-08 12:23:17 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:23:17 DEBUG SelectIterator:21 - closed iterator @1557628953 after 1 rows
+2015-01-08 12:23:17 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `review` WHERE `user_id` = 5 ' returned 1 results
+2015-01-08 12:26:02 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.Product with reflection
+2015-01-08 12:26:02 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.User with reflection
+2015-01-08 12:26:02 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.Review with reflection
+2015-01-08 12:26:02 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.News with reflection
+2015-01-08 12:26:02 INFO  DatabaseManagerMB:58 - Database connection established successfully
+2015-01-08 12:26:02 DEBUG StatementBuilder:21 - built statement SELECT * FROM `news` 
+2015-01-08 12:26:02 DEBUG JdbcConnectionSource:21 - opened connection to jdbc:mysql://localhost/jweb got #1566612473
+2015-01-08 12:26:02 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `news` ' with 0 args
+2015-01-08 12:26:02 DEBUG SelectIterator:21 - starting iterator @1198492267 for 'SELECT * FROM `news` '
+2015-01-08 12:26:02 DEBUG SelectIterator:21 - closed iterator @1198492267 after 2 rows
+2015-01-08 12:26:02 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 12:26:05 DEBUG StatementBuilder:21 - built statement SELECT * FROM `user` WHERE (`email` = 'Test' ) 
+2015-01-08 12:26:05 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `user` WHERE (`email` = 'Test' ) ' with 0 args
+2015-01-08 12:26:05 DEBUG SelectIterator:21 - starting iterator @1072150370 for 'SELECT * FROM `user` WHERE (`email` = 'Test' ) '
+2015-01-08 12:26:05 DEBUG SelectIterator:21 - closed iterator @1072150370 after 1 rows
+2015-01-08 12:26:05 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `user` WHERE (`email` = 'Test' ) ' returned 1 results
+2015-01-08 12:26:05 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `news` ' with 0 args
+2015-01-08 12:26:05 DEBUG SelectIterator:21 - starting iterator @2124418881 for 'SELECT * FROM `news` '
+2015-01-08 12:26:05 DEBUG SelectIterator:21 - closed iterator @2124418881 after 2 rows
+2015-01-08 12:26:05 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 12:26:07 DEBUG StatementBuilder:21 - built statement SELECT * FROM `product` 
+2015-01-08 12:26:07 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `product` ' with 0 args
+2015-01-08 12:26:07 DEBUG SelectIterator:21 - starting iterator @2050114192 for 'SELECT * FROM `product` '
+2015-01-08 12:26:07 DEBUG SelectIterator:21 - closed iterator @2050114192 after 2 rows
+2015-01-08 12:26:07 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `product` ' returned 2 results
+2015-01-08 12:26:10 DEBUG StatementBuilder:21 - built statement SELECT * FROM `review` WHERE `user_id` = 5 
+2015-01-08 12:26:10 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `review` WHERE `user_id` = 5 ' with 0 args
+2015-01-08 12:26:10 DEBUG SelectIterator:21 - starting iterator @1305340330 for 'SELECT * FROM `review` WHERE `user_id` = 5 '
+2015-01-08 12:26:10 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:26:10 DEBUG SelectIterator:21 - closed iterator @1305340330 after 1 rows
+2015-01-08 12:26:10 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `review` WHERE `user_id` = 5 ' returned 1 results
+2015-01-08 12:26:10 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:26:10 DEBUG StatementBuilder:21 - built statement SELECT * FROM `review` WHERE `product_id` = 1 
+2015-01-08 12:26:10 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `review` WHERE `product_id` = 1 ' with 0 args
+2015-01-08 12:26:10 DEBUG SelectIterator:21 - starting iterator @2044413609 for 'SELECT * FROM `review` WHERE `product_id` = 1 '
+2015-01-08 12:26:10 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:26:10 DEBUG SelectIterator:21 - closed iterator @2044413609 after 1 rows
+2015-01-08 12:26:10 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `review` WHERE `product_id` = 1 ' returned 1 results
+2015-01-08 12:32:23 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.Product with reflection
+2015-01-08 12:32:23 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.User with reflection
+2015-01-08 12:32:23 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.Review with reflection
+2015-01-08 12:32:23 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.News with reflection
+2015-01-08 12:32:23 INFO  DatabaseManagerMB:58 - Database connection established successfully
+2015-01-08 12:32:23 DEBUG StatementBuilder:21 - built statement SELECT * FROM `news` 
+2015-01-08 12:32:23 DEBUG JdbcConnectionSource:21 - opened connection to jdbc:mysql://localhost/jweb got #564866597
+2015-01-08 12:32:23 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `news` ' with 0 args
+2015-01-08 12:32:23 DEBUG SelectIterator:21 - starting iterator @1742681875 for 'SELECT * FROM `news` '
+2015-01-08 12:32:23 DEBUG SelectIterator:21 - closed iterator @1742681875 after 2 rows
+2015-01-08 12:32:23 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 12:32:28 DEBUG StatementBuilder:21 - built statement SELECT * FROM `product` 
+2015-01-08 12:32:28 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `product` ' with 0 args
+2015-01-08 12:32:28 DEBUG SelectIterator:21 - starting iterator @369968576 for 'SELECT * FROM `product` '
+2015-01-08 12:32:28 DEBUG SelectIterator:21 - closed iterator @369968576 after 2 rows
+2015-01-08 12:32:28 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `product` ' returned 2 results
+2015-01-08 12:32:31 DEBUG StatementBuilder:21 - built statement SELECT * FROM `user` WHERE (`email` = 'Test' ) 
+2015-01-08 12:32:31 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `user` WHERE (`email` = 'Test' ) ' with 0 args
+2015-01-08 12:32:31 DEBUG SelectIterator:21 - starting iterator @346869545 for 'SELECT * FROM `user` WHERE (`email` = 'Test' ) '
+2015-01-08 12:32:31 DEBUG SelectIterator:21 - closed iterator @346869545 after 1 rows
+2015-01-08 12:32:31 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `user` WHERE (`email` = 'Test' ) ' returned 1 results
+2015-01-08 12:32:31 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `news` ' with 0 args
+2015-01-08 12:32:31 DEBUG SelectIterator:21 - starting iterator @1667364784 for 'SELECT * FROM `news` '
+2015-01-08 12:32:31 DEBUG SelectIterator:21 - closed iterator @1667364784 after 2 rows
+2015-01-08 12:32:31 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 12:32:48 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `product` ' with 0 args
+2015-01-08 12:32:48 DEBUG SelectIterator:21 - starting iterator @809762151 for 'SELECT * FROM `product` '
+2015-01-08 12:32:48 DEBUG SelectIterator:21 - closed iterator @809762151 after 2 rows
+2015-01-08 12:32:48 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `product` ' returned 2 results
+2015-01-08 12:32:52 DEBUG StatementBuilder:21 - built statement SELECT * FROM `review` WHERE `user_id` = 5 
+2015-01-08 12:32:52 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `review` WHERE `user_id` = 5 ' with 0 args
+2015-01-08 12:32:52 DEBUG SelectIterator:21 - starting iterator @1277325110 for 'SELECT * FROM `review` WHERE `user_id` = 5 '
+2015-01-08 12:32:52 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:32:52 DEBUG SelectIterator:21 - closed iterator @1277325110 after 1 rows
+2015-01-08 12:32:52 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `review` WHERE `user_id` = 5 ' returned 1 results
+2015-01-08 12:32:52 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:32:52 DEBUG StatementBuilder:21 - built statement SELECT * FROM `review` WHERE `product_id` = 1 
+2015-01-08 12:32:52 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `review` WHERE `product_id` = 1 ' with 0 args
+2015-01-08 12:32:52 DEBUG SelectIterator:21 - starting iterator @612988643 for 'SELECT * FROM `review` WHERE `product_id` = 1 '
+2015-01-08 12:32:52 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:32:52 DEBUG SelectIterator:21 - closed iterator @612988643 after 1 rows
+2015-01-08 12:32:52 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `review` WHERE `product_id` = 1 ' returned 1 results
+2015-01-08 12:33:23 DEBUG StatementBuilder:21 - built statement SELECT * FROM `review` WHERE `user_id` = 5 
+2015-01-08 12:33:23 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `review` WHERE `user_id` = 5 ' with 0 args
+2015-01-08 12:33:23 DEBUG SelectIterator:21 - starting iterator @597658934 for 'SELECT * FROM `review` WHERE `user_id` = 5 '
+2015-01-08 12:33:23 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:33:23 DEBUG SelectIterator:21 - closed iterator @597658934 after 1 rows
+2015-01-08 12:33:23 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `review` WHERE `user_id` = 5 ' returned 1 results
+2015-01-08 12:33:23 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:33:23 DEBUG StatementBuilder:21 - built statement SELECT * FROM `review` WHERE `product_id` = 1 
+2015-01-08 12:33:23 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `review` WHERE `product_id` = 1 ' with 0 args
+2015-01-08 12:33:23 DEBUG SelectIterator:21 - starting iterator @867203698 for 'SELECT * FROM `review` WHERE `product_id` = 1 '
+2015-01-08 12:33:23 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:33:23 DEBUG SelectIterator:21 - closed iterator @867203698 after 1 rows
+2015-01-08 12:33:23 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `review` WHERE `product_id` = 1 ' returned 1 results
+2015-01-08 12:34:05 DEBUG StatementBuilder:21 - built statement SELECT * FROM `review` WHERE `user_id` = 5 
+2015-01-08 12:34:05 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `review` WHERE `user_id` = 5 ' with 0 args
+2015-01-08 12:34:05 DEBUG SelectIterator:21 - starting iterator @984444022 for 'SELECT * FROM `review` WHERE `user_id` = 5 '
+2015-01-08 12:34:05 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:34:05 DEBUG SelectIterator:21 - closed iterator @984444022 after 1 rows
+2015-01-08 12:34:05 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `review` WHERE `user_id` = 5 ' returned 1 results
+2015-01-08 12:34:05 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:34:05 DEBUG StatementBuilder:21 - built statement SELECT * FROM `review` WHERE `product_id` = 1 
+2015-01-08 12:34:05 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `review` WHERE `product_id` = 1 ' with 0 args
+2015-01-08 12:34:05 DEBUG SelectIterator:21 - starting iterator @1902862345 for 'SELECT * FROM `review` WHERE `product_id` = 1 '
+2015-01-08 12:34:05 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:34:05 DEBUG SelectIterator:21 - closed iterator @1902862345 after 1 rows
+2015-01-08 12:34:05 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `review` WHERE `product_id` = 1 ' returned 1 results
+2015-01-08 12:34:47 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `news` ' with 0 args
+2015-01-08 12:34:47 DEBUG SelectIterator:21 - starting iterator @1309946667 for 'SELECT * FROM `news` '
+2015-01-08 12:34:47 DEBUG SelectIterator:21 - closed iterator @1309946667 after 2 rows
+2015-01-08 12:34:47 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 12:34:50 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `product` ' with 0 args
+2015-01-08 12:34:50 DEBUG SelectIterator:21 - starting iterator @1876571512 for 'SELECT * FROM `product` '
+2015-01-08 12:34:50 DEBUG SelectIterator:21 - closed iterator @1876571512 after 2 rows
+2015-01-08 12:34:50 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `product` ' returned 2 results
+2015-01-08 12:34:51 DEBUG StatementBuilder:21 - built statement SELECT * FROM `review` WHERE `user_id` = 5 
+2015-01-08 12:34:51 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `review` WHERE `user_id` = 5 ' with 0 args
+2015-01-08 12:34:51 DEBUG SelectIterator:21 - starting iterator @220366448 for 'SELECT * FROM `review` WHERE `user_id` = 5 '
+2015-01-08 12:34:51 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:34:51 DEBUG SelectIterator:21 - closed iterator @220366448 after 1 rows
+2015-01-08 12:34:51 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `review` WHERE `user_id` = 5 ' returned 1 results
+2015-01-08 12:34:51 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:34:51 DEBUG StatementBuilder:21 - built statement SELECT * FROM `review` WHERE `product_id` = 1 
+2015-01-08 12:34:51 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `review` WHERE `product_id` = 1 ' with 0 args
+2015-01-08 12:34:51 DEBUG SelectIterator:21 - starting iterator @1831165011 for 'SELECT * FROM `review` WHERE `product_id` = 1 '
+2015-01-08 12:34:51 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:34:51 DEBUG SelectIterator:21 - closed iterator @1831165011 after 1 rows
+2015-01-08 12:34:51 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `review` WHERE `product_id` = 1 ' returned 1 results
+2015-01-08 12:36:42 DEBUG StatementBuilder:21 - built statement SELECT * FROM `review` WHERE `user_id` = 5 
+2015-01-08 12:36:42 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `review` WHERE `user_id` = 5 ' with 0 args
+2015-01-08 12:36:42 DEBUG SelectIterator:21 - starting iterator @1272477342 for 'SELECT * FROM `review` WHERE `user_id` = 5 '
+2015-01-08 12:36:42 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:36:42 DEBUG SelectIterator:21 - closed iterator @1272477342 after 1 rows
+2015-01-08 12:36:42 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `review` WHERE `user_id` = 5 ' returned 1 results
+2015-01-08 12:36:42 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:36:42 DEBUG StatementBuilder:21 - built statement SELECT * FROM `review` WHERE `product_id` = 1 
+2015-01-08 12:36:42 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `review` WHERE `product_id` = 1 ' with 0 args
+2015-01-08 12:36:42 DEBUG SelectIterator:21 - starting iterator @345234593 for 'SELECT * FROM `review` WHERE `product_id` = 1 '
+2015-01-08 12:36:42 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:36:42 DEBUG SelectIterator:21 - closed iterator @345234593 after 1 rows
+2015-01-08 12:36:42 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `review` WHERE `product_id` = 1 ' returned 1 results
+2015-01-08 12:37:33 DEBUG StatementBuilder:21 - built statement SELECT * FROM `review` WHERE `user_id` = 5 
+2015-01-08 12:37:33 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `review` WHERE `user_id` = 5 ' with 0 args
+2015-01-08 12:37:33 DEBUG SelectIterator:21 - starting iterator @12593492 for 'SELECT * FROM `review` WHERE `user_id` = 5 '
+2015-01-08 12:37:33 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:37:33 DEBUG SelectIterator:21 - closed iterator @12593492 after 1 rows
+2015-01-08 12:37:33 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `review` WHERE `user_id` = 5 ' returned 1 results
+2015-01-08 12:37:33 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:37:33 DEBUG StatementBuilder:21 - built statement SELECT * FROM `review` WHERE `product_id` = 1 
+2015-01-08 12:37:33 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `review` WHERE `product_id` = 1 ' with 0 args
+2015-01-08 12:37:33 DEBUG SelectIterator:21 - starting iterator @114465683 for 'SELECT * FROM `review` WHERE `product_id` = 1 '
+2015-01-08 12:37:33 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:37:33 DEBUG SelectIterator:21 - closed iterator @114465683 after 1 rows
+2015-01-08 12:37:33 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `review` WHERE `product_id` = 1 ' returned 1 results
+2015-01-08 12:37:48 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `news` ' with 0 args
+2015-01-08 12:37:48 DEBUG SelectIterator:21 - starting iterator @1447175088 for 'SELECT * FROM `news` '
+2015-01-08 12:37:48 DEBUG SelectIterator:21 - closed iterator @1447175088 after 2 rows
+2015-01-08 12:37:48 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 12:38:14 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `product` ' with 0 args
+2015-01-08 12:38:14 DEBUG SelectIterator:21 - starting iterator @434360664 for 'SELECT * FROM `product` '
+2015-01-08 12:38:14 DEBUG SelectIterator:21 - closed iterator @434360664 after 2 rows
+2015-01-08 12:38:14 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `product` ' returned 2 results
+2015-01-08 12:38:16 DEBUG StatementBuilder:21 - built statement SELECT * FROM `review` WHERE `user_id` = 5 
+2015-01-08 12:38:16 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `review` WHERE `user_id` = 5 ' with 0 args
+2015-01-08 12:38:16 DEBUG SelectIterator:21 - starting iterator @892216929 for 'SELECT * FROM `review` WHERE `user_id` = 5 '
+2015-01-08 12:38:16 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:38:16 DEBUG SelectIterator:21 - closed iterator @892216929 after 1 rows
+2015-01-08 12:38:16 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `review` WHERE `user_id` = 5 ' returned 1 results
+2015-01-08 12:38:16 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:38:16 DEBUG StatementBuilder:21 - built statement SELECT * FROM `review` WHERE `product_id` = 1 
+2015-01-08 12:38:16 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `review` WHERE `product_id` = 1 ' with 0 args
+2015-01-08 12:38:16 DEBUG SelectIterator:21 - starting iterator @321711903 for 'SELECT * FROM `review` WHERE `product_id` = 1 '
+2015-01-08 12:38:16 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:38:16 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:38:16 DEBUG SelectIterator:21 - closed iterator @321711903 after 2 rows
+2015-01-08 12:38:16 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `review` WHERE `product_id` = 1 ' returned 2 results
+2015-01-08 12:39:13 DEBUG StatementBuilder:21 - built statement SELECT * FROM `review` WHERE `user_id` = 5 
+2015-01-08 12:39:13 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `review` WHERE `user_id` = 5 ' with 0 args
+2015-01-08 12:39:13 DEBUG SelectIterator:21 - starting iterator @163565952 for 'SELECT * FROM `review` WHERE `user_id` = 5 '
+2015-01-08 12:39:13 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:39:13 DEBUG SelectIterator:21 - closed iterator @163565952 after 1 rows
+2015-01-08 12:39:13 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `review` WHERE `user_id` = 5 ' returned 1 results
+2015-01-08 12:39:13 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:39:13 DEBUG StatementBuilder:21 - built statement SELECT * FROM `review` WHERE `product_id` = 1 
+2015-01-08 12:39:13 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `review` WHERE `product_id` = 1 ' with 0 args
+2015-01-08 12:39:13 DEBUG SelectIterator:21 - starting iterator @889920526 for 'SELECT * FROM `review` WHERE `product_id` = 1 '
+2015-01-08 12:39:13 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:39:13 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:39:13 DEBUG SelectIterator:21 - closed iterator @889920526 after 2 rows
+2015-01-08 12:39:13 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `review` WHERE `product_id` = 1 ' returned 2 results
+2015-01-08 12:39:25 DEBUG StatementBuilder:21 - built statement SELECT * FROM `review` WHERE `user_id` = 5 
+2015-01-08 12:39:25 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `review` WHERE `user_id` = 5 ' with 0 args
+2015-01-08 12:39:25 DEBUG SelectIterator:21 - starting iterator @2015794413 for 'SELECT * FROM `review` WHERE `user_id` = 5 '
+2015-01-08 12:39:25 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:39:25 DEBUG SelectIterator:21 - closed iterator @2015794413 after 1 rows
+2015-01-08 12:39:25 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `review` WHERE `user_id` = 5 ' returned 1 results
+2015-01-08 12:39:25 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:39:25 DEBUG StatementBuilder:21 - built statement SELECT * FROM `review` WHERE `product_id` = 1 
+2015-01-08 12:39:25 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `review` WHERE `product_id` = 1 ' with 0 args
+2015-01-08 12:39:25 DEBUG SelectIterator:21 - starting iterator @431096185 for 'SELECT * FROM `review` WHERE `product_id` = 1 '
+2015-01-08 12:39:25 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:39:25 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 12:39:25 DEBUG SelectIterator:21 - closed iterator @431096185 after 2 rows
+2015-01-08 12:39:25 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `review` WHERE `product_id` = 1 ' returned 2 results

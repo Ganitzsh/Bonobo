@@ -14,7 +14,7 @@
 		</ui:fragment>
 		<ui:fragment rendered="#{productPage.product != null}">
 		<h1 class="ui header">#{productPage.product.name}</h1>
-		<p style="text-align: center;"><h:graphicImage library="images" name="test.png"/></p>
+		<p style="text-align: center;"><h:graphicImage styleClass="ui centered medium image" library="images" name="test.png"/></p>
 		<h3 class="ui right aligned header">Price: #{productPage.product.price} €</h3>
 		<div class="ui segment">
 			<div class="meta">
@@ -26,7 +26,23 @@
 		</div>
 		
 		<div id="product_page">
-			<ui:fragment rendered="#{currentUser.loggedIn == true}">
+			<ui:fragment rendered="#{productPage.alreadyPosted == true}">
+				<h4 class="ui dividing header">Your review</h4>
+				<div class="ui blue message">
+					<h2 class="header"><i class="info circle icon"></i>You already reviewed that product.</h2>
+				</div>
+				<div class="ui items">
+				<div class="item">
+				 	<div class="meta">
+				 	<p>Note: <span style="font-weight: bold; font-size: 15px;">#{productPage.currentUserReview.rating}</span></p>
+				 	</div>
+				 	<div class="ui segment">
+						#{productPage.currentUserReview.review}
+					</div>
+				</div>
+				</div>
+			</ui:fragment>
+			<ui:fragment rendered="#{currentUser.loggedIn == true and productPage.alreadyPosted == false}">
 				<h:form>
 					<div class="ui form">
 						<h4 class="ui dividing header">Review that product</h4>
@@ -46,7 +62,7 @@
 					  		<label>Comment</label>
 						    <h:inputTextarea value="#{reviewPoster.reviewContent}" styleClass="ui input"/>
 					  	</div>
-					  	<h:commandButton value="Envoyer" type="submit" action="#{reviewPoster.newReview()}" styleClass="ui primary button" partialSubmit="true" ajax="true"/>
+					  	<h:commandButton value="Envoyer" type="submit" action="#{reviewPoster.newReview(productPage.product)}" styleClass="ui primary button" partialSubmit="true" ajax="true"/>
 					</div>
 				</h:form>
 			</ui:fragment>
@@ -65,9 +81,10 @@
 			<ui:fragment rendered="#{not empty productPage.reviews}">
 				<div class="ui items">
 					<ui:repeat value="#{productPage.reviews}" var="item">
+					<ui:fragment rendered="#{productPage.currentUserReview.id != item.id and productPage.reviews.size() > 1}">
 						<div class="item">
 							<div class="content">
-								<span class="header">#{item.username}</span>
+								<span class="header">#{item.user.username}</span>
 							</div>
 							<div class="meta">
 								<p>Note: <span style="font-weight: bold; font-size: 15px;">#{item.rating}</span></p>
@@ -76,6 +93,7 @@
 								#{item.review}
 							</div>
 						</div>
+					</ui:fragment>
 					</ui:repeat>
 				</div>
 			</ui:fragment>

@@ -7,6 +7,9 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.ViewScoped;
 import javax.faces.context.FacesContext;
+
+import org.apache.log4j.Logger;
+
 import java.sql.SQLException;
 import java.util.Map;
 
@@ -18,6 +21,8 @@ import java.util.Map;
 @ViewScoped
 public class EditNewsMB {
 
+	private static final Logger logger = Logger.getLogger(EditNewsMB.class);
+	
     @ManagedProperty(value = "#{dbManager}")
     private DatabaseManagerMB dbManager;
 
@@ -37,7 +42,7 @@ public class EditNewsMB {
             title = oldNews.getTitle();
             content = oldNews.getContent();
         } catch (SQLException e) {
-            System.out.println("SQLException while getting news: " + e.getMessage());
+            logger.error("SQLException while getting news: " + e.getMessage());
         }
     }
 
@@ -51,7 +56,7 @@ public class EditNewsMB {
             oldNews.setContent(this.getContent());
             dbManager.getNewsDao().update(oldNews);
         } catch (SQLException e) {
-            System.out.println("SQLException while updating news: " + e.getMessage());
+            logger.error("SQLException while updating news: " + e.getMessage());
             e.printStackTrace();
         }
         return ("admin?faces-redirect=true");
