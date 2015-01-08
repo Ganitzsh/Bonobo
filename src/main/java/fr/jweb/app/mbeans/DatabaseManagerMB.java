@@ -62,7 +62,6 @@ public class DatabaseManagerMB implements Serializable {
             productDao = DaoManager.createDao(conn, Product.class);
             orderDao = DaoManager.createDao(conn, Order.class);
             mailSender = new MailSender();
-            logger.info("Database connection established successfully");
         } catch (SQLException ex) {
         	logger.error("SQLException: " + ex.getMessage());
         	logger.error("SQLState: " + ex.getSQLState());

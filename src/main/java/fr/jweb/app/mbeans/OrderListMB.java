@@ -36,7 +36,8 @@ public class OrderListMB implements Serializable {
 	 public void init() {
 		 try {
 			list = dbManager.getOrderDao().queryBuilder().where().eq("user_id", currentUser.getActualUser().getId()).query();
-		} catch (SQLException e) {
+			dbManager.getConn().close();
+		 } catch (SQLException e) {
 			logger.error("SQLException: " + e.getMessage());
 			e.printStackTrace();
 		}

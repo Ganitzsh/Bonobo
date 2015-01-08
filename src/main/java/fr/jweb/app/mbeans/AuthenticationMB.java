@@ -89,6 +89,7 @@ public class AuthenticationMB implements Serializable {
 		map.put("email", this.getEmail());
 		try {
 			list = dbManager.getUserDao().queryForFieldValues(map);
+			dbManager.getConn().close();
 			for (User user : list) {
 				if (user.getPasswordHash().equals(DigestUtils.sha1Hex(this.getPassword()))) {
 					currentUser.setLoggedIn(true);

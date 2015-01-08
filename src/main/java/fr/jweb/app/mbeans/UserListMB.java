@@ -33,6 +33,7 @@ public class UserListMB {
     public void init() {
         try {
             userList = dbManager.getUserDao().queryForAll();
+            dbManager.getConn().close();
         } catch (SQLException e) {
             System.out.println("SQLException while querying users: " + e.getMessage());
         }

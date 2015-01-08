@@ -88,6 +88,7 @@ public class SignUpMB implements Serializable {
             tmp.setPasswordHash(DigestUtils.sha1Hex(this.password));
             tmp.setAdmin(false);
             dbManager.getUserDao().create(tmp);
+            dbManager.getConn().close();
         } catch (SQLException e) {
             System.out.println("SQLException while creating new user: " + e.getMessage());
             e.printStackTrace();

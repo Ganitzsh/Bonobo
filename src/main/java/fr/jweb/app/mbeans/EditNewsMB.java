@@ -41,6 +41,7 @@ public class EditNewsMB {
             oldNews = dbManager.getNewsDao().queryForId(Integer.parseInt(requestParams.get("id")));
             title = oldNews.getTitle();
             content = oldNews.getContent();
+            dbManager.getConn().close();
         } catch (SQLException e) {
             logger.error("SQLException while getting news: " + e.getMessage());
         }

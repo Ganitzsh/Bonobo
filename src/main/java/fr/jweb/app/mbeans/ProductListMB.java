@@ -35,6 +35,7 @@ public class ProductListMB implements Serializable {
     public void init() {
         try {
             productList = dbManager.getProductDao().queryForAll();
+            dbManager.getConn().close();
         } catch (SQLException e) {
             e.printStackTrace();
         }

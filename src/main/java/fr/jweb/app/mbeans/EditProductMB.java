@@ -46,6 +46,7 @@ public class EditProductMB {
             name = oldProduct.getName();
             description = oldProduct.getDescription();
             price = oldProduct.getPrice();
+            dbManager.getConn().close();
         } catch (SQLException e) {
             System.out.println("SQLException while getting product: " + e.getMessage());
         }

@@ -36,6 +36,7 @@ public class EditUserMB {
         Map<String, String> requestParams = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap();
         try {
             oldUser = dbManager.getUserDao().queryForId(Integer.parseInt(requestParams.get("id")));
+            dbManager.getConn().close();
             email = oldUser.getEmail();
             username = oldUser.getUsername();
             newsletter = oldUser.getNewsletter();
@@ -65,6 +66,7 @@ public class EditUserMB {
             oldUser.setNewsletter(this.getNewsletter());
             oldUser.setAdmin(this.admin);
             dbManager.getUserDao().update(oldUser);
+            dbManager.getConn().close();
         }
         catch (SQLException e) {
             System.out.println("SQLException while update new user: " + e.getMessage());

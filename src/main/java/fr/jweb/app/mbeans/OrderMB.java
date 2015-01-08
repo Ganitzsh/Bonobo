@@ -92,6 +92,7 @@ public class OrderMB implements Serializable {
 			try {
 				dbManager.getOrderDao().create(tmp);
 				dbManager.getProductDao().update(product);
+				dbManager.getConn().close();
 			} catch (SQLException e) {
 				logger.error("SQLException: " + e.getMessage());
 				e.printStackTrace();

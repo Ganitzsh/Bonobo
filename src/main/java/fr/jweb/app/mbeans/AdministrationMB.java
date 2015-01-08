@@ -34,6 +34,7 @@ public class AdministrationMB {
     public String deleteUser(int id) {
         try {
             dbManager.getUserDao().delete(dbManager.getUserDao().queryForId(id));
+            dbManager.getConn().close();
         } catch (SQLException e) {
             logger.error("SQLException while deleting user: " + e.getMessage());
         }
@@ -55,6 +56,7 @@ public class AdministrationMB {
     public String deleteNews(int id) {
         try {
             dbManager.getNewsDao().delete(dbManager.getNewsDao().queryForId(id));
+            dbManager.getConn().close();
         } catch (SQLException e) {
             System.out.println("SQLException while deleting news: " + e.getMessage());
         }
@@ -76,6 +78,7 @@ public class AdministrationMB {
     public String deleteProduct(int id) {
         try {
             dbManager.getProductDao().delete(dbManager.getProductDao().queryForId(id));
+            dbManager.getConn().close();
         } catch (SQLException e) {
             System.out.println("SQLException while deleting product: " + e.getMessage());
         }
@@ -96,6 +99,7 @@ public class AdministrationMB {
     public String deleteReview(int id) {
         try {
             dbManager.getReviewDao().delete(dbManager.getReviewDao().queryForId(id));
+            dbManager.getConn().close();
         } catch (SQLException e) {
             System.out.println("SQLException while deleting review: " + e.getMessage());
         }

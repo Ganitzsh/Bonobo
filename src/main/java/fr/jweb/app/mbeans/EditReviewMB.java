@@ -35,6 +35,7 @@ public class EditReviewMB {
             oldReview = dbManager.getReviewDao().queryForId(Integer.parseInt(requestParams.get("id")));
             reviewContent = oldReview.getReviewContent();
             rating = oldReview.getRating();
+            dbManager.getConn().close();
         } catch (SQLException e) {
             System.out.println("SQLException while getting review: " + e.getMessage());
         }

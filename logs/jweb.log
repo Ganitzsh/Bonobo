@@ -509,3 +509,103 @@
 2015-01-08 18:29:20 DEBUG SelectIterator:21 - starting iterator @1210269658 for 'SELECT * FROM `news` '
 2015-01-08 18:29:20 DEBUG SelectIterator:21 - closed iterator @1210269658 after 2 rows
 2015-01-08 18:29:20 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 18:35:52 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.Product with reflection
+2015-01-08 18:35:52 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.User with reflection
+2015-01-08 18:35:52 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.Review with reflection
+2015-01-08 18:35:52 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.News with reflection
+2015-01-08 18:35:52 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.Order with reflection
+2015-01-08 18:35:52 DEBUG StatementBuilder:21 - built statement SELECT * FROM `news` 
+2015-01-08 18:35:52 DEBUG JdbcConnectionSource:21 - opened connection to jdbc:mysql://localhost/jweb got #1117637482
+2015-01-08 18:35:52 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `news` ' with 0 args
+2015-01-08 18:35:52 DEBUG SelectIterator:21 - starting iterator @773298285 for 'SELECT * FROM `news` '
+2015-01-08 18:35:52 DEBUG SelectIterator:21 - closed iterator @773298285 after 2 rows
+2015-01-08 18:35:52 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 18:35:52 DEBUG JdbcConnectionSource:21 - closed connection #1117637482
+2015-01-08 18:38:43 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.Product with reflection
+2015-01-08 18:38:43 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.User with reflection
+2015-01-08 18:38:43 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.Review with reflection
+2015-01-08 18:38:43 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.News with reflection
+2015-01-08 18:38:43 DEBUG DaoManager:21 - created dao for class class fr.jweb.app.entities.Order with reflection
+2015-01-08 18:38:43 DEBUG StatementBuilder:21 - built statement SELECT * FROM `news` 
+2015-01-08 18:38:43 DEBUG JdbcConnectionSource:21 - opened connection to jdbc:mysql://localhost/jweb got #111971604
+2015-01-08 18:38:43 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `news` ' with 0 args
+2015-01-08 18:38:43 DEBUG SelectIterator:21 - starting iterator @1456632351 for 'SELECT * FROM `news` '
+2015-01-08 18:38:43 DEBUG SelectIterator:21 - closed iterator @1456632351 after 2 rows
+2015-01-08 18:38:43 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 18:38:43 DEBUG JdbcConnectionSource:21 - closed connection #111971604
+2015-01-08 18:38:56 DEBUG JdbcConnectionSource:21 - opened connection to jdbc:mysql://localhost/jweb got #900181597
+2015-01-08 18:38:56 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `news` ' with 0 args
+2015-01-08 18:38:56 DEBUG SelectIterator:21 - starting iterator @24167799 for 'SELECT * FROM `news` '
+2015-01-08 18:38:56 DEBUG SelectIterator:21 - closed iterator @24167799 after 2 rows
+2015-01-08 18:38:56 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 18:38:56 DEBUG JdbcConnectionSource:21 - closed connection #900181597
+2015-01-08 18:39:02 DEBUG StatementBuilder:21 - built statement SELECT * FROM `user` WHERE (`email` = 'julienindahood@gmail.com' ) 
+2015-01-08 18:39:02 DEBUG JdbcConnectionSource:21 - opened connection to jdbc:mysql://localhost/jweb got #1831119681
+2015-01-08 18:39:02 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `user` WHERE (`email` = 'julienindahood@gmail.com' ) ' with 0 args
+2015-01-08 18:39:02 DEBUG SelectIterator:21 - starting iterator @1603924253 for 'SELECT * FROM `user` WHERE (`email` = 'julienindahood@gmail.com' ) '
+2015-01-08 18:39:02 DEBUG SelectIterator:21 - closed iterator @1603924253 after 1 rows
+2015-01-08 18:39:02 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `user` WHERE (`email` = 'julienindahood@gmail.com' ) ' returned 1 results
+2015-01-08 18:39:02 DEBUG JdbcConnectionSource:21 - closed connection #1831119681
+2015-01-08 18:39:02 DEBUG JdbcConnectionSource:21 - opened connection to jdbc:mysql://localhost/jweb got #978053860
+2015-01-08 18:39:02 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `news` ' with 0 args
+2015-01-08 18:39:02 DEBUG SelectIterator:21 - starting iterator @480578433 for 'SELECT * FROM `news` '
+2015-01-08 18:39:02 DEBUG SelectIterator:21 - closed iterator @480578433 after 2 rows
+2015-01-08 18:39:02 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 18:39:02 DEBUG JdbcConnectionSource:21 - closed connection #978053860
+2015-01-08 18:39:05 DEBUG StatementBuilder:21 - built statement SELECT * FROM `product` 
+2015-01-08 18:39:05 DEBUG JdbcConnectionSource:21 - opened connection to jdbc:mysql://localhost/jweb got #2021124027
+2015-01-08 18:39:05 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `product` ' with 0 args
+2015-01-08 18:39:05 DEBUG SelectIterator:21 - starting iterator @874552260 for 'SELECT * FROM `product` '
+2015-01-08 18:39:05 DEBUG SelectIterator:21 - closed iterator @874552260 after 2 rows
+2015-01-08 18:39:05 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `product` ' returned 2 results
+2015-01-08 18:39:05 DEBUG JdbcConnectionSource:21 - closed connection #2021124027
+2015-01-08 18:39:09 DEBUG StatementBuilder:21 - built statement SELECT * FROM `review` WHERE `user_id` = 4 
+2015-01-08 18:39:09 DEBUG JdbcConnectionSource:21 - opened connection to jdbc:mysql://localhost/jweb got #1958044493
+2015-01-08 18:39:09 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `review` WHERE `user_id` = 4 ' with 0 args
+2015-01-08 18:39:09 DEBUG SelectIterator:21 - starting iterator @1401418277 for 'SELECT * FROM `review` WHERE `user_id` = 4 '
+2015-01-08 18:39:09 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `user` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 18:39:09 DEBUG SelectIterator:21 - closed iterator @1401418277 after 1 rows
+2015-01-08 18:39:09 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `review` WHERE `user_id` = 4 ' returned 1 results
+2015-01-08 18:39:09 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 18:39:09 DEBUG StatementBuilder:21 - built statement SELECT * FROM `review` WHERE `product_id` = 2 
+2015-01-08 18:39:09 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `review` WHERE `product_id` = 2 ' with 0 args
+2015-01-08 18:39:09 DEBUG SelectIterator:21 - starting iterator @431337776 for 'SELECT * FROM `review` WHERE `product_id` = 2 '
+2015-01-08 18:39:09 DEBUG SelectIterator:21 - closed iterator @431337776 after 0 rows
+2015-01-08 18:39:09 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `review` WHERE `product_id` = 2 ' returned 0 results
+2015-01-08 18:39:09 DEBUG JdbcConnectionSource:21 - closed connection #1958044493
+2015-01-08 18:39:29 DEBUG JdbcConnectionSource:21 - opened connection to jdbc:mysql://localhost/jweb got #646661687
+2015-01-08 18:39:29 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 18:39:37 INFO  OrderMB:76 - Ordering item with id: 2
+2015-01-08 18:39:37 INFO  MailSender:48 - Sending message to: To
+2015-01-08 18:39:39 DEBUG BaseMappedStatement:21 - insert data with statement 'INSERT INTO `order` (`id` ,`user_id` ,`address` ,`product_id` ,`quantity` ) VALUES (?,?,?,?,?)' and 5 args, changed 1 rows
+2015-01-08 18:39:39 DEBUG BaseMappedStatement:21 - update data with statement 'UPDATE `product` SET `name` = ?, `description` = ?, `price` = ?, `quantity` = ? WHERE `id` = ?' and 5 args, changed 1 rows
+2015-01-08 18:39:39 DEBUG JdbcConnectionSource:21 - closed connection #646661687
+2015-01-08 18:39:39 DEBUG JdbcConnectionSource:21 - opened connection to jdbc:mysql://localhost/jweb got #608206981
+2015-01-08 18:39:39 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `news` ' with 0 args
+2015-01-08 18:39:39 DEBUG SelectIterator:21 - starting iterator @1973525364 for 'SELECT * FROM `news` '
+2015-01-08 18:39:39 DEBUG SelectIterator:21 - closed iterator @1973525364 after 2 rows
+2015-01-08 18:39:39 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `news` ' returned 2 results
+2015-01-08 18:39:39 DEBUG JdbcConnectionSource:21 - closed connection #608206981
+2015-01-08 18:39:42 DEBUG StatementBuilder:21 - built statement SELECT * FROM `user` 
+2015-01-08 18:39:42 DEBUG JdbcConnectionSource:21 - opened connection to jdbc:mysql://localhost/jweb got #1192632797
+2015-01-08 18:39:42 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `user` ' with 0 args
+2015-01-08 18:39:42 DEBUG SelectIterator:21 - starting iterator @1487016925 for 'SELECT * FROM `user` '
+2015-01-08 18:39:42 DEBUG SelectIterator:21 - closed iterator @1487016925 after 2 rows
+2015-01-08 18:39:42 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `user` ' returned 2 results
+2015-01-08 18:39:42 DEBUG JdbcConnectionSource:21 - closed connection #1192632797
+2015-01-08 18:39:42 DEBUG StatementBuilder:21 - built statement SELECT * FROM `order` WHERE `user_id` = 4 
+2015-01-08 18:39:42 DEBUG JdbcConnectionSource:21 - opened connection to jdbc:mysql://localhost/jweb got #225985796
+2015-01-08 18:39:42 DEBUG BaseMappedStatement:21 - prepared statement 'SELECT * FROM `order` WHERE `user_id` = 4 ' with 0 args
+2015-01-08 18:39:42 DEBUG SelectIterator:21 - starting iterator @223813188 for 'SELECT * FROM `order` WHERE `user_id` = 4 '
+2015-01-08 18:39:42 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 18:39:42 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 18:39:42 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 18:39:42 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 18:39:42 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 18:39:42 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 18:39:42 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 18:39:42 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 18:39:42 DEBUG BaseMappedStatement:21 - query-for-id using 'SELECT * FROM `product` WHERE `id` = ?' and 1 args, got 1 result
+2015-01-08 18:39:42 DEBUG SelectIterator:21 - closed iterator @223813188 after 9 rows
+2015-01-08 18:39:42 DEBUG StatementExecutor:21 - query of 'SELECT * FROM `order` WHERE `user_id` = 4 ' returned 9 results
+2015-01-08 18:39:42 DEBUG JdbcConnectionSource:21 - closed connection #225985796

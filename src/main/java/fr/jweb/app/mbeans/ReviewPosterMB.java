@@ -77,6 +77,7 @@ public class ReviewPosterMB implements Serializable {
     	try {
 			if (dbManager.getReviewDao().queryBuilder().where().eq("user_id", currentUser.getActualUser().getId()).query().size() > 0)
 				alreadyPosted = true;
+			dbManager.getConn().close();
 		} catch (SQLException e) {
 			logger.error("SQLException: " + e.getMessage());
 			e.printStackTrace();

@@ -42,6 +42,7 @@ public class NewsListMB implements Serializable {
     public void init() {
         try {
             newsList = dbManager.getNewsDao().queryForAll();
+            dbManager.getConn().close();
         } catch (SQLException e) {
             System.out.println("SQLException while querying news: " + e.getMessage());
         }

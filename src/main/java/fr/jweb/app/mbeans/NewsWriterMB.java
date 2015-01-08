@@ -39,6 +39,7 @@ public class NewsWriterMB implements Serializable {
             tmp.setContent(content);
             tmp.setTitle(title);
             dbManager.getNewsDao().create(tmp);
+            dbManager.getConn().close();
             content = "";
             title = "";
         } catch (SQLException e) {

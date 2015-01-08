@@ -93,7 +93,8 @@ public class ProductPageMB implements Serializable {
 				product = dbManager.getProductDao().queryForId(Integer.parseInt(requestParams.get("id")));
 				title = (product == null) ? "No product found" : product.getName();
 	            reviews = dbManager.getReviewDao().queryBuilder().where().eq("product_id", product.getId()).query();
-			} catch (NumberFormatException e1) {
+	            dbManager.getConn().close();
+	        } catch (NumberFormatException e1) {
 				e1.printStackTrace();
 			} catch (SQLException e1) {
 				e1.printStackTrace();
